@@ -28,18 +28,38 @@
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
  */ 
- function countryChange(selectObj) { 
- var idx = selectObj.selectedIndex; 
- var which = selectObj.options[idx].value; 
- cList = countryLists[which]; 
+function originSpawn(selectObj){
+	
+}
+  var originLists = new Array(5) 
+ originLists["empty"] = ["Select a Main Role"]; 
+ originLists["Meat Shield"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ originLists["Damage Dealer"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ originLists["Party Face"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+ originLists["Skill Monkey"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+ originLists["Support-Controller"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+
+ function countryChange(selectObj2) { 
+ // get the index of the selected option 
+ var idx = selectObj2.selectedIndex; 
+ // get the value of the selected option 
+ var which = selectObj2.options[idx].value; 
+ // use the selected option value to retrieve the list of items from the countryLists array 
+ cList2 = countryLists[which]; 
+ // get the country select element via its known id 
  var cSelect = document.getElementById("country"); 
+ // remove the current options from the country select 
  var len=cSelect.options.length; 
- while (cSelect.options.length > 0) { cSelect.remove(0);} 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
  var newOption; 
- for (var i=0; i<cList.length; i++) { 
+ // create new options 
+ for (var i=0; i<cList2.length; i++) { 
  newOption = document.createElement("option"); 
- newOption.value = cList[i];  // assumes option string and value are the same 
- newOption.text=cList[i]; 
+ newOption.value = cList2[i];  // assumes option string and value are the same 
+ newOption.text=cList2[i]; 
+ // add the new option 
  try { 
  cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
  } 
@@ -48,7 +68,7 @@
  } 
  } 
  } 
- /*
+ 
  //__________________________________________________
 // Origin 	
 
