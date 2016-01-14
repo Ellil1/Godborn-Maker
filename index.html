@@ -14,13 +14,19 @@
     <![endif]-->
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script>
-window.onload=function(){
-  document.getElementById("button").style.display='none';
 
-}
-function showButton(){
-  document.getElementById("button").style.display='block';
-}
+$(function(){
+    $("#model").hide();  // By default use jQuery to hide the second modal
+
+    // We can use the change(); function to watch the state of the select box and run some conditional logic every time it's changes to hide or show the second select box
+    $("#manufacturer").change(function(){
+        if( $(".default").is(:selected) ){
+            $("#model").hide();
+        } else {
+            $("#model").show();
+        }
+    });
+});
 </script>
     <title>Scion-maker by Ellil1</title>
   </head>
@@ -32,11 +38,18 @@ function showButton(){
         <h2></h2>
       </div>
     </header>
-<input type="button" id="button" value="New Button"/>
-<br>
-<br>
-<br>
-<input type="button" id="turnOn" value="Show Button" onclick="showButton()"/>
+<select name="manufacturer" id="manufacturer"> 
+    <option value="" class="default" selected>(select)</option>
+    <option value="Manufacturer One">Manufacturer One</option>
+    <option value="Manufacturer Two">Manufacturer Two</option>
+</select>
+
+<select name="model" id="model"> 
+    <option value="" selected>(select)</option>
+    <option value="Model One">Model One</option>
+    <option value="Model Two">Model Two</option>
+</select>
+
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
