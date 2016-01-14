@@ -23,38 +23,23 @@
   var countryLists = new Array(3) 
  countryLists["empty"] = ["Select a Country"]; 
  countryLists["Godborn"] = ["Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
- countryLists["Mythborn"] = ["Dark Forest", "Fairie", "Jade Sea", "Shambhalla"]; 
+ countryLists["Mythborn"] = ["Dark Forest", "Fairie", "Jade Sea", "Shambhalla","Other"]; 
  countryLists["Wyrdborn"] = ["Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
  */ 
  function countryChange(selectObj) { 
- // get the index of the selected option 
  var idx = selectObj.selectedIndex; 
- // get the value of the selected option 
  var which = selectObj.options[idx].value; 
- // use the selected option value to retrieve the list of items from the countryLists array 
  cList = countryLists[which]; 
- // get the country select element via its known id 
  var cSelect = document.getElementById("country"); 
- // remove the current options from the country select 
  var len=cSelect.options.length; 
- while (cSelect.options.length > 0) { 
- cSelect.remove(0); 
- } 
+ while (cSelect.options.length > 0) { cSelect.remove(0);} 
  var newOption; 
- // create new options 
  for (var i=0; i<cList.length; i++) { 
  newOption = document.createElement("option"); 
  newOption.value = cList[i];  // assumes option string and value are the same 
  newOption.text=cList[i]; 
- // add the new option 
- try { 
- cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
- } 
- catch (e) { 
- cSelect.appendChild(newOption); 
- } 
  } 
  } 
  /*
@@ -187,9 +172,9 @@ function originSpawn(selectObj){
     <option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
   </select>
   <br>
-  <label for="country">Select a country</label>
+  <label for="country">Select an Origin </label>
   <select id="country">
-    <option value="0">Select a country</option>
+    <option value="0">Select an Origin </option>
   <br>
     <br>
    
