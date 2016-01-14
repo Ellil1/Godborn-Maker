@@ -15,7 +15,7 @@
 	<script>
 
 // array of possible countries in the same order as they appear in the country selection list 
- var countryLists = new Array(3) 
+  var countryLists = new Array(3) 
  countryLists["empty"] = ["Select a Country"]; 
  countryLists["Godborn"] = ["Canada", "United States", "Mexico"]; 
  countryLists["Mythborn"] = ["Brazil", "Argentina", "Chile", "Ecuador"]; 
@@ -23,7 +23,9 @@
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
  */ 
- function countryChange(selectObj) { 
+
+
+ function countryChange(selectObj,chosenButton) { 
  // get the index of the selected option 
  var idx = selectObj.selectedIndex; 
  // get the value of the selected option 
@@ -31,7 +33,7 @@
  // use the selected option value to retrieve the list of items from the countryLists array 
  cList = countryLists[which]; 
  // get the country select element via its known id 
- var cSelect = document.getElementById("country"); 
+ var cSelect = document.getElementById(chosenButton); 
  // remove the current options from the country select 
  var len=cSelect.options.length; 
  while (cSelect.options.length > 0) { 
@@ -70,10 +72,10 @@
 </select>
 
   <h1>Dynamic Select Statements</h1>
-  <label for="continent">Select Continent</label>
-  <select id="continent" onchange="countryChange(this);">
-    <option value="empty">Select a Continent</option>
-    <option value="Goborn">Godborn - God + Human</option>
+  <label for="continent">Select Type</label>
+  <select id="continent" onchange="countryChange(this,"country");">
+    <option value="empty">Select Type</option>
+    <option value="Godborn">Godborn - God + Human</option>
     <option value="Mythborn">Mythborn - Legendary Creature</option>
     <option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
   </select>
