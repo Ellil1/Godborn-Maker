@@ -11,12 +11,11 @@
 	<script>
 
 // array of possible countries in the same order as they appear in the country selection list 
- var countryLists = new Array(4) 
+ var countryLists = new Array(3) 
  countryLists["empty"] = ["Select a Country"]; 
- countryLists["North America"] = ["Canada", "United States", "Mexico"]; 
- countryLists["South America"] = ["Brazil", "Argentina", "Chile", "Ecuador"]; 
- countryLists["Asia"] = ["Russia", "China", "Japan"]; 
- countryLists["Europe"]= ["Britain", "France", "Spain", "Germany"]; 
+ countryLists["Godborn"] = ["Canada", "United States", "Mexico"]; 
+ countryLists["Mythborn"] = ["Brazil", "Argentina", "Chile", "Ecuador"]; 
+ countryLists["Wyrdborn"] = ["Russia", "China", "Japan"]; 
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
  */ 
@@ -70,10 +69,9 @@
   <label for="continent">Select Continent</label>
   <select id="continent" onchange="countryChange(this);">
     <option value="empty">Select a Continent</option>
-    <option value="North America">North America</option>
-    <option value="South America">South America</option>
-    <option value="Asia">Asia</option>
-    <option value="Europe">Europe</option>
+    <option value="Goborn">Godborn - God + Human</option>
+    <option value="Mythborn">Mythborn - Legendary Creature</option>
+    <option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
   </select>
   <br/>
   <label for="country">Select a country</label>
