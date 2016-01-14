@@ -52,6 +52,46 @@
  } 
  } 
  } 
+ 
+   var rolesLists = new Array(5) 
+ rolesLists["empty"] = ["Select a Main Role"]; 
+ rolesLists["Meat Shield"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ rolesLists["Damage Dealer"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ rolesLists["Party Face"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+ rolesLists["Skill Monkey"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+ rolesLists["Support-Controller"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+ /* CountryChange() is called from the onchange event of a select element. 
+ * param selectObj - the select object which fired the on change event. 
+ */ 
+ function rolesChange(selectObj2) { 
+ // get the index of the selected option 
+ var idx = selectObj2.selectedIndex; 
+ // get the value of the selected option 
+ var which = selectObj2.options[idx].value; 
+ // use the selected option value to retrieve the list of items from the countryLists array 
+ cList2 = rolesLists[which]; 
+ // get the country select element via its known id 
+ var cSelect = document.getElementById("secondRole"); 
+ // remove the current options from the country select 
+ var len=cSelect.options.length; 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
+ var newOption; 
+ // create new options 
+ for (var i=0; i<cList2.length; i++) { 
+ newOption = document.createElement("option"); 
+ newOption.value = cList2[i];  // assumes option string and value are the same 
+ newOption.text=cList2[i]; 
+ // add the new option 
+ try { 
+ cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
+ } 
+ catch (e) { 
+ cSelect.appendChild(newOption); 
+ } 
+ } 
+ } 
 </script>
     <title>Scion-maker by Ellil1</title>
   </head>
@@ -65,7 +105,22 @@
     </header>
 
 
-  <h1>Dynamic Select Statements</h1>
+<br>
+  <label for="mainRole">Select Main Role</label>
+  <select id="mainRole" onchange="rolesChange(this);">
+    <option value="empty">Select Role</option>
+    <option value="Meat Shield"> Meat Shield</option>
+    <option value="Damage Dealer">Damage Dealer</option>
+    <option value="Party Face">Party Face</option>
+    <option value="Skill Monkey">Skill Monkey</option>
+    <option value="Support/Controller">Support/Controller</option>
+
+  </select>
+  
+<label for="secondRole">Select a Second Role</label>
+  <select id="secondRole">
+    <option value="0">Select a Second Role</option> 
+  </select>
   <label for="continent">Select Type</label>
   <select id="continent" onchange="countryChange(this);">
     <option value="empty">Select Type</option>
