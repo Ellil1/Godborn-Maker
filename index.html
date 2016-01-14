@@ -13,13 +13,18 @@
 
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script>
+	
 
+
+ //__________________________________________________
+// Types 
+ 
 // array of possible countries in the same order as they appear in the country selection list 
   var countryLists = new Array(3) 
  countryLists["empty"] = ["Select a Country"]; 
- countryLists["Godborn"] = ["Canada", "United States", "Mexico"]; 
- countryLists["Mythborn"] = ["Brazil", "Argentina", "Chile", "Ecuador"]; 
- countryLists["Wyrdborn"] = ["Russia", "China", "Japan"]; 
+ countryLists["Godborn"] = ["Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+ countryLists["Mythborn"] = ["Dark Forest", "Fairie", "Jade Sea", "Shambhalla"]; 
+ countryLists["Wyrdborn"] = ["Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
  */ 
@@ -52,6 +57,55 @@
  } 
  } 
  } 
+ /*
+ //__________________________________________________
+// Origin 	
+
+function originSpawn(selectObj){
+	
+}
+  var originLists = new Array(5) 
+ originLists["empty"] = ["Select a Main Role"]; 
+ originLists["Meat Shield"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ originLists["Damage Dealer"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+ originLists["Party Face"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+ originLists["Skill Monkey"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+ originLists["Support-Controller"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+ /* CountryChange() is called from the onchange event of a select element. 
+ * param selectObj - the select object which fired the on change event. 
+ 
+ function rolesChange(selectObj2) { 
+ // get the index of the selected option 
+ var idx = selectObj2.selectedIndex; 
+ // get the value of the selected option 
+ var which = selectObj2.options[idx].value; 
+ // use the selected option value to retrieve the list of items from the countryLists array 
+ cList2 = rolesLists[which]; 
+ // get the country select element via its known id 
+ var cSelect = document.getElementById("secondRole"); 
+ // remove the current options from the country select 
+ var len=cSelect.options.length; 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
+ var newOption; 
+ // create new options 
+ for (var i=0; i<cList2.length; i++) { 
+ newOption = document.createElement("option"); 
+ newOption.value = cList2[i];  // assumes option string and value are the same 
+ newOption.text=cList2[i]; 
+ // add the new option 
+ try { 
+ cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
+ } 
+ catch (e) { 
+ cSelect.appendChild(newOption); 
+ } 
+ } 
+ } 
+  */ 
+  //__________________________________________________
+// Roles
  
    var rolesLists = new Array(5) 
  rolesLists["empty"] = ["Select a Main Role"]; 
@@ -103,6 +157,7 @@
         <h2></h2>
       </div>
     </header>
+<br>
 
 
 <br>
@@ -117,11 +172,13 @@
 
   </select>
     <br>
+    
 <label for="secondRole">Select a Second Role</label>
   <select id="secondRole">
     <option value="0">Select a Second Role</option> 
   </select>
     <br>
+      <br>
   <label for="continent">Select Type</label>
   <select id="continent" onchange="countryChange(this);">
     <option selected value="empty">Select Type</option>
@@ -133,6 +190,13 @@
   <label for="country">Select a country</label>
   <select id="country">
     <option value="0">Select a country</option>
+  <br>
+    <br>
+   
+    <br>
+    <br>    
+    
+    
   </select>
      </section>
 
