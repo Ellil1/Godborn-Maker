@@ -25,7 +25,7 @@
  */ 
 
 
- function countryChange(selectObj,chosenButton) { 
+ function countryChange(selectObj) { 
  // get the index of the selected option 
  var idx = selectObj.selectedIndex; 
  // get the value of the selected option 
@@ -33,7 +33,7 @@
  // use the selected option value to retrieve the list of items from the countryLists array 
  cList = countryLists[which]; 
  // get the country select element via its known id 
- var cSelect = document.getElementById(chosenButton); 
+ var cSelect = document.getElementById("country"); 
  // remove the current options from the country select 
  var len=cSelect.options.length; 
  while (cSelect.options.length > 0) { 
