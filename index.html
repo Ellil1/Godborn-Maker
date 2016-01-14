@@ -4,29 +4,51 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+
+
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script>
 
-$(function(){
-    $("#model").hide();  // By default use jQuery to hide the second modal
-
-    // We can use the change(); function to watch the state of the select box and run some conditional logic every time it's changes to hide or show the second select box
-    $("#manufacturer").change(function(){
-        if( $(".default").is(:selected) ){
-            $("#model").hide();
-        } else {
-            $("#model").show();
-        }
-    });
-});
+// array of possible countries in the same order as they appear in the country selection list 
+ var countryLists = new Array(4) 
+ countryLists["empty"] = ["Select a Country"]; 
+ countryLists["North America"] = ["Canada", "United States", "Mexico"]; 
+ countryLists["South America"] = ["Brazil", "Argentina", "Chile", "Ecuador"]; 
+ countryLists["Asia"] = ["Russia", "China", "Japan"]; 
+ countryLists["Europe"]= ["Britain", "France", "Spain", "Germany"]; 
+ /* CountryChange() is called from the onchange event of a select element. 
+ * param selectObj - the select object which fired the on change event. 
+ */ 
+ function countryChange(selectObj) { 
+ // get the index of the selected option 
+ var idx = selectObj.selectedIndex; 
+ // get the value of the selected option 
+ var which = selectObj.options[idx].value; 
+ // use the selected option value to retrieve the list of items from the countryLists array 
+ cList = countryLists[which]; 
+ // get the country select element via its known id 
+ var cSelect = document.getElementById("country"); 
+ // remove the current options from the country select 
+ var len=cSelect.options.length; 
+ while (cSelect.options.length > 0) { 
+ cSelect.remove(0); 
+ } 
+ var newOption; 
+ // create new options 
+ for (var i=0; i<cList.length; i++) { 
+ newOption = document.createElement("option"); 
+ newOption.value = cList[i];  // assumes option string and value are the same 
+ newOption.text=cList[i]; 
+ // add the new option 
+ try { 
+ cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
+ } 
+ catch (e) { 
+ cSelect.appendChild(newOption); 
+ } 
+ } 
+ } 
 </script>
     <title>Scion-maker by Ellil1</title>
   </head>
@@ -44,16 +66,20 @@ $(function(){
     <option value="Manufacturer Two">Manufacturer Two</option>
 </select>
 
-<select name="model" id="model"> 
-    <option value="" selected>(select)</option>
-    <option value="Model One">Model One</option>
-    <option value="Model Two">Model Two</option>
-</select>
-
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-<a href="http://www.codecademy.com">My Favorite Site!</a>          
+  <h1>Dynamic Select Statements</h1>
+  <label for="continent">Select Continent</label>
+  <select id="continent" onchange="countryChange(this);">
+    <option value="empty">Select a Continent</option>
+    <option value="North America">North America</option>
+    <option value="South America">South America</option>
+    <option value="Asia">Asia</option>
+    <option value="Europe">Europe</option>
+  </select>
+  <br/>
+  <label for="country">Select a country</label>
+  <select id="country">
+    <option value="0">Select a country</option>
+  </select>
      </section>
 
 
