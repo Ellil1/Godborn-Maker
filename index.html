@@ -93,20 +93,31 @@
 	// Origins Test, trying to make a select box appear based on other select boxes
 	
 	function test() {
+// Mythborn Options
 	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block'} 
 	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourt').style.display = 'block'} 
 	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourt').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhalla').style.display = 'block'};
+	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhalla').style.display = 'block'}
+// God Options
+	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesir').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukami').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlanti').style.display = 'block'};
 
 	}
 	
 	function hide() {
+// Mythborn Options
 	document.getElementById('darkForest').style.display = 'none' 
 	document.getElementById('summerCourt').style.display = 'none' 
 	document.getElementById('jadeSea').style.display = 'none'
 	document.getElementById('winterCourt').style.display = 'none'
-	document.getElementById('shambhalla').style.display = 'none';
+	document.getElementById('shambhalla').style.display = 'none'
+// God Options
+	document.getElementById('aesir').style.display = 'none'
+	document.getElementById('amatsukami').style.display = 'none'
+	document.getElementById('atzlanti').style.display = 'none';
+	
 	}
 	
 	</script>
@@ -158,6 +169,7 @@
 
 	
 	<select id="test" name="test" style="display: none">
+<!-- Dark Forest -->
 	
 	</select>
 	<select id="darkForest" name="darkForest" style="display: none">
@@ -165,6 +177,10 @@
 	<option value="Garou">Garou</option>
 	<option value="Nymph">Nymph</option>
 	</select>
+	
+<!-- Summer Court -->
+	
+	
 <select id="summerCourt" name="summerCourt" style="display: none">
     <option value="Summer Fey">Summer Fey</option>
     <option value="Summer Elf">Summer Elf</option>
@@ -172,6 +188,10 @@
     <option value="Summer Pixie">Summer Pixie</option>
     <option value="Summer Nymph">Summer Nymph</option>
 </select>
+
+<!-- Winter Court -->
+
+
 <select id="winterCourt" name="winterCourt" style="display: none">
     <option value="Winter Fey">Winter Fey</option>
     <option value="Winter Elf">Winter Elf</option>
@@ -179,6 +199,9 @@
     <option value="Winter Pixie">Winter Pixie</option>
     <option value="Winter Nymph">Winter Nymph</option>
 </select>
+
+<!-- Jade Sea -->
+
 	
 <select id="jadeSea" name="jadeSea" style="display: none">
 <option value="Eastern Dragon">Eastern Dragon</option>
@@ -186,12 +209,55 @@
 <option value="Naga">Naga</option>
 <option value="Coatl">Coatl</option>
 </select>
+
+<!-- Shambhalla -->
+
 <select id="shambhalla" name="shambhalla" style="display: none">
     <option value="Asura">Asura</option>
     <option value="Rakshasa">Rakshasa</option>
     <option value="Naga">Naga</option>
 </select>
 
+<!-- Aesir -->
+<select id="aesir" name="aesir" style="display: none">
+    <option value="Baldur">Baldur</option>
+    <option value="Freya">Freya</option>
+    <option value="Freyr">Freyr</option>
+    <option value="Frigg">Frigg</option>
+    <option value="Heimdall">Heimdall</option>
+    <option value="Hel">Hel</option>
+    <option value="Loki">Loki</option>
+    <option value="Odin">Odin</option>
+    <option value="Sif">Sif</option>
+    <option value="Thor">Thor</option>
+    <option value="Tyr">Tyr</option>
+    <option value="Vidar">Vidar</option>
+    </select>
+    
+<!-- Amatsukami -->
+
+<select id="amatsukami" name="amatsukami" style="display: none">
+    <option value="Amaterasu">Amaterasu</option>
+    <option value="Hachiman">Hachiman</option>
+    <option value="Izanagi">Izanagi</option>
+    <option value="Izanami">Izanami</option>
+    <option value="Raiden">Raiden</option>
+    <option value="Ryujin">Ryujin</option>
+    <option value="Susano-o">Susano-o</option>
+    <option value="Tsuki-Yomi">Tsuki-Yomi</option>
+</select>
+<!-- Atzlánti -->
+
+<select id="atzlanti" name="atzlanti" style="display: none">
+    <option value="Ellykha">Ellykha</option>
+    <option value="Huitzilopochtli">Huitzilopochtli</option>
+    <option value="Miclántecuhtli">Miclántecuhtli</option>
+    <option value="Quetzalcoátl">Quetzalcoátl</option>
+    <option value="Tezcatlipoca">Tezcatlipoca</option>
+    <option value="Tlaloc">Tlaloc</option>
+    <option value="Tlazoltéotl">Tlazoltéotl</option>
+    <option value="Xipe Totec">Xipe Totec</option>
+</select>
 
 <br>
 	
