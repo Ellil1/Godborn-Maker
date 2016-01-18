@@ -1,203 +1,215 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+<head>
+<meta charset='utf-8'>
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
 
+	<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
 
+	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
+	
+	
+	
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
 	<script>
 	
+	
+	
+	//__________________________________________________
+	// Types 
+	
+	// array of possible countries in the same order as they appear in the country selection list 
+	var countryLists = new Array(3) 
+	countryLists["empty"] = ["Select an Origin"]; 
+	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
+	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	/* CountryChange() is called from the onchange event of a select element. 
+	* param selectObj - the select object which fired the on change event. 
+	*/ 
+	
+	function countryChange(selectObj2) { 
+	var idx = selectObj2.selectedIndex; 
+	var which = selectObj2.options[idx].value; 
+	cList2 = countryLists[which]; 
+	var cSelect = document.getElementById("country"); 
+	var len=cSelect.options.length; 
+	while (cSelect.options.length > 0) { 
+	cSelect.remove(0); 
+	} 
+	var newOption; 
+	for (var i=0; i<cList2.length; i++) { 
+	newOption = document.createElement("option"); 
+	newOption.value = cList2[i]; // assumes option string and value are the same 
+	newOption.text=cList2[i]; 
+	try { 
+	cSelect.add(newOption); // this will fail in DOM browsers but is needed for IE 
+	} 
+	catch (e) { 
+	cSelect.appendChild(newOption); 
+	} 
+	} 
+	} 
+	
+	
+	//__________________________________________________
+	// Roles
+	
+	var rolesLists = new Array(5) 
+	rolesLists["empty"] = ["Select a Main Role"]; 
+	rolesLists["Meat Shield"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Damage Dealer"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Party Face"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Skill Monkey"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+	rolesLists["Support-Controller"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	
+	function rolesChange(selectObj2) { 
+	var idx = selectObj2.selectedIndex; 
+	var which = selectObj2.options[idx].value; 
+	cList2 = rolesLists[which]; 
+	var cSelect = document.getElementById("secondRole"); 
+	var len=cSelect.options.length; 
+	while (cSelect.options.length > 0) { cSelect.remove(0); } 
+	var newOption; 
+	for (var i=0; i<cList2.length; i++) { 
+	newOption = document.createElement("option"); 
+	newOption.value = cList2[i]; // assumes option string and value are the same 
+	newOption.text=cList2[i]; 
+	try { 
+	cSelect.add(newOption); // this will fail in DOM browsers but is needed for IE 
+	} 
+	catch (e) { 
+	cSelect.appendChild(newOption); 
+	} 
+	} 
+	} 
+	
+	// ______________________________________________
+	// Origins Test, trying to make a select box appear based on other select boxes
+	
+	function test() {
+	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block'} 
+	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourt').style.display = 'block'} 
+	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourt').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhalla').style.display = 'block'};
 
+	}
+	
+	function hide() {
+	document.getElementById('darkForest').style.display = 'none' 
+	document.getElementById('summerCourt').style.display = 'none' 
+	document.getElementById('jadeSea').style.display = 'none'
+	document.getElementById('winterCourt').style.display = 'none'
+	document.getElementById('shambhalla').style.display = 'none';
+	}
+	
+	</script>
+	<title>Scion-maker by Ellil1</title>
+	</head>
+	
+	<body>
+	<header>
+	<div class="inner">
+	<h1>Scion-maker</h1>
+	<h2></h2>
+	</div>
+	</header>
+	<br>
+	
+	
+	<br>
+	<label for="mainRole">Select Main Role</label>
+	<select id="mainRole" onchange="rolesChange(this);">
+	<option selected value="empty">Select Role</option>
+	<option value="Meat Shield"> Meat Shield</option>
+	<option value="Damage Dealer">Damage Dealer</option>
+	<option value="Party Face">Party Face</option>
+	<option value="Skill Monkey">Skill Monkey</option>
+	<option value="Support-Controller">Support/Controller</option>
+	
+	</select>
+	<br>
+	
+	<label for="secondRole">Select a Second Role</label>
+	<select id="secondRole">
+	<option value="empty">Select a Second Role</option> 
+	</select>
+	<br>
+	<br>
+	<label for="continent">Select Type</label>
+	<select id="continent" onchange="countryChange(this);">
+	<option selected value="empty">Select Type</option>
+	<option value="Godborn">Godborn - God + Human</option>
+	<option value="Mythborn">Mythborn - Legendary Creature</option>
+	<option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
+	</select>
+	<br>
+	<label for="country">Select an Origin </label>
+	<select id="country" onchange="
+	hide();
+	test();">
+	<option value="empty">Select an Origin </option>
 
- //__________________________________________________
-// Types 
- 
-// array of possible countries in the same order as they appear in the country selection list 
-  var countryLists = new Array(3) 
- countryLists["empty"] = ["Select an Origin"]; 
- countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
- countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
- countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
- /* CountryChange() is called from the onchange event of a select element. 
- * param selectObj - the select object which fired the on change event. 
- */ 
-
- function countryChange(selectObj2) { 
- var idx = selectObj2.selectedIndex; 
- var which = selectObj2.options[idx].value; 
- cList2 = countryLists[which]; 
- var cSelect = document.getElementById("country"); 
- var len=cSelect.options.length; 
- while (cSelect.options.length > 0) { 
- cSelect.remove(0); 
- } 
- var newOption; 
- for (var i=0; i<cList2.length; i++) { 
- newOption = document.createElement("option"); 
- newOption.value = cList2[i];  // assumes option string and value are the same 
- newOption.text=cList2[i]; 
- try { 
- cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
- } 
- catch (e) { 
- cSelect.appendChild(newOption); 
- } 
- } 
- } 
- 
- 
-  //__________________________________________________
-// Roles
- 
-   var rolesLists = new Array(5) 
- rolesLists["empty"] = ["Select a Main Role"]; 
- rolesLists["Meat Shield"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
- rolesLists["Damage Dealer"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
- rolesLists["Party Face"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
- rolesLists["Skill Monkey"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
- rolesLists["Support-Controller"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-
- function rolesChange(selectObj2) { 
- var idx = selectObj2.selectedIndex; 
- var which = selectObj2.options[idx].value; 
- cList2 = rolesLists[which]; 
- var cSelect = document.getElementById("secondRole"); 
- var len=cSelect.options.length; 
- while (cSelect.options.length > 0) { cSelect.remove(0);  } 
- var newOption; 
- for (var i=0; i<cList2.length; i++) { 
- newOption = document.createElement("option"); 
- newOption.value = cList2[i];  // assumes option string and value are the same 
- newOption.text=cList2[i]; 
- try { 
- cSelect.add(newOption);  // this will fail in DOM browsers but is needed for IE 
- } 
- catch (e) { 
- cSelect.appendChild(newOption); 
- } 
- } 
- } 
- 
-// ______________________________________________
-// Origins Test, trying to make a select box appear based on other select boxes
-
-function test() {
-    if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block'} 
-else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourt').style.display = 'block'}     
-else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'};
-    }
-    
-function hide() {
-document.getElementById('darkForest').style.display = 'none' 
-document.getElementById('fairie').style.display = 'none'     
-document.getElementById('jadeSea').style.display = 'none';
-    }
- 
-</script>
-    <title>Scion-maker by Ellil1</title>
-  </head>
-
-  <body>
-    <header>
-      <div class="inner">
-        <h1>Scion-maker</h1>
-        <h2></h2>
-      </div>
-    </header>
-<br>
-
-
-<br>
-  <label for="mainRole">Select Main Role</label>
-  <select id="mainRole" onchange="rolesChange(this);">
-    <option selected value="empty">Select Role</option>
-    <option value="Meat Shield"> Meat Shield</option>
-    <option value="Damage Dealer">Damage Dealer</option>
-    <option value="Party Face">Party Face</option>
-    <option value="Skill Monkey">Skill Monkey</option>
-    <option value="Support-Controller">Support/Controller</option>
-
-  </select>
-    <br>
-    
-<label for="secondRole">Select a Second Role</label>
-  <select id="secondRole">
-    <option value="empty">Select a Second Role</option> 
-  </select>
-    <br>
-      <br>
-  <label for="continent">Select Type</label>
-  <select id="continent" onchange="countryChange(this);">
-    <option selected value="empty">Select Type</option>
-    <option value="Godborn">Godborn - God + Human</option>
-    <option value="Mythborn">Mythborn - Legendary Creature</option>
-    <option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
-  </select>
-  <br>
-  <label for="country">Select an Origin </label>
-  <select id="country" onchange="
-  hide();
-  test();">
-    <option value="empty">Select an Origin </option>
-  <br>
-  
-  <select id="test" name="test" style="display: none">
-
-</select>
-<select id="darkForest" name="darkForest" style="display: none">
-    <option value="Ent">Ent</option>
-    <option value="Garou">Garou</option>
-    <option value="Nymph">Nymph</option>
-</select>
+	
+	<select id="test" name="test" style="display: none">
+	
+	</select>
+	<select id="darkForest" name="darkForest" style="display: none">
+	<option value="Ent">Ent</option>
+	<option value="Garou">Garou</option>
+	<option value="Nymph">Nymph</option>
+	</select>
 <select id="summerCourt" name="summerCourt" style="display: none">
-    <option value="Summer Fey">Fey</option>
-    <option value="Summer Elf">Elf</option>
-    <option value="Summer Small Folk">Small Folk</option>
-    <option value="Summer Pixie">Pixie</option>
-    <option value="Summer Nymph">Nymph</option>
+    <option value="Summer Fey">Summer Fey</option>
+    <option value="Summer Elf">Summer Elf</option>
+    <option value="Summer Small Folk">Summer Small Folk</option>
+    <option value="Summer Pixie">Summer Pixie</option>
+    <option value="Summer Nymph">Summer Nymph</option>
 </select>
 <select id="winterCourt" name="winterCourt" style="display: none">
-    <option value="Winter Fey">Fey</option>
-    <option value="Winter Elf">Elf</option>
-    <option value="Winter Small Folk">Small Folk</option>
-    <option value="Winter Pixie">Pixie</option>
-    <option value="Winter Nymph">Nymph</option>
+    <option value="Winter Fey">Winter Fey</option>
+    <option value="Winter Elf">Winter Elf</option>
+    <option value="Winter Small Folk">Winter Small Folk</option>
+    <option value="Winter Pixie">Winter Pixie</option>
+    <option value="Winter Nymph">Winter Nymph</option>
 </select>
+	
 <select id="jadeSea" name="jadeSea" style="display: none">
-    <option value="Eastern Dragon">Eastern Dragon</option>
-    <option value="Western Dragon">Western Dragon</option>
-    <option value="Naga">Naga</option>
+<option value="Eastern Dragon">Eastern Dragon</option>
+<option value="Western Dragon">Western Dragon</option>
+<option value="Naga">Naga</option>
+<option value="Coatl">Coatl</option>
 </select>
 <select id="shambhalla" name="shambhalla" style="display: none">
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
+    <option value="Asura">Asura</option>
+    <option value="Rakshasa">Rakshasa</option>
+    <option value="Naga">Naga</option>
 </select>
 
+
 <br>
-   
-    <br>
-    <br>    
-    
-    
-  </select>
-     </section>
-
-
-
-
-        </aside>
-      </div>
-    </div>
-
-  
-  </body>
-</html>
+	
+	<br>
+	<br> 
+	
+	
+	</select>
+	</section>
+	
+	
+	
+	
+	</aside>
+	</div>
+	</div>
+	
+	
+	</body>
+	</html>
+	
