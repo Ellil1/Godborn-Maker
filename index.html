@@ -23,7 +23,7 @@
   var countryLists = new Array(3) 
  countryLists["empty"] = ["Select an Origin"]; 
  countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
- countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Fairie", "Jade Sea", "Shambhalla","Other"]; 
+ countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
  countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
  /* CountryChange() is called from the onchange event of a select element. 
  * param selectObj - the select object which fired the on change event. 
@@ -90,7 +90,7 @@
 
 function test() {
     if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block'} 
-else if (document.getElementById('country').value == 'Fairie') {document.getElementById('fairie').style.display = 'block'}     
+else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourt').style.display = 'block'}     
 else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'};
     }
     
@@ -156,10 +156,12 @@ document.getElementById('jadeSea').style.display = 'none';
     <option value="Garou">Garou</option>
     <option value="Nymph">Nymph</option>
 </select>
-<select id="fairie" name="fairie" style="display: none">
+<select id="summerCourt" name="summerCourt" style="display: none">
     <option value="Fey">Fey</option>
     <option value="Elf">Elf</option>
     <option value="Small Folk">Small Folk</option>
+    <option value="Small Folk">Small Folk</option>
+
 </select>
 
 <select id="jadeSea" name="jadeSea" style="display: none">
