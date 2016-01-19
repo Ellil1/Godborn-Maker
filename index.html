@@ -26,10 +26,10 @@
 	// array of possible countries in the same order as they appear in the country selection list 
 	var countryLists = new Array(3) 
 	countryLists["empty"] = ["Select an Origin"]; 
-	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
-	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Loa: Voodoo Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	/* CountryChange() is called from the onchange event of a select element. 
+	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
 	*/ 
 	
@@ -102,7 +102,11 @@
 // God Options
 	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesir').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukami').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlanti').style.display = 'block'};
+	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlanti').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Celestial Bureaucracy: Chinese Gods') {document.getElementById('celestialBureaucracy').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Deva: Hindu Gods') {document.getElementById('deva').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheon').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orisha').style.display = 'block'};
 
 	}
 	
@@ -116,8 +120,12 @@
 // God Options
 	document.getElementById('aesir').style.display = 'none'
 	document.getElementById('amatsukami').style.display = 'none'
-	document.getElementById('atzlanti').style.display = 'none';
-	
+	document.getElementById('atzlanti').style.display = 'none'
+	document.getElementById('celestialBureaucracy').style.display = 'none'
+	document.getElementById('deva').style.display = 'none'
+	document.getElementById('dodekatheon').style.display = 'none'
+	document.getElementById('orisha').style.display = 'none';
+		
 	}
 	
 	</script>
@@ -261,7 +269,7 @@
 
 <!-- Celestial Bureaucracy -->
 
-<select id="Celestial Bureaucracy" name="Celestial Bureaucracy" style="display: none">
+<select id="celestialBureaucracy" name="celestialBureaucracy" style="display: none">
     <option value="Chang'e">Chang'e</option>
     <option value="Fuxi">Fuxi</option>
      <option value="Guanyin">Guanyin</option>
@@ -274,10 +282,11 @@
     <option value="Sun Wukong">Sun Wukong</option>
     <option value="Xiwangmu">Xiwangmu</option>
     <option value="Yanluo">Yanluo</option>
+</select>
 
 <!-- Deva -->
    
-<select id="Deva" name="Deva" style="display: none">
+<select id="deva" name="deva" style="display: none">
     <option value="Agni">Agni</option>
     <option value="Brahma">Brahma</option>    
     <option value="Ganesha">Ganesha</option>
@@ -290,23 +299,48 @@
     <option value="Surya">Surya</option>     
     <option value="Vishnu">Vishnu</option>
     <option value="Yama">Yama</option>     
+</select>
 
 <!-- Dodekatheon -->
 
+<select id="dodekatheon" name="dodekatheon" style="display: none">
+    <option value="Aphrodite">Aphrodite</option>
+    <option value="Apollo">Apollo</option>
+    <option value="Archimedes">Archimedes</option>
+    <option value="Ares">Ares</option>
+    <option value="Artemis">Artemis</option>
+    <option value="Athena">Athena</option>
+    <option value="Dionysus">Dionysus</option>
+    <option value="Gerald">Gerald</option>
+    <option value="Hades">Hades</option>
+    <option value="Hephaestus">Hephaestus</option>
+    <option value="Hera">Hera</option>
+    <option value="Herakles">Herakles</option>
+    <option value="Hermes">Hermes</option>
+    <option value="Lyra">Lyra</option>
+    <option value="Poseidon">Poseidon</option>
+    <option value="Zeus">Zeus</option>
+</select>
+
+<!-- Orisha -->
+    
+<select id="orisha" name="orisha" style="display: none">
+    <option value="Anansi">Anansi</option>
+    <option value="Baron Samedi">Baron Samedi</option>
+    <option value="Damballa">Damballa</option>
+    <option value="Erzulie">Erzulie</option>
+    <option value="Kalfu">Kalfu</option>
+    <option value="Legba">Legba</option>
+    <option value="Ogoun">Ogoun</option>
+    <option value="Shango">Shango</option>
+</select>
+
+
+
 <select id="" name="" style="display: none">
     <option value=""></option>
     <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-    <option value=""></option>
-<select id="" name="" style="display: none">
-    <option value=""></option>
-    <option value=""></option>
+</select>
 
 <br>
 	
