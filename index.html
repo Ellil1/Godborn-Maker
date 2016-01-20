@@ -88,6 +88,39 @@
 	} 
 	} 
 	} 
+// Wyrdborn Options	
+	var godLists = new Array(9) 
+	godLists["empty"] = ["Select a Main Role"]; 
+	godLists["Aesir: Norse Gods"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	godLists["Amatsukami: Japanese Gods"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	godLists["Atzlánti: Aztec Gods"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+	godLists["Celestial Bureaucracy: Chinese Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+	godLists["Deva: Hindu Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Dodekatheon: Greek Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Orisha: African Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Pesedjet: Egyptian Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Tuatha Dé Danaan: Celtic Gods"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	
+	function speciesChangeChange(selectObj2) { 
+	var idx = selectObj2.selectedIndex; 
+	var which = selectObj2.options[idx].value; 
+	cList2 = godLists[which]; 
+	var cSelect = document.getElementById("secondRole"); 
+	var len=cSelect.options.length; 
+	while (cSelect.options.length > 0) { cSelect.remove(0); } 
+	var newOption; 
+	for (var i=0; i<cList2.length; i++) { 
+	newOption = document.createElement("option"); 
+	newOption.value = cList2[i]; // assumes option string and value are the same 
+	newOption.text=cList2[i]; 
+	try { 
+	cSelect.add(newOption); // this will fail in DOM browsers but is needed for IE 
+	} 
+	catch (e) { 
+	cSelect.appendChild(newOption); 
+	} 
+	} 
+	} 
 	
 	// ______________________________________________
 	// Origins Test, trying to make a select box appear based on other select boxes
@@ -99,6 +132,7 @@
 	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourt').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhalla').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Other') {document.getElementById('others').style.display = 'block'}
 // God Options
 	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesir').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukami').style.display = 'block'}
@@ -119,6 +153,7 @@
 	document.getElementById('jadeSea').style.display = 'none'
 	document.getElementById('winterCourt').style.display = 'none'
 	document.getElementById('shambhalla').style.display = 'none'
+	document.getElementById('others').style.display = 'none'
 // God Options
 	document.getElementById('aesir').style.display = 'none'
 	document.getElementById('amatsukami').style.display = 'none'
@@ -179,42 +214,50 @@
 	test();">
 	<option value="empty">Select an Origin </option>
 <br>
+
 	<select id="test" name="test" style="display: none">
+		
+		
 <!-- Dark Forest -->
 	
 	</select>
 	<select id="darkForest" name="darkForest" style="display: none">
-	<option value="Ent">Ent</option>
-	<option value="Garou">Garou</option>
-	<option value="Nymph">Nymph</option>
+    <option value="empty">Select a Species</option> 
+    <option value="Ent">Ent</option>
+    <option value="Nymph">Nymph</option>
+    <option value="Witch">Witch</option>
+
 	</select>
 	
 <!-- Summer Court -->
 	
 	
 <select id="summerCourt" name="summerCourt" style="display: none">
-    <option value="Summer Fey">Summer Fey</option>
-    <option value="Summer Elf">Summer Elf</option>
-    <option value="Summer Small Folk">Summer Small Folk</option>
-    <option value="Summer Pixie">Summer Pixie</option>
-    <option value="Summer Nymph">Summer Nymph</option>
+    <option value="empty">Select a Species</option> 
+    <option value="Summer Fey">Fey</option>
+    <option value="Summer Elf">Elf</option>
+    <option value="Summer Small Folk">Small Folk</option>
+    <option value="Summer Pixie">Pixie</option>
+    <option value="Summer Nymph">Nymph</option>
 </select>
 
 <!-- Winter Court -->
 
 
 <select id="winterCourt" name="winterCourt" style="display: none">
-    <option value="Winter Fey">Winter Fey</option>
-    <option value="Winter Elf">Winter Elf</option>
-    <option value="Winter Small Folk">Winter Small Folk</option>
-    <option value="Winter Pixie">Winter Pixie</option>
-    <option value="Winter Nymph">Winter Nymph</option>
+    <option value="empty">Select a Species</option> 
+    <option value="Winter Fey">Fey</option>
+    <option value="Winter Elf">Elf</option>
+    <option value="Winter Small Folk">Small Folk</option>
+    <option value="Winter Pixie">Pixie</option>
+    <option value="Winter Nymph">Nymph</option>
 </select>
 
 <!-- Jade Sea -->
 
 	
 <select id="jadeSea" name="jadeSea" style="display: none">
+    <option value="empty">Select a Species</option> 
 <option value="Eastern Dragon">Eastern Dragon</option>
 <option value="Western Dragon">Western Dragon</option>
 <option value="Naga">Naga</option>
@@ -224,13 +267,23 @@
 <!-- Shambhalla -->
 
 <select id="shambhalla" name="shambhalla" style="display: none">
+    <option value="empty">Select a Species</option> 
     <option value="Asura">Asura</option>
     <option value="Rakshasa">Rakshasa</option>
     <option value="Naga">Naga</option>
 </select>
 
+<!-- Others -->
+
+<select id="others" name="others" style="display: none">
+    <option value="empty">Select a Species</option> 
+    <option value="Dwarf">Dwarf</option>
+    <option value="Giant">Giant</option>
+</select>
+
 <!-- Aesir -->
 <select id="aesir" name="aesir" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Baldur">Baldur</option>
     <option value="Freya">Freya</option>
     <option value="Freyr">Freyr</option>
@@ -248,6 +301,7 @@
 <!-- Amatsukami -->
 
 <select id="amatsukami" name="amatsukami" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Amaterasu">Amaterasu</option>
     <option value="Hachiman">Hachiman</option>
     <option value="Izanagi">Izanagi</option>
@@ -260,6 +314,7 @@
 <!-- Atzlánti -->
 
 <select id="atzlanti" name="atzlanti" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Ellykha">Ellykha</option>
     <option value="Huitzilopochtli">Huitzilopochtli</option>
     <option value="Miclántecuhtli">Miclántecuhtli</option>
@@ -273,6 +328,7 @@
 <!-- Celestial Bureaucracy -->
 
 <select id="celestialBureaucracy" name="celestialBureaucracy" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Chang'e">Chang'e</option>
     <option value="Fuxi">Fuxi</option>
      <option value="Guanyin">Guanyin</option>
@@ -290,6 +346,7 @@
 <!-- Deva -->
    
 <select id="deva" name="deva" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Agni">Agni</option>
     <option value="Brahma">Brahma</option>    
     <option value="Ganesha">Ganesha</option>
@@ -307,6 +364,7 @@
 <!-- Dodekatheon -->
 
 <select id="dodekatheon" name="dodekatheon" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Aphrodite">Aphrodite</option>
     <option value="Apollo">Apollo</option>
     <option value="Archimedes">Archimedes</option>
@@ -328,6 +386,7 @@
 <!-- Orisha -->
     
 <select id="orisha" name="orisha" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Anansi">Anansi</option>
     <option value="Baron Samedi">Baron Samedi</option>
     <option value="Damballa">Damballa</option>
@@ -342,6 +401,7 @@
 
 
 <select id="pesedjet" name="pesedjet" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Anubis">Anubis</option>
     <option value="Atum Re">Atum Re</option>
     <option value="Bastet">Bastet</option>
@@ -362,6 +422,7 @@
 <!-- Tuatha Dé Danaan -->
 
 <select id="tuatha" name="tuatha" style="display: none">
+    <option value="empty">Select a God</option> 
     <option value="Aengus">Aengus</option>
     <option value="Brigid">Brigid</option>
     <option value="The Dagda">The Dagda</option>
@@ -373,7 +434,10 @@
     <option value="Ogma">Ogma</option>
 
 <br>
-	
+	<label for="wyrdbornOrigin">Select your Mythborn Species</label>
+	<select id="wyrdbornOrigin" onchange="speciesChange(this);>
+	<option value="empty">Select your Mythborn Species</option> 
+	</select>	
 	<br>
 	<br> 
 	
