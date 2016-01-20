@@ -90,7 +90,7 @@
 	} 
 // Wyrdborn Options	
 	var godLists = new Array(9) 
-	godLists["empty"] = ["Select a Main Role"]; 
+	godLists["empty"] = ["Select a Second Origin"]; 
 	godLists["Aesir: Norse Gods"] = ["Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
 	godLists["Amatsukami: Japanese Gods"] = ["Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
 	godLists["Atzlánti: Aztec Gods"] = ["Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
@@ -105,7 +105,7 @@
 	var idx = selectObj2.selectedIndex; 
 	var which = selectObj2.options[idx].value; 
 	cList2 = godLists[which]; 
-	var cSelect = document.getElementById("secondRole"); 
+	var cSelect = document.getElementById("wyrdbornOrigin"); 
 	var len=cSelect.options.length; 
 	while (cSelect.options.length > 0) { cSelect.remove(0); } 
 	var newOption; 
@@ -210,6 +210,7 @@
 	<br>
 	<label for="country">Select an Origin </label>
 	<select id="country" onchange="
+	rolesChange(this);
 	hide();
 	test();">
 	<option value="empty">Select an Origin </option>
@@ -435,7 +436,7 @@
 	</select>
 	
 <label for="wyrdbornOrigin">Select your Mythborn Species</label>
-<select id="wyrdbornOrigin" onchange="speciesChange(this);">
+<select id="wyrdbornOrigin">
 <option value="empty">Select your Mythborn Species</option> 
 </select>
 	</section>
