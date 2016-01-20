@@ -133,6 +133,7 @@
 	if (document.getElementById('continent').value == 'Wyrdborn') {document.getElementById('wyrdbornOrigin').style.display = 'block';document.getElementById('wyrdbornOriginLabel').style.display = 'block' } 
 	else {document.getElementById('wyrdbornOrigin').style.display = 'none';document.getElementById('wyrdbornOriginLabel').style.display = 'none' } 	
 	}
+	function wyrdbornHide(){document.getElementById('wyrdbornOrigin').style.display = 'none';document.getElementById('wyrdbornOriginLabel').style.display = 'none' }
 	function test() {
 // Mythborn Options
 	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block';document.getElementById('darkForestLabel').style.display = 'block' } 
@@ -226,7 +227,7 @@
 	</select>
 	<br>
 	<label for="continent">Select Type</label>
-	<select id="continent" onchange="countryChange(this); hide(); wyrdbornDisplay();">
+	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();">
 	<option selected value="empty">Select Type</option>
 	<option value="Godborn">Godborn - God + Human</option>
 	<option value="Mythborn">Mythborn - Legendary Creature</option>
