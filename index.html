@@ -12,7 +12,15 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
 	
-	
+
+<style>
+label {
+  width:200px;
+  display: inline-block;
+}
+
+
+</style>
 	
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
@@ -136,24 +144,25 @@
 	function wyrdbornHide(){document.getElementById('wyrdbornOrigin').style.display = 'none';document.getElementById('wyrdbornOriginLabel').style.display = 'none' }
 	function test() {
 // Mythborn Options
-	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForest').style.display = 'block';document.getElementById('darkForestLabel').style.display = 'block' } 
-	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourt').style.display = 'block'; document.getElementById('darkForestLabel').style.display = 'block'} 
-	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSea').style.display = 'block'; document.getElementById('jadeSeaLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourt').style.display = 'block'; document.getElementById('winterCourtLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhalla').style.display = 'block'; document.getElementById('shambhallaLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Other') {document.getElementById('others').style.display = 'block'; document.getElementById('othersLabel').style.display = 'block'}
+	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForestLabel').style.display = 'block';document.getElementById('darkForest').style.display = 'block' } 
+	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourtLabel').style.display = 'block'; document.getElementById('darkForest').style.display = 'block'} 
+	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSeaLabel').style.display = 'block'; document.getElementById('jadeSea').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourtLabel').style.display = 'block'; document.getElementById('winterCourt').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhallaLabel').style.display = 'block'; document.getElementById('shambhalla').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Other') {document.getElementById('othersLabel').style.display = 'block'; document.getElementById('others').style.display = 'block'}
 // God Options
-	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesir').style.display = 'block'; document.getElementById('aesirLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukami').style.display = 'block'; document.getElementById('amatsukamiLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlanti').style.display = 'block'; document.getElementById('atzlantiLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Celestial Bureaucracy: Chinese Gods') {document.getElementById('celestialBureaucracy').style.display = 'block'; document.getElementById('celestialBureaucracyLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Deva: Hindu Gods') {document.getElementById('deva').style.display = 'block'; document.getElementById('devaLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheon').style.display = 'block'; document.getElementById('dodekatheonLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orisha').style.display = 'block'; document.getElementById('orishaLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Pesedjet: Egyptian Gods') {document.getElementById('pesedjet').style.display = 'block'; document.getElementById('pesedjetLabel').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuatha').style.display = 'block'; document.getElementById('tuathaLabel').style.display = 'block'};
-
+	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesirLabel').style.display = 'block'; document.getElementById('aesir').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukamiLabel').style.display = 'block'; document.getElementById('amatsukami').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlantiLabel').style.display = 'block'; document.getElementById('atzlanti').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Celestial Bureaucracy: Chinese Gods') {document.getElementById('celestialBureaucracyLabel').style.display = 'block'; document.getElementById('celestialBureaucracy').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Deva: Hindu Gods') {document.getElementById('devaLabel').style.display = 'block'; document.getElementById('deva').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheonLabel').style.display = 'block'; document.getElementById('dodekatheon').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orishaLabel').style.display = 'block'; document.getElementById('orisha').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Pesedjet: Egyptian Gods') {document.getElementById('pesedjetLabel').style.display = 'block'; document.getElementById('pesedjet').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'};
 	}
+	
+
 	
 	function hide() {
 // Hide Boxes
@@ -243,13 +252,13 @@
         wyrdbornDisplay();">
 	<option value="empty">Select an Origin </option>
 	<select id="test" name="test" style="display: none">
-
+<br>
 	<br>		
 <!-- Dark Forest -->
 	
 	</select>
-	<label for="darkForest" id = darkForestLabel style="display: none">Select a Species</label>
-	<select id="darkForest" name="darkForest" style="display: none">
+	<label for="darkForest" id = darkForestLabel style="float:left;display: none">Select a Species</label>
+	<select id="darkForest" name="darkForest" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Ent">Ent</option>
     <option value="Nymph">Nymph</option>
@@ -259,8 +268,8 @@
 	
 <!-- Summer Court -->
 	
-	<label for="summerCourt" id = summerCourtLabel style="display: none">Select a Species</label>	
-<select id="summerCourt" name="summerCourt" style="display: none">
+	<label for="summerCourt" id = summerCourtLabel style="float:left;display: none">Select a Species</label>	
+<select id="summerCourt" name="summerCourt" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Summer Fey">Fey</option>
     <option value="Summer Elf">Elf</option>
@@ -271,8 +280,8 @@
 
 <!-- Winter Court -->
 
-<label for="winterCourt" id = winterCourtLabel style="display: none">Select a Species</label>	
-<select id="winterCourt" name="winterCourt" style="display: none">
+<label for="winterCourt" id = winterCourtLabel style="float:left;display: none">Select a Species</label>	
+<select id="winterCourt" name="winterCourt" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Winter Fey">Fey</option>
     <option value="Winter Elf">Elf</option>
@@ -283,8 +292,8 @@
 
 <!-- Jade Sea -->
 
-<label for="jadeSea" id = jadeSeaLabel style="display: none">Select a Species</label>		
-<select id="jadeSea" name="jadeSea" style="display: none">
+<label for="jadeSea" id = jadeSeaLabel style="float:left;display: none">Select a Species</label>		
+<select id="jadeSea" name="jadeSea" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
 <option value="Eastern Dragon">Eastern Dragon</option>
 <option value="Western Dragon">Western Dragon</option>
@@ -293,8 +302,8 @@
 </select>
 
 <!-- Shambhalla -->
-<label for="shambhalla" id = shambhallaLabel style="display: none">Select a Species</label>		
-<select id="shambhalla" name="shambhalla" style="display: none">
+<label for="shambhalla" id = shambhallaLabel style="float:left;display: none">Select a Species</label>		
+<select id="shambhalla" name="shambhalla" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Asura">Asura</option>
     <option value="Rakshasa">Rakshasa</option>
@@ -303,16 +312,16 @@
 
 <!-- Others -->
 
-<label for="others" id = othersLabel style="display: none">Select a Species</label>		
-<select id="others" name="others" style="display: none">
+<label for="others" id = othersLabel style="float:left;display: none">Select a Species</label>		
+<select id="others" name="others" style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Dwarf">Dwarf</option>
     <option value="Giant">Giant</option>
 </select>
 
 <!-- Aesir -->
-<label for="aesir" id = aesirLabel style="display: none">Select a God</label>	
-<select id="aesir" name="aesir" style="display: none">
+<label for="aesir" id = aesirLabel style="float:left;display: none">Select a God</label>	
+<select id="aesir" name="aesir" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Baldur">Baldur</option>
     <option value="Freya">Freya</option>
@@ -329,8 +338,8 @@
     </select>
     
 <!-- Amatsukami -->
-<label for="amatsukami" id = amatsukamiLabel style="display: none">Select a God</label>	
-<select id="amatsukami" name="amatsukami" style="display: none">
+<label for="amatsukami" id = amatsukamiLabel style="float:left;display: none">Select a God</label>	
+<select id="amatsukami" name="amatsukami" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Amaterasu">Amaterasu</option>
     <option value="Hachiman">Hachiman</option>
@@ -343,8 +352,8 @@
 </select>
 <!-- Atzlánti -->
 
-<label for="atzlanti" id = atzlantiLabel style="display: none">Select a God</label>	
-<select id="atzlanti" name="atzlanti" style="display: none">
+<label for="atzlanti" id = atzlantiLabel style="float:left;display: none">Select a God</label>	
+<select id="atzlanti" name="atzlanti" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Ellykha">Ellykha</option>
     <option value="Huitzilopochtli">Huitzilopochtli</option>
@@ -358,8 +367,8 @@
 
 <!-- Celestial Bureaucracy -->
 
-<label for="celestialBureaucracy" id = celestialBureaucracyLabel style="display: none">Select a God</label>	
-<select id="celestialBureaucracy" name="celestialBureaucracy" style="display: none">
+<label for="celestialBureaucracy" id = celestialBureaucracyLabel style="float:left;display: none">Select a God</label>	
+<select id="celestialBureaucracy" name="celestialBureaucracy" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Chang'e">Chang'e</option>
     <option value="Fuxi">Fuxi</option>
@@ -376,8 +385,8 @@
 </select>
 
 <!-- Deva -->
-<label for="deva" id = devaLabel style="display: none">Select a God</label>	   
-<select id="deva" name="deva" style="display: none">
+<label for="deva" id = devaLabel style="float:left;display: none">Select a God</label>	   
+<select id="deva" name="deva" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Agni">Agni</option>
     <option value="Brahma">Brahma</option>    
@@ -395,8 +404,8 @@
 
 <!-- Dodekatheon -->
 
-<label for="dodekatheon" id = dodekatheonLabel style="display: none">Select a God</label>	   
-<select id="dodekatheon" name="dodekatheon" style="display: none">
+<label for="dodekatheon" id = dodekatheonLabel style="float:left;display: none">Select a God</label>	   
+<select id="dodekatheon" name="dodekatheon" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aphrodite">Aphrodite</option>
     <option value="Apollo">Apollo</option>
@@ -418,8 +427,8 @@
 
 <!-- Orisha -->
     
-<label for="orisha" id = orishaLabel style="display: none">Select a God</label>	   
-<select id="orisha" name="orisha" style="display: none">
+<label for="orisha" id = orishaLabel style="float:left;display: none">Select a God</label>	   
+<select id="orisha" name="orisha" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anansi">Anansi</option>
     <option value="Baron Samedi">Baron Samedi</option>
@@ -434,8 +443,8 @@
 <!-- Pesedjet -->
 
 
-<label for="pesedjet" id = pesedjetLabel style="display: none">Select a God</label>	   
-<select id="pesedjet" name="pesedjet" style="display: none">
+<label for="pesedjet" id = pesedjetLabel style="float:left;display: none">Select a God</label>	   
+<select id="pesedjet" name="pesedjet" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anubis">Anubis</option>
     <option value="Atum Re">Atum Re</option>
@@ -456,8 +465,8 @@
 
 <!-- Tuatha Dé Danaan -->
 
-<label for="tuatha" id = tuathaLabel style="display: none">Select a God</label>	   
-<select id="tuatha" name="tuatha" style="display: none">
+<label for="tuatha" id = tuathaLabel style="float:left;display: none">Select a God</label>	   
+<select id="tuatha" name="tuatha" style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aengus">Aengus</option>
     <option value="Brigid">Brigid</option>
@@ -469,9 +478,10 @@
     <option value="Nuada">Nuada</option>
     <option value="Ogma">Ogma</option>
 	</select>
+<br><hr style="height:5px; visibility:hidden;" />
 
-<label for="wyrdbornOrigin" id = wyrdbornOriginLabel style="display: none">Select your Mythborn Species</label>
-<select id="wyrdbornOrigin" style="display: none">
+<label for="wyrdbornOrigin" id = wyrdbornOriginLabel style="float:left;display: none">Select your Mythborn Species</label>
+<select id="wyrdbornOrigin" style="float:left;display: none">
 <option value="empty">Select your Mythborn Species</option> 
 </select>
 
