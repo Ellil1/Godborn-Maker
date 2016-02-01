@@ -67,7 +67,17 @@ label {
 ChosenFirstRole = "Weep"
 ChosenSecondRole = "Wuup"
 ChosenGod = "Woop"	
-function setChosenGod(selectedBox,variableToChange){variableToChange = selectedBox.options[selectedBox.selectedIndex].value; alert(variableToChange);}	
+function setChosenGod(selectedBox){
+	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value; alert(ChosenGod);}
+
+function setFirstRole(selectedBox){
+	ChosenFirstRole = selectedBox.options[selectedBox.selectedIndex].value; alert(ChosenFirstRole);}
+
+function setSecondRole(selectedBox){
+	ChosenSecondRole = selectedBox.options[selectedBox.selectedIndex].value; alert(ChosenSecondRole);}
+
+
+	
 	//__________________________________________________
 	// Roles
 	
@@ -224,7 +234,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 	
 	<br>
 	<label for="mainRole">Select Main Role</label>
-	<select id="mainRole" onchange="rolesChange(this); setChosenGod(mainRole,ChosenFirstRole)" >
+	<select id="mainRole" onchange="rolesChange(this); setFirstRole(mainRole)" >
 	<option selected value="empty">Select Role</option>
 	<option value="Meat Shield"> Meat Shield</option>
 	<option value="Damage Dealer">Damage Dealer</option>
@@ -236,7 +246,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 	<br>
 	
 	<label for="secondRole" >Select a Second Role</label>
-	<select id="secondRole" onchange = setChosenGod(secondRole,ChosenSecondRole)>
+	<select id="secondRole" onchange = setSecondRole(secondRole)>
 	<option value="empty">Select a Second Role</option> 
 	</select>
 	<br>
@@ -263,7 +273,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 	
 	</select>
 	<label for="darkForest" id = darkForestLabel style="float:left;display: none">Select a Species</label>
-	<select id="darkForest" name="darkForest" onchange = setChosenGod(darkForest,ChosenGod) style="float:left;display: none">
+	<select id="darkForest" name="darkForest" onchange = setChosenGod(darkForest) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Ent">Ent</option>
     <option value="Nymph">Nymph</option>
@@ -274,7 +284,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Summer Court -->
 	
 	<label for="summerCourt" id = summerCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="summerCourt" name="summerCourt" onchange = setChosenGod(summerCourt,ChosenGod) style="float:left;display: none">
+<select id="summerCourt" name="summerCourt" onchange = setChosenGod(summerCourt) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Summer Fey">Fey</option>
     <option value="Summer Elf">Elf</option>
@@ -286,7 +296,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Winter Court -->
 
 <label for="winterCourt" id = winterCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="winterCourt" name="winterCourt"  onchange = setChosenGod(winterCourt,ChosenGod) style="float:left;display: none">
+<select id="winterCourt" name="winterCourt"  onchange = setChosenGod(winterCourt) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Winter Fey">Fey</option>
     <option value="Winter Elf">Elf</option>
@@ -298,7 +308,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Jade Sea -->
 
 <label for="jadeSea" id = jadeSeaLabel style="float:left;display: none">Select a Species</label>		
-<select id="jadeSea" name="jadeSea"  onchange = setChosenGod(jadeSea,ChosenGod) style="float:left;display: none">
+<select id="jadeSea" name="jadeSea"  onchange = setChosenGod(jadeSea) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
 <option value="Eastern Dragon">Eastern Dragon</option>
 <option value="Western Dragon">Western Dragon</option>
@@ -308,7 +318,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 
 <!-- Shambhalla -->
 <label for="shambhalla" id = shambhallaLabel style="float:left;display: none">Select a Species</label>		
-<select id="shambhalla" name="shambhalla"  onchange = setChosenGod(shambhalla,ChosenGod) style="float:left;display: none">
+<select id="shambhalla" name="shambhalla"  onchange = setChosenGod(shambhalla) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Asura">Asura</option>
     <option value="Rakshasa">Rakshasa</option>
@@ -318,7 +328,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Others -->
 
 <label for="others" id = othersLabel style="float:left;display: none">Select a Species</label>		
-<select id="others" name="others"  onchange = setChosenGod(others,ChosenGod) style="float:left;display: none">
+<select id="others" name="others"  onchange = setChosenGod(others) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Dwarf">Dwarf</option>
     <option value="Giant">Giant</option>
@@ -326,7 +336,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 
 <!-- Aesir -->
 <label for="aesir" id = aesirLabel style="float:left;display: none">Select a God</label>	
-<select id="aesir" name="aesir"  onchange = setChosenGod(aesir,ChosenGod) style="float:left;display: none">
+<select id="aesir" name="aesir"  onchange = setChosenGod(aesir) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Baldur">Baldur</option>
     <option value="Freya">Freya</option>
@@ -344,7 +354,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
     
 <!-- Amatsukami -->
 <label for="amatsukami" id = amatsukamiLabel style="float:left;display: none">Select a God</label>	
-<select id="amatsukami" name="amatsukami"  onchange = setChosenGod(amatsukami,ChosenGod) style="float:left;display: none">
+<select id="amatsukami" name="amatsukami"  onchange = setChosenGod(amatsukami) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Amaterasu">Amaterasu</option>
     <option value="Hachiman">Hachiman</option>
@@ -358,7 +368,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Atzlánti -->
 
 <label for="atzlanti" id = atzlantiLabel style="float:left;display: none">Select a God</label>	
-<select id="atzlanti" name="atzlanti"  onchange = setChosenGod(atzlanti,ChosenGod) style="float:left;display: none">
+<select id="atzlanti" name="atzlanti"  onchange = setChosenGod(atzlanti) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Ellykha">Ellykha</option>
     <option value="Huitzilopochtli">Huitzilopochtli</option>
@@ -373,7 +383,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Celestial Bureaucracy -->
 
 <label for="celestialBureaucracy" id = celestialBureaucracyLabel style="float:left;display: none">Select a God</label>	
-<select id="celestialBureaucracy" name="celestialBureaucracy"  onchange = setChosenGod(celestialBureaucracy,ChosenGod) style="float:left;display: none">
+<select id="celestialBureaucracy" name="celestialBureaucracy"  onchange = setChosenGod(celestialBureaucracy) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Chang'e">Chang'e</option>
     <option value="Fuxi">Fuxi</option>
@@ -391,7 +401,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 
 <!-- Deva -->
 <label for="deva" id = devaLabel style="float:left;display: none">Select a God</label>	   
-<select id="deva" name="deva"  onchange = setChosenGod(deva,ChosenGod) style="float:left;display: none">
+<select id="deva" name="deva"  onchange = setChosenGod(deva) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Agni">Agni</option>
     <option value="Brahma">Brahma</option>    
@@ -410,7 +420,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Dodekatheon -->
 
 <label for="dodekatheon" id = dodekatheonLabel style="float:left;display: none">Select a God</label>	   
-<select id="dodekatheon" name="dodekatheon"  onchange = setChosenGod(dodekatheon,ChosenGod) style="float:left;display: none">
+<select id="dodekatheon" name="dodekatheon"  onchange = setChosenGod(dodekatheon) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aphrodite">Aphrodite</option>
     <option value="Apollo">Apollo</option>
@@ -433,7 +443,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Orisha -->
     
 <label for="orisha" id = orishaLabel style="float:left;display: none">Select a God</label>	   
-<select id="orisha" name="orisha"  onchange = setChosenGod(orisha,ChosenGod) style="float:left;display: none">
+<select id="orisha" name="orisha"  onchange = setChosenGod(orisha) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anansi">Anansi</option>
     <option value="Baron Samedi">Baron Samedi</option>
@@ -449,7 +459,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 
 
 <label for="pesedjet" id = pesedjetLabel style="float:left;display: none">Select a God</label>	   
-<select id="pesedjet" name="pesedjet"  onchange = setChosenGod(pesedjet,ChosenGod) style="float:left;display: none">
+<select id="pesedjet" name="pesedjet"  onchange = setChosenGod(pesedjet) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anubis">Anubis</option>
     <option value="Atum Re">Atum Re</option>
@@ -471,7 +481,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
 <!-- Tuatha Dé Danaan -->
 
 <label for="tuatha" id = tuathaLabel style="float:left;display: none">Select a God</label>	   
-<select id="tuatha" name="tuatha"  onchange = setChosenGod(tuatha,ChosenGod) style="float:left;display: none">
+<select id="tuatha" name="tuatha"  onchange = setChosenGod(tuatha) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aengus">Aengus</option>
     <option value="Brigid">Brigid</option>
@@ -484,7 +494,7 @@ function setChosenGod(selectedBox,variableToChange){variableToChange = selectedB
     <option value="Ogma">Ogma</option>
 	</select>
 <br><br>
-<label for="wyrdbornOrigin" id = wyrdbornOriginLabel onchange = setChosenGod(tuatha,ChosenGod) style="float:left;display: none">Select your Mythborn Species</label>
+<label for="wyrdbornOrigin" id = wyrdbornOriginLabel onchange = setChosenGod(wyrdbornOrigin) style="float:left;display: none">Select your Mythborn Species</label>
 <select id="wyrdbornOrigin" style="float:left;display: none">
 <option value="empty">Select your Mythborn Species</option> 
 </select>
