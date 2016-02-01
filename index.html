@@ -63,8 +63,8 @@ label {
 	} 
 	} 
 	} 
-	
-	
+var ChosenGod = "Woop"	
+function setChosenGod(selectedBox){ChosenGod = selectedBox.options[selectedBox.selectedIndex].value; alert(ChosenGod)}	
 	//__________________________________________________
 	// Roles
 	
@@ -135,6 +135,8 @@ label {
 	} 
 	} 
 	
+
+
 	// ______________________________________________
 	// Origins Test, trying to make a select box appear based on other select boxes
 	function wyrdbornDisplay(){
@@ -258,7 +260,7 @@ label {
 	
 	</select>
 	<label for="darkForest" id = darkForestLabel style="float:left;display: none">Select a Species</label>
-	<select id="darkForest" name="darkForest" style="float:left;display: none">
+	<select id="darkForest" name="darkForest" onchange = setChosenGod(darkForest) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Ent">Ent</option>
     <option value="Nymph">Nymph</option>
@@ -269,7 +271,7 @@ label {
 <!-- Summer Court -->
 	
 	<label for="summerCourt" id = summerCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="summerCourt" name="summerCourt" style="float:left;display: none">
+<select id="summerCourt" name="summerCourt" onchange = setChosenGod(summerCourt) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Summer Fey">Fey</option>
     <option value="Summer Elf">Elf</option>
@@ -281,7 +283,7 @@ label {
 <!-- Winter Court -->
 
 <label for="winterCourt" id = winterCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="winterCourt" name="winterCourt" style="float:left;display: none">
+<select id="winterCourt" name="winterCourt"  onchange = setChosenGod(winterCourt) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Winter Fey">Fey</option>
     <option value="Winter Elf">Elf</option>
@@ -293,7 +295,7 @@ label {
 <!-- Jade Sea -->
 
 <label for="jadeSea" id = jadeSeaLabel style="float:left;display: none">Select a Species</label>		
-<select id="jadeSea" name="jadeSea" style="float:left;display: none">
+<select id="jadeSea" name="jadeSea"  onchange = setChosenGod(jadeSea) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
 <option value="Eastern Dragon">Eastern Dragon</option>
 <option value="Western Dragon">Western Dragon</option>
@@ -303,7 +305,7 @@ label {
 
 <!-- Shambhalla -->
 <label for="shambhalla" id = shambhallaLabel style="float:left;display: none">Select a Species</label>		
-<select id="shambhalla" name="shambhalla" style="float:left;display: none">
+<select id="shambhalla" name="shambhalla"  onchange = setChosenGod(shambhalla) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Asura">Asura</option>
     <option value="Rakshasa">Rakshasa</option>
@@ -313,7 +315,7 @@ label {
 <!-- Others -->
 
 <label for="others" id = othersLabel style="float:left;display: none">Select a Species</label>		
-<select id="others" name="others" style="float:left;display: none">
+<select id="others" name="others"  onchange = setChosenGod(others) style="float:left;display: none">
     <option value="empty">Select a Species</option> 
     <option value="Dwarf">Dwarf</option>
     <option value="Giant">Giant</option>
@@ -321,7 +323,7 @@ label {
 
 <!-- Aesir -->
 <label for="aesir" id = aesirLabel style="float:left;display: none">Select a God</label>	
-<select id="aesir" name="aesir" style="float:left;display: none">
+<select id="aesir" name="aesir"  onchange = setChosenGod(aesir) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Baldur">Baldur</option>
     <option value="Freya">Freya</option>
@@ -339,7 +341,7 @@ label {
     
 <!-- Amatsukami -->
 <label for="amatsukami" id = amatsukamiLabel style="float:left;display: none">Select a God</label>	
-<select id="amatsukami" name="amatsukami" style="float:left;display: none">
+<select id="amatsukami" name="amatsukami"  onchange = setChosenGod(amatsukami) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Amaterasu">Amaterasu</option>
     <option value="Hachiman">Hachiman</option>
@@ -353,7 +355,7 @@ label {
 <!-- Atzlánti -->
 
 <label for="atzlanti" id = atzlantiLabel style="float:left;display: none">Select a God</label>	
-<select id="atzlanti" name="atzlanti" style="float:left;display: none">
+<select id="atzlanti" name="atzlanti"  onchange = setChosenGod(atzlanti) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Ellykha">Ellykha</option>
     <option value="Huitzilopochtli">Huitzilopochtli</option>
@@ -368,7 +370,7 @@ label {
 <!-- Celestial Bureaucracy -->
 
 <label for="celestialBureaucracy" id = celestialBureaucracyLabel style="float:left;display: none">Select a God</label>	
-<select id="celestialBureaucracy" name="celestialBureaucracy" style="float:left;display: none">
+<select id="celestialBureaucracy" name="celestialBureaucracy"  onchange = setChosenGod(celestialBureaucracy) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Chang'e">Chang'e</option>
     <option value="Fuxi">Fuxi</option>
@@ -386,7 +388,7 @@ label {
 
 <!-- Deva -->
 <label for="deva" id = devaLabel style="float:left;display: none">Select a God</label>	   
-<select id="deva" name="deva" style="float:left;display: none">
+<select id="deva" name="deva"  onchange = setChosenGod(deva) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Agni">Agni</option>
     <option value="Brahma">Brahma</option>    
@@ -405,7 +407,7 @@ label {
 <!-- Dodekatheon -->
 
 <label for="dodekatheon" id = dodekatheonLabel style="float:left;display: none">Select a God</label>	   
-<select id="dodekatheon" name="dodekatheon" style="float:left;display: none">
+<select id="dodekatheon" name="dodekatheon"  onchange = setChosenGod(dodekatheon) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aphrodite">Aphrodite</option>
     <option value="Apollo">Apollo</option>
@@ -428,7 +430,7 @@ label {
 <!-- Orisha -->
     
 <label for="orisha" id = orishaLabel style="float:left;display: none">Select a God</label>	   
-<select id="orisha" name="orisha" style="float:left;display: none">
+<select id="orisha" name="orisha"  onchange = setChosenGod(orisha) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anansi">Anansi</option>
     <option value="Baron Samedi">Baron Samedi</option>
@@ -444,7 +446,7 @@ label {
 
 
 <label for="pesedjet" id = pesedjetLabel style="float:left;display: none">Select a God</label>	   
-<select id="pesedjet" name="pesedjet" style="float:left;display: none">
+<select id="pesedjet" name="pesedjet"  onchange = setChosenGod(pesedjet) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anubis">Anubis</option>
     <option value="Atum Re">Atum Re</option>
@@ -466,7 +468,7 @@ label {
 <!-- Tuatha Dé Danaan -->
 
 <label for="tuatha" id = tuathaLabel style="float:left;display: none">Select a God</label>	   
-<select id="tuatha" name="tuatha" style="float:left;display: none">
+<select id="tuatha" name="tuatha"  onchange = setChosenGod(tuatha) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Aengus">Aengus</option>
     <option value="Brigid">Brigid</option>
