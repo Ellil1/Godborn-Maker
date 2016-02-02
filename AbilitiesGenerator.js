@@ -228,7 +228,7 @@ alert(total)
 //lengthChecker()
 // Test the Legendaries
 // Test the Skills
-exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7)
+//exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7)
 // Create a new Origin
 //intelligenceChoiceFunction(legendaryAbilitiesArray)
 
