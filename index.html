@@ -292,11 +292,11 @@ function setSecondRole(selectedBox){
 	
 	var rolesLists = new Array(5) 
 	rolesLists["empty"] = ["Select a Main Role"]; 
-	rolesLists["Meat Shield"] = ["empty","Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
-	rolesLists["Damage Dealer"] = ["empty","Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
-	rolesLists["Party Face"] = ["empty","Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
-	rolesLists["Skill Monkey"] = ["empty","Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
-	rolesLists["Support-Controller"] = ["empty","Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	rolesLists["Meat Shield"] = ["Select Role","Damage Dealer", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Damage Dealer"] = ["Select Role","Meat Shield", "Party Face", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Party Face"] = ["Select Role","Meat Shield", "Damage Dealer", "Skill Monkey", "Support-Controller"]; 
+	rolesLists["Skill Monkey"] = ["Select Role","Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
+	rolesLists["Support-Controller"] = ["Select Role","Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	
 	function rolesChange(selectObj2) { 
 	var idx = selectObj2.selectedIndex; 
