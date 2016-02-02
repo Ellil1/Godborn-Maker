@@ -14,6 +14,13 @@
 	
 
 <style>
+
+
+a{display:block}
+a:link, a:visited {text-decoration: none;display: inline-block;}
+a:hover, a:active {background-color: lightblue;}
+
+
 label {
   width:200px;
   display: inline-block;
@@ -236,7 +243,10 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 //intelligenceChoiceFunction(legendaryAbilitiesArray)
 
 	
-	
+function changeLink(){
+    document.getElementById("mylink").href = "http://facebook.com";
+    document.getElementById("mylink").innerHTML = "facebook";
+    }	
 	//__________________________________________________
 	// Types 
 	
@@ -453,7 +463,9 @@ function setSecondRole(selectedBox){
 	
 	</select>
 	<br>
-	
+<label for="firstRoleLink"></label>
+<a id="firstRoleLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank">This is a link</a>	
+<br>
 	<label for="secondRole" >Select a Second Role</label>
 	<select id="secondRole" onchange = setSecondRole(secondRole)>
 	<option value="empty">Select a Second Role</option> 
