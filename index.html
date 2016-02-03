@@ -291,6 +291,11 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 ChosenFirstRole = "Weep"
 ChosenSecondRole = "Wuup"
 ChosenGod = "Woop"	
+
+function setChosenPantheon(selectedBox){
+curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
+document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;}
+
 function setChosenGod(selectedBox){
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
 	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;}
@@ -490,11 +495,13 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	<label for="country">Select an Origin </label>
 	<select id="country" onchange="
 	speciesChange(this);
+	setChosenPantheon(this)
 	hide();
 	test();
         wyrdbornDisplay();">
 	<option value="empty">Select an Origin </option>
 	<select id="test" name="test" style="display: none">
+<a id="PantheonLink" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
 
 <br><br>		
 <!-- Dark Forest -->
