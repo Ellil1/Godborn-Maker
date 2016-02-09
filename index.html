@@ -295,8 +295,10 @@ function LegendaryMakerTotal(){
   godFound = secondOriginArray.filter(function (entry) { return entry.name === ChosenGod; })[0]
   roleFound = rolesChoiceArray.filter(function (entry) { return entry.name === ChosenFirstRole; })[0]
   roleFound2 = rolesChoiceArray.filter(function (entry) { return entry.name === ChosenSecondRole; })[0]
-exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9)  
-exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7)
+  wyrdbornFound = secondOriginArray.filter(function (entry) { return entry.name === ChosenWyrdborn; })[0]
+  
+exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9,wyrdbornFound.legendaries)  
+exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
 }
 // Test the length of Legendaries
 //lengthChecker()
@@ -790,13 +792,14 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 
 <a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank">  Wiki Link</a>	
 <br><br>	
-<label for="wyrdbornOrigin" id = wyrdbornOriginLabel onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">Select your Mythborn Species</label>
-<select id="wyrdbornOrigin" style="float:left;display: none">
+<label for="wyrdbornOrigin" id = wyrdbornOriginLabel  style="float:left;display: none">Select your Mythborn Species</label>
+<select id="wyrdbornOrigin" onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">
 <option value="empty">Select your Mythborn Species</option> 
 </select>
 
 <br>		<br>	
 <button type="button" onclick="LegendaryMakerTotal()">Show Recommended Legendary Abilities and Skills !</button>
+
 	</section>
 	
 	
