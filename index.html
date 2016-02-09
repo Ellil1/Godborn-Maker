@@ -264,12 +264,17 @@ Damballa = new secondOrigin("Damballa","Orisha",[3,2,3,3,2,1,1,-2,-3,-3,-2,-1,-2
 
 ]
 
-function exampleLegendaryMaker(targetArray,targetPropertyOrigin,targetPropertyRole1,targetPropertyRole2,sizeLimit){
+
+function exampleLegendaryMaker(targetArray,targetPropertyOrigin,targetPropertyRole1,targetPropertyRole2,sizeLimit,targetWyrdbornOrigin){
   total = ""
   counter = 0
   for(i=0;i<targetArray.length;i++){
-    Total.legendaries[i] = (targetPropertyOrigin[i]+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4))) + "\n"
-  }
+if(document.getElementById('continent').value == "Wyrdborn"){
+Total.legendaries[i] = ((targetWyrdbornOrigin[i]+targetPropertyOrigin[i])/2+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4))) + "\n"
+}
+else{Total.legendaries[i] = (targetPropertyOrigin[i]+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4))) + "\n"
+}
+} 	
 function adder(value){
 {for(i=0;i<targetArray.length;i++){if(Total.legendaries[i]==value && counter<=sizeLimit){  total+= targetArray[i].name + "\n"; counter+=1}}}  
 }
@@ -287,9 +292,9 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 // Test the length of Legendaries
 //lengthChecker()
 // Test the Legendaries
-//exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9)
+//exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9,wyrdbornFound.legendaries)
 // Test the Skills
-//exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7)
+//exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
 // Create a new Origin
 //intelligenceChoiceFunction(legendaryAbilitiesArray)
 
@@ -301,9 +306,9 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 	// array of possible countries in the same order as they appear in the country selection list 
 	var countryLists = new Array(3) 
 	countryLists["empty"] = ["Select an Origin"]; 
-	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
-	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Pesedjet: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
 	*/ 
@@ -334,6 +339,7 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 ChosenFirstRole = "Weep"
 ChosenSecondRole = "Wuup"
 ChosenGod = "Woop"	
+ChosenWyrdborn = "Wyyp"
 
 function setChosenPantheon(selectedBox){
 curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
@@ -349,7 +355,8 @@ function setFirstRole(selectedBox){
 function setSecondRole(selectedBox){
 	ChosenSecondRole = selectedBox.options[selectedBox.selectedIndex].value;}
 
-
+function setWyrdborn(selectedBox){
+	ChosenWyrdborn = selectedBox.options[selectedBox.selectedIndex].value;}
 	
 	//__________________________________________________
 	// Roles
@@ -392,7 +399,7 @@ function setSecondRole(selectedBox){
 	godLists["Deva: Hindu Gods"] = ["Nymph", "Summer Elf", "Eastern Dragon","Naga","Asura","Raksasha","Garou"]; 
 	godLists["Dodekatheon: Greek Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf","Giant","Garou"]; 
 	godLists["Orisha: African Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf","Giant","Garou"]; 
-	godLists["Pesedjet: Egyptian Gods"] = ["Garou"]; 
+	godLists["Neter: Egyptian Gods"] = ["Garou"]; 
 	godLists["Tuatha Dé Danaan: Celtic Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon","Giant","Garou"]; 
 	godLists["Shambhalla"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Winter Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
@@ -446,7 +453,7 @@ function setSecondRole(selectedBox){
 	else if (document.getElementById('country').value == 'Deva: Hindu Gods') {document.getElementById('devaLabel').style.display = 'block'; document.getElementById('deva').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheonLabel').style.display = 'block'; document.getElementById('dodekatheon').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orishaLabel').style.display = 'block'; document.getElementById('orisha').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Pesedjet: Egyptian Gods') {document.getElementById('pesedjetLabel').style.display = 'block'; document.getElementById('pesedjet').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Neter: Egyptian Gods') {document.getElementById('neterLabel').style.display = 'block'; document.getElementById('neter').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'};
 	}
 	
@@ -469,7 +476,7 @@ function setSecondRole(selectedBox){
 	document.getElementById('deva').style.display = 'none'
 	document.getElementById('dodekatheon').style.display = 'none'
 	document.getElementById('orisha').style.display = 'none'
-	document.getElementById('pesedjet').style.display = 'none'
+	document.getElementById('neter').style.display = 'none'
 	document.getElementById('tuatha').style.display = 'none';
 // Hide Labels
 // Mythborn Options
@@ -487,7 +494,7 @@ function setSecondRole(selectedBox){
 	document.getElementById('devaLabel').style.display = 'none'
 	document.getElementById('dodekatheonLabel').style.display = 'none'
 	document.getElementById('orishaLabel').style.display = 'none'
-	document.getElementById('pesedjetLabel').style.display = 'none'
+	document.getElementById('neterLabel').style.display = 'none'
 	document.getElementById('tuathaLabel').style.display = 'none';
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	}
@@ -733,11 +740,11 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
     <option value="Shango">Shango</option>
 </select>
 
-<!-- Pesedjet -->
+<!-- Neter -->
 
 
-<label for="pesedjet" id = pesedjetLabel style="float:left;display: none">Select a God</label>	   
-<select id="pesedjet" name="pesedjet"  onchange = setChosenGod(pesedjet) style="float:left;display: none">
+<label for="neter" id = neterLabel style="float:left;display: none">Select a God</label>	   
+<select id="neter" name="neter"  onchange = setChosenGod(neter) style="float:left;display: none">
     <option value="empty">Select a God</option> 
     <option value="Anubis">Anubis</option>
     <option value="Atum Re">Atum Re</option>
@@ -773,13 +780,13 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	</select>
 
 <a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank">  Wiki Link</a>	
-<br>
-<label for="wyrdbornOrigin" id = wyrdbornOriginLabel onchange = setChosenGod(wyrdbornOrigin) style="float:left;display: none">Select your Mythborn Species</label>
+<br><br>	
+<label for="wyrdbornOrigin" id = wyrdbornOriginLabel onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">Select your Mythborn Species</label>
 <select id="wyrdbornOrigin" style="float:left;display: none">
 <option value="empty">Select your Mythborn Species</option> 
 </select>
 
-<br>		
+<br>		<br>	
 <button type="button" onclick="LegendaryMakerTotal()">Show Recommended Legendary Abilities and Skills !</button>
 	</section>
 	
