@@ -296,7 +296,7 @@ else{Total.legendaries[i] = (targetPropertyOrigin[i]+Math.floor((targetPropertyR
 function adder(value){
 {for(i=0;i<targetArray.length;i++){if(Total.legendaries[i]==value && counter<=sizeLimit){  total+= targetArray[i].name + "\n"; counter+=1}}}  
 }
-adder(8);adder(7);adder(6);adder(5);adder(4);adder(3);adder(2);adder(1);adder(0);adder(-1);adder(-2);adder(-3);adder(-4);
+adder(8);adder(7);adder(6);adder(5);adder(4);adder(3);adder(2);adder(1);adder(0);adder(-1);
 alert(total) 
 }
 
@@ -349,7 +349,7 @@ alert(name + "]),")
 	var countryLists = new Array(3) 
 	countryLists["empty"] = ["Select an Origin"]; 
 	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala","Other"]; 
+	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala"]; 
 	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
@@ -447,7 +447,6 @@ function setWyrdborn(selectedBox){
 	godLists["Winter Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Summer Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Jade Sea"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Other"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 	
 	godLists["Dark Forest"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	function speciesChange(selectObj) { 
 	var idx = selectObj.selectedIndex; 
