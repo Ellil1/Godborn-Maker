@@ -261,15 +261,24 @@ Witch = new secondOrigin("Witch","Dark Forest",[2,4,4,3,3,3,0,1,1,0,1,3,4,3,3,4,
   // Summer Court
 SummerFey = new secondOrigin("Summer Fey","Summer Court",[2,3,4,4,3,4,2,3,4,3,2,-2,-3,-4,-3,-4,-4,4,3,4,4,2,3,3,1,3,3,4,4,-3,2,4,-2,-3,2,1,-1,2,-3,-4,-3,-4,-3,-2,-2,-2,-1,-2,3,4,4,4,2,3,4,-3,-3,-3,-3,-3,-3,-3,-3,-3],[2,3,4,3,2,2,4,2,1,3,4,2,3,3,2]),
 SummerElf = new secondOrigin("Summer Elf","Summer Court",[0,4,4,4,3,4,3,2,1,3,2,-3,-4,-4,-3,-4,-4,3,4,4,2,2,3,2,1,1,2,3,3,-3,3,4,-2,-3,2,1,-3,3,-4,,-4,-4,-4,-3,2,3,2,2,2,3,4,2,2,1,2,-3,-3,-3,-3,-3,-3,-3,-3,-3],[2,2,3,3,3,4,3,3,2,3,2,2,4,3,3]),
-
-
+SummerSmallFolk = new secondOrigin("Summer Small Folk","Summer Court",[1,3,3,2,4,3,3,-1,-2,-2,-2,-3,-4,-4,-4,-3,-4,2,-1,1,2,-1,-2,-1,-3,3,2,2,3,-3,1,1,-3,-2,1,0,-2,0,-3,-3,-4,-4,-4,-2,2,0,-3,-4,-2,-2,3,-3,-2,2,1,-3,-3,-3,-3,-3,-3,-3,-3,-3],[-1,3,1,3,2,0,2,2,-1,0,3,2,2,2,3]),
+SummerPixie = new secondOrigin("Summer Pixie","Summer Court",[3,0,4,2,0,4,-1,2,1,1,2,-3,-4,-3,-4,-4,-4,3,1,2,4,3,2,2,1,2,2,2,2,-4,-2,2,-1,-2,1,2,-2,1,-3,-3,-4,-4,-4,-3,2,0,-3,-3,-1,3,4,3,3,2,3,-3,-3,-3,-3,-3,-3,-3,-3,-3],[0,2,3,-1,1,-2,1,2,-2,1,2,-2,3,1,2]),
 
  // Winter Court
 WinterFey = new secondOrigin("Winter Fey","Fairie",[2,3,3,2,2,4,-3,-4,-4,-4,-3,2,3,2,2,3,1,2,-2,-2,1,1,2,1,0,-1,-2,-3,2,3,2,2,2,3,-2,-1,-2,1,4,4,2,1,1,-1,2,0,-2,-2,3,4,3,4,4,-1,2,-3,-3,-3,-3,-3,-3,-3,-3,-3],[2,3,0,2,0,2,3,2,-2,1,4,2,3,3,2]),
+WinterElf = new secondOrigin("Winter Elf","Winter Court",[0,4,3,3,2,4,-3,-4,-3,-3,-3,3,3,3,2,2,0,-2,-4,-4,-3,1,2,0,1,-3,-4,-3,0,2,3,2,2,2,-1,0,1,2,4,4,1,2,2,0,3,-1,2,3,4,4,4,-2,-2,2,2,-3,-3,-3,-3,-3,-3,-3,-3,-3],[1,2,-2,2,0,3,1,3,2,3,4,2,4,3,2]),
+WinterSmallFolk = new secondOrigin("Winter Small Folk","Winter Court",[2,4,2,3,4,3,2,-1,-2,-3,-3,2,1,2,2,1,3,1,-2,-3,-3,1,0,0,1,3,0,-1,2,2,3,1,-2,-1,0,-1,-2,0,2,3,-3,-3,-3,-3,-3,-3,-2,-4,0,-2,3,2,2,1,2,-3,-3,-3,-3,-3,-3,-3,-3,-3],[-1,3,-1,4,1,2,2,2,-1,-2,1,2,3,3,1]),
+WinterPixie = new secondOrigin("Winter Pixie","Winter Court",[3,2,3,3,0,4,-2,-3,-3,-4,-3,3,3,4,3,2,0,2,-2,-4,-4,2,1,2,2,-2,-1,-1,1,2,-1,0,2,2,2,1,1,2,4,4,1,2,0,1,-1,-1,-4,-4,1,4,3,3,3,-1,1,-3,-3,-3,-3,-3,-3,-3,-3,-3],[0,2,0,1,2,-1,3,4,-1,1,3,-2,3,4,2]),
 
+ // Jade Sea
+EasternDragon = new secondOrigin("Eastern Dragon","Jade Sea",[3,3,2,3,1,2,3,4,4,2,1,2,1,3,1,2,-1,4,3,-1,1,4,4,4,3,3,2,3,3,-2,2,1,4,3,3,2,2,4,1,3,-1,0,-2,2,1,2,3,3,3,-1,1,2,2,4,4,-3,-3,4,-3,-3,-3,-3,-3,-3],[1,0,1,2,0,2,4,1,3,3,3,2,3,0,3]),
+WesternDragon = new secondOrigin("Western Dragon","Jade Sea",[0,4,-1,1,-1,-2,2,4,3,3,1,-2,0,-1,-2,-3,2,-1,1,-1,-2,1,2,0,1,3,2,-1,0,-2,3,2,-1,1,-2,-1,-3,0,1,-1,-3,-3,-3,-3,3,3,4,4,4,-1,1,-2,-2,0,2,-3,-3,4,-3,-3,-3,-3,-3,-3],[1,2,0,2,0,3,3,2,4,4,1,3,3,0,3]),
+Naga = new secondOrigin("Naga","Jade Sea",[2,2,1,2,0,0,1,-2,-2,-3,-2,-2,-2,-2,-3,-3,0,2,-1,-2,-2,1,2,1,2,0,1,2,0,-2,1,-1,2,3,3,3,1,3,2,2,-3,-3,-3,-3,-3,-3,3,2,1,-1,4,3,3,2,4,-3,-3,4,-3,-3,-3,-3,-3,4],[1,2,0,2,1,3,2,2,3,1,0,1,3,2,2]),
+Coatl = new secondOrigin("Coatl","Jade Sea",[2,2,4,2,2,0,1,0,-1,1,0,-1,-2,-2,-3,-4,-3,2,0,-1,0,3,4,2,4,2,1,3,2,-2,3,2,-1,-2,1,-1,-2,0,-2,1,-3,-3,-3,-3,4,3,3,4,3,-1,4,2,2,1,2,-3,-3,4,-3,-3,-3,-3,-3,2],[2,2,2,1,3,3,4,3,3,3,3,-1,4,1,3]),
 
-
-
+ // Shambhala
+Rakshasa = new secondOrigin("Rakshasa","Shambhala",[3,4,0,2,2,2,3,4,1,3,2,1,3,-1,2,3,1,3,2,0,2,1,2,0,2,1,0,3,-2,4,3,1,1,2,-1,-2,-1,-3,-3,-2,1,2,2,3,4,3,4,3,4,-4,3,4,-4,3,3,-3,-3,-3,-3,-3,-3,-3,-3,-3],[2,2,-1,1,0,3,3,3,3,4,4,2,3,2,2]),
+Asura = new secondOrigin("Asura","Shambhala",[4,4,-1,3,0,2,2,3,2,3,3,3,4,-2,2,4,2,3,4,2,3,1,3,-3,3,0,-1,-2,-2,3,1,-1,-2,-3,-3,-3,-4,-3,-3,-3,2,3,2,3,4,3,2,3,4,3,2,4,-4,3,3,-3,-3,-3,-3,-3,-3,-3,-3,-3],[1,2,-1,2,0,3,4,3,3,4,4,3,3,2,3]),
 
 ]
 
@@ -287,7 +296,7 @@ else{Total.legendaries[i] = (targetPropertyOrigin[i]+Math.floor((targetPropertyR
 function adder(value){
 {for(i=0;i<targetArray.length;i++){if(Total.legendaries[i]==value && counter<=sizeLimit){  total+= targetArray[i].name + "\n"; counter+=1}}}  
 }
-adder(8);adder(7);adder(6);adder(5);adder(4);adder(3);adder(2);adder(1);adder(0);adder(-1);
+adder(8);adder(7);adder(6);adder(5);adder(4);adder(3);adder(2);adder(1);adder(0);adder(-1);adder(-2);adder(-3);adder(-4);
 alert(total) 
 }
 
@@ -300,6 +309,30 @@ function LegendaryMakerTotal(){
 exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9,wyrdbornFound.legendaries)  
 exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
 }
+
+function intelligenceChoiceFunction(){
+
+abilityName = prompt("What is the Name of this Species ?")
+variableName = abilityName.replace(/\s/g, '');
+properties=0
+propertiesSkill = 0
+name = variableName + " = new secondOrigin(\"" + abilityName + "\","    
+name+= "\"" + prompt("What is this Species' Origin ?") + "\","
+for(i=0;i<legendaryAbilitiesArray.length;i++){
+if(properties===0){name += "[" + prompt(legendaryAbilitiesArray[i].name)}
+else{name+="," + prompt(legendaryAbilitiesArray[i].name)}
+properties+=1
+}
+for(i=0;i<skillsArray.length;i++){
+if(propertiesSkill===0){name+= "],[" + prompt(skillsArray[i].name)}
+else{name+="," + prompt(skillsArray[i].name)}
+propertiesSkill+=1
+}
+
+
+alert(name + "]),")
+}
+
 // Test the length of Legendaries
 //lengthChecker()
 // Test the Legendaries
@@ -307,9 +340,7 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 // Test the Skills
 //exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
 // Create a new Origin
-//intelligenceChoiceFunction(legendaryAbilitiesArray)
-
-	
+//intelligenceChoiceFunction()
 
 	//__________________________________________________
 	// Types 
@@ -318,7 +349,7 @@ exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.sk
 	var countryLists = new Array(3) 
 	countryLists["empty"] = ["Select an Origin"]; 
 	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhalla","Other"]; 
+	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala","Other"]; 
 	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
@@ -403,16 +434,16 @@ function setWyrdborn(selectedBox){
 // Wyrdborn Options	
 	var godLists = new Array(9) 
 	godLists["empty"] = ["Select a Second Origin"]; 
-	godLists["Aesir: Norse Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon","Giant","Garou"]; 
-	godLists["Amatsukami: Japanese Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Eastern Dragon","Garou"]; 
-	godLists["Atzlánti: Aztec Gods"] = ["Witch", "Nymph", "Ent", "Coatl","Garou"]; 
-	godLists["Celestial Bureaucracy: Chinese Gods"] = ["Witch", "Nymph", "Summer Elf", "Winter Elf", "Eastern Dragon","Garou"]; 
-	godLists["Deva: Hindu Gods"] = ["Nymph", "Summer Elf", "Eastern Dragon","Naga","Asura","Raksasha","Garou"]; 
-	godLists["Dodekatheon: Greek Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf","Giant","Garou"]; 
-	godLists["Orisha: African Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf","Giant","Garou"]; 
-	godLists["Neter: Egyptian Gods"] = ["Garou"]; 
-	godLists["Tuatha Dé Danaan: Celtic Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon","Giant","Garou"]; 
-	godLists["Shambhalla"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Aesir: Norse Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon"]; 
+	godLists["Amatsukami: Japanese Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Eastern Dragon"]; 
+	godLists["Atzlánti: Aztec Gods"] = ["Witch", "Nymph", "Ent", "Coatl"]; 
+	godLists["Celestial Bureaucracy: Chinese Gods"] = ["Witch", "Nymph", "Summer Elf", "Winter Elf", "Eastern Dragon"]; 
+	godLists["Deva: Hindu Gods"] = ["Nymph", "Summer Elf", "Eastern Dragon","Naga","Asura","Rakshasa"]; 
+	godLists["Dodekatheon: Greek Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf"]; 
+	godLists["Orisha: African Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf"]; 
+	godLists["Neter: Egyptian Gods"] = ["Summer Elf","Summer Fey"]; 
+	godLists["Tuatha Dé Danaan: Celtic Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon"]; 
+	godLists["Shambhala"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Winter Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Summer Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Jade Sea"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
@@ -454,8 +485,8 @@ function setWyrdborn(selectedBox){
 	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourtLabel').style.display = 'block'; document.getElementById('summerCourt').style.display = 'block'} 
 	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSeaLabel').style.display = 'block'; document.getElementById('jadeSea').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourtLabel').style.display = 'block'; document.getElementById('winterCourt').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Shambhalla') {document.getElementById('shambhallaLabel').style.display = 'block'; document.getElementById('shambhalla').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Other') {document.getElementById('othersLabel').style.display = 'block'; document.getElementById('others').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Shambhala') {document.getElementById('shambhalaLabel').style.display = 'block'; document.getElementById('shambhala').style.display = 'block'}
+//	else if (document.getElementById('country').value == 'Other') {document.getElementById('othersLabel').style.display = 'block'; document.getElementById('others').style.display = 'block'}
 // God Options
 	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesirLabel').style.display = 'block'; document.getElementById('aesir').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukamiLabel').style.display = 'block'; document.getElementById('amatsukami').style.display = 'block'}
@@ -477,7 +508,7 @@ function setWyrdborn(selectedBox){
 	document.getElementById('summerCourt').style.display = 'none' 
 	document.getElementById('jadeSea').style.display = 'none'
 	document.getElementById('winterCourt').style.display = 'none'
-	document.getElementById('shambhalla').style.display = 'none'
+	document.getElementById('shambhala').style.display = 'none'
 	document.getElementById('others').style.display = 'none'
 // God Options
 	document.getElementById('aesir').style.display = 'none'
@@ -495,7 +526,7 @@ function setWyrdborn(selectedBox){
 	document.getElementById('summerCourtLabel').style.display = 'none' 
 	document.getElementById('jadeSeaLabel').style.display = 'none'
 	document.getElementById('winterCourtLabel').style.display = 'none'
-	document.getElementById('shambhallaLabel').style.display = 'none'
+	document.getElementById('shambhalaLabel').style.display = 'none'
 	document.getElementById('othersLabel').style.display = 'none'
 // God Options
 	document.getElementById('aesirLabel').style.display = 'none'
