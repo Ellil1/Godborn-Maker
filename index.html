@@ -137,10 +137,10 @@ zoothropyJackal = new LegendaryAbility("Zoothropy - Jackal"),
 zoothropyEagle = new LegendaryAbility("Zoothropy - Eagle"),
 zoothropyDog = new LegendaryAbility("Zoothropy - Dog"),
 zoothropyJaguar = new LegendaryAbility("Zoothropy - Jaguar"),
-zoothropySnake = new LegendaryAbility("Zoothropy - Snake")
+zoothropySnake = new LegendaryAbility("Zoothropy - Snake"),
 
 // Extras
-//sensesSpeed = new LegendaryAbility("Epic Physique - Speed"),
+WyrdseeingMystery = new LegendaryAbility("Wyrdseeing: Mystery"),
 
 ]
 
@@ -165,11 +165,11 @@ Will = new LegendaryAbility("Will")
   
 
 var rolesChoiceArray = [
-MeatShield = new Role("Meat Shield",[2,4,3,1,3,2,3,1,1,3,3,2,-1,-1,3,-2,1,-2,-1,0,2,3,0,2,-1,3,1,-1,2,2,4,3,-1,1,2,2,-2,-1,3,2,-3,-2,0,-2,-1,4,3,4,2,-1,1,-1,0,-2,3,1,-1,2,-2,-1,-2,3,2,1],[3,-2,-1,2,1,4,3,3,4,3,-1,-2,1,0,4]),
-DamageDealer = new Role("Damage Dealer",[2,0,0,1,2,3,2,4,2,4,3,-2,-3,-1,-2,4,1,-1,0,3,1,3,4,-1,3,2,1,0,-1,4,2,-1,3,1,2,2,3,1,3,3,-4,4,1,1,4,1,4,2,-1,-2,4,-2,-2,-1,1,2,3,4,2,1,2,1,4,4],[3,-1,-2,3,-2,4,4,1,1,0,-1,-2,4,4,3]),
-PartyFace = new Role("Party Face",[1,1,0,3,1,4,2,-3,-3,-4,-3,1,4,3,3,1,1,2,4,2,4,1,-2,4,-1,-1,-1,-2,-1,-3,-3,-2,3,4,-1,-1,1,0,-3,-2,1,-3,-3,3,-2,-1,-4,-4,4,4,-4,4,4,-2,-3,3,-2,2,2,1,2,3,1,4],[1,0,4,2,1,-2,2,2,-1,4,4,4,-2,-1,0]),
-SkillMonkey = new Role("Skill Monkey",[4,4,3,4,4,4,4,-2,-3,-2,-1,4,2,2,2,-1,-1,4,3,2,2,0,-2,-1,-1,3,2,1,2,-1,-1,1,-1,-2,1,2,-2,3,1,3,3,0,1,4,2,1,-2,-3,-1,-2,-1,0,-1,3,2,1,2,2,4,-2,3,3,1,2],[3,4,1,4,2,1,4,4,1,0,1,4,1,4,3]),
-SupportController = new Role("Support-Controller",[4,4,3,3,4,4,4,1,3,3,4,4,4,2,4,1,3,4,4,3,4,4,1,4,-1,3,3,4,3,2,3,3,4,3,2,3,3,0,3,3,-1,-2,3,2,2,4,-1,-1,4,4,0,4,4,2,4,2,1,2,0,1,1,-1,-3,-1],[2,-1,4,4,4,2,4,1,2,3,4,-1,-2,1,4]),
+MeatShield = new Role("Meat Shield",[2,4,3,1,3,2,3,1,1,3,3,2,-1,-1,3,-2,1,-2,-1,0,2,3,0,2,-1,3,1,-1,2,2,4,3,-1,1,2,2,-2,-1,3,2,-3,-2,0,-2,-1,4,3,4,2,-1,1,-1,0,-2,3,1,-1,2,-2,-1,-2,3,2,1,-2],[3,-2,-1,2,1,4,3,3,4,3,-1,-2,1,0,4]),
+DamageDealer = new Role("Damage Dealer",[2,0,0,1,2,3,2,4,2,4,3,-2,-3,-1,-2,4,1,-1,0,3,1,3,4,-1,3,2,1,0,-1,4,2,-1,3,1,2,2,3,1,3,3,-4,4,1,1,4,1,4,2,-1,-2,4,-2,-2,-1,1,2,3,4,2,1,2,1,4,4,-4],[3,-1,-2,3,-2,4,4,1,1,0,-1,-2,4,4,3]),
+PartyFace = new Role("Party Face",[1,1,0,3,1,4,2,-3,-3,-4,-3,1,4,3,3,1,1,2,4,2,4,1,-2,4,-1,-1,-1,-2,-1,-3,-3,-2,3,4,-1,-1,1,0,-3,-2,1,-3,-3,3,-2,-1,-4,-4,4,4,-4,4,4,-2,-3,3,-2,2,2,1,2,3,1,4,1],[1,0,4,2,1,-2,2,2,-1,4,4,4,-2,-1,0]),
+SkillMonkey = new Role("Skill Monkey",[4,4,3,4,4,4,4,-2,-3,-2,-1,4,2,2,2,-1,-1,4,3,2,2,0,-2,-1,-1,3,2,1,2,-1,-1,1,-1,-2,1,2,-2,3,1,3,3,0,1,4,2,1,-2,-3,-1,-2,-1,0,-1,3,2,1,2,2,4,-2,3,3,1,2,3],[3,4,1,4,2,1,4,4,1,0,1,4,1,4,3]),
+SupportController = new Role("Support-Controller",[4,4,3,3,4,4,4,1,3,3,4,4,4,2,4,1,3,4,4,3,4,4,1,4,-1,3,3,4,3,2,3,3,4,3,2,3,3,0,3,3,-1,-2,3,2,2,4,-1,-1,4,4,0,4,4,2,4,2,1,2,0,1,1,-1,-3,-1,1],[2,-1,4,4,4,2,4,1,2,3,4,-1,-2,1,4]),
 
 
 ]
@@ -345,7 +345,7 @@ function LegendaryMakerTotal(){
   roleFound = rolesChoiceArray.filter(function (entry) { return entry.name === ChosenFirstRole; })[0]
   roleFound2 = rolesChoiceArray.filter(function (entry) { return entry.name === ChosenSecondRole; })[0]
   wyrdbornFound = secondOriginArray.filter(function (entry) { return entry.name === ChosenWyrdborn; })[0]
-addAnAbility()
+addAnAbility()  
 exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9,wyrdbornFound.legendaries)  
 exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
 }
@@ -401,7 +401,7 @@ for(j=0;j<secondOriginArray.length;j++){
 	secondOriginArray[j].legendaries.push(newAbilitiesArray[i][j])
 }}
 }
-addAnAbility()
+
 // Test the length of Legendaries
 //lengthChecker()
 // Test the Legendaries
@@ -412,8 +412,9 @@ addAnAbility()
 //intelligenceChoiceFunction()
 // Create an Ability
 //addAnAbilityMaker()
+LegendaryMakerTotal()
 
-	//__________________________________________________
+  //__________________________________________________
 	// Types 
 	
 	// array of possible countries in the same order as they appear in the country selection list 
@@ -610,6 +611,8 @@ function setWyrdborn(selectedBox){
 	document.getElementById('tuathaLabel').style.display = 'none';
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	}
+
+
 
 
 	
