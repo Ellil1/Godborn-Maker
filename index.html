@@ -488,7 +488,9 @@ document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com
 
 function setChosenGod(selectedBox){
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
-	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;}
+	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;
+document.getElementById('OriginLink').style.display = 'block'
+}
 
 function setFirstRole(selectedBox){
 	ChosenFirstRole = selectedBox.options[selectedBox.selectedIndex].value;}
@@ -595,6 +597,7 @@ function setWyrdborn(selectedBox){
 	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orishaLabel').style.display = 'block'; document.getElementById('orisha').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Neter: Egyptian Gods') {document.getElementById('neterLabel').style.display = 'block'; document.getElementById('neter').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'};
+
 	}
 	
 
@@ -925,7 +928,7 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
     <option value="Ogma">Ogma, God of Wisdom, Magic and Strength.</option>
 	</select>
 
-<a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank">  Wiki Link</a>	
+<a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
 <br><br>	
 <label for="wyrdbornOrigin" id = wyrdbornOriginLabel  style="float:left;display: none">Select your Mythborn Species</label>
 <select id="wyrdbornOrigin" onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">
