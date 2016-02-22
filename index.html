@@ -484,7 +484,10 @@ ChosenWyrdborn = "Winter Fey"
 
 function setChosenPantheon(selectedBox){
 curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
-document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;}
+document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;
+document.getElementById('OriginLink').style.display = 'none'
+
+}
 
 function setChosenGod(selectedBox){
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
@@ -640,6 +643,7 @@ function setWyrdborn(selectedBox){
 	document.getElementById('neterLabel').style.display = 'none'
 	document.getElementById('tuathaLabel').style.display = 'none';
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
+document.getElementById('OriginLink').style.display = 'none'
 	}
 
 
@@ -704,7 +708,7 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	<select id="test" name="test" style="display: none">
 <a id="PantheonLink" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
 
-<br><br>		
+<br>		
 <!-- Dark Forest -->
 	
 	</select>
@@ -929,7 +933,7 @@ document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 	</select>
 
 <a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
-<br><br>	
+<br>	
 <label for="wyrdbornOrigin" id = wyrdbornOriginLabel  style="float:left;display: none">Select your Mythborn Species</label>
 <select id="wyrdbornOrigin" onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">
 <option value="empty">Select your Mythborn Species</option> 
