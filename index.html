@@ -485,12 +485,15 @@ ChosenWyrdborn = "Winter Fey"
 function setChosenPantheon(selectedBox){
 curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
 document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;
+document.getElementById ("PantheonLink").innerHTML = "Wiki Link: "+ curatedName;
+
 document.getElementById('OriginLink').style.display = 'none'
 
 }
 
 function setChosenGod(selectedBox){
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
+document.getElementById ("OriginLink").innerHTML = "Wiki Link: "+ selectedBox.options[selectedBox.selectedIndex].value;
 	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;
 document.getElementById('OriginLink').style.display = 'block'
 }
