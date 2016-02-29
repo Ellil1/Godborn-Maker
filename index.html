@@ -450,7 +450,6 @@ for(j=0;j<secondOriginArray.length;j++){
 	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala"]; 
 	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	countryLists["Enlightened"] = ["Select an Origin","Cabal", "Circle of Merlin", "Illuminati", "Order of the Jade Fist"]; 
 	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
 	*/ 
@@ -604,9 +603,6 @@ function setWyrdborn(selectedBox){
 
 	}
 	
-	function enlightenedShow(){
-if (document.getElementById('continent').value == 'Enlightened') {document.getElementById('enlightenedLabel').style.display = 'block';document.getElementById('enlightened').style.display = 'block' } 
-	}
 	
 	function hide() {
 // Hide Boxes
@@ -628,8 +624,6 @@ if (document.getElementById('continent').value == 'Enlightened') {document.getEl
 	document.getElementById('neter').style.display = 'none'
 	document.getElementById('tuatha').style.display = 'none';
 	
-	document.getElementById('enlightened').style.display = 'none';
-
 // Hide Labels
 // Mythborn Options
 	document.getElementById('darkForestLabel').style.display = 'none' 
@@ -649,7 +643,6 @@ if (document.getElementById('continent').value == 'Enlightened') {document.getEl
 	document.getElementById('neterLabel').style.display = 'none'
 	document.getElementById('tuathaLabel').style.display = 'none';
 	
-	document.getElementById('enlightenedLabel').style.display = 'none';
 
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 document.getElementById('OriginLink').style.display = 'none'
@@ -698,12 +691,11 @@ document.getElementById('OriginLink').style.display = 'none'
 	</select>
 	<br><br>
 	<label for="continent">Select Type</label>
-	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();enlightenedShow()">
+	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();">
 	<option selected value="empty">Select Type</option>
 	<option value="Godborn">Godborn - God + Human</option>
 	<option value="Mythborn">Mythborn - Legendary Creature</option>
 	<option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
-	<option value="Enlightened">Enlightened - Gifted Human</option>
 	</select>
 	<br>
 
