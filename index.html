@@ -604,7 +604,9 @@ function setWyrdborn(selectedBox){
 
 	}
 	
-
+	function enlightenedShow(){
+if (document.getElementById('continent').value == 'Enlightened') {document.getElementById('enlightenedLabel').style.display = 'block';document.getElementById('enlightened').style.display = 'block' } 
+	}
 	
 	function hide() {
 // Hide Boxes
@@ -625,6 +627,9 @@ function setWyrdborn(selectedBox){
 	document.getElementById('orisha').style.display = 'none'
 	document.getElementById('neter').style.display = 'none'
 	document.getElementById('tuatha').style.display = 'none';
+	
+	document.getElementById('enlightened').style.display = 'none';
+
 // Hide Labels
 // Mythborn Options
 	document.getElementById('darkForestLabel').style.display = 'none' 
@@ -643,6 +648,9 @@ function setWyrdborn(selectedBox){
 	document.getElementById('orishaLabel').style.display = 'none'
 	document.getElementById('neterLabel').style.display = 'none'
 	document.getElementById('tuathaLabel').style.display = 'none';
+	
+	document.getElementById('enlightenedLabel').style.display = 'none';
+
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 document.getElementById('OriginLink').style.display = 'none'
 	}
@@ -690,7 +698,7 @@ document.getElementById('OriginLink').style.display = 'none'
 	</select>
 	<br><br>
 	<label for="continent">Select Type</label>
-	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();">
+	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();enlightenedShow()">
 	<option selected value="empty">Select Type</option>
 	<option value="Godborn">Godborn - God + Human</option>
 	<option value="Mythborn">Mythborn - Legendary Creature</option>
@@ -710,7 +718,8 @@ document.getElementById('OriginLink').style.display = 'none'
 	<select id="test" name="test" style="display: none">
 <a id="PantheonLink" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
 
-<br>		
+<br>	
+
 <!-- Dark Forest -->
 	
 	</select>
