@@ -14,6 +14,61 @@
 	
 
 <style>
+
+html {
+		margin:0;
+		padding:0;
+	
+	}
+	#wrap {
+		width:750px;
+		margin:0 auto;
+	}
+	#header {
+    	padding:5px 10px;
+	}
+	h1 {
+	    margin:0;
+    }
+	#nav {
+		padding:5px 10px;
+	}
+	#nav ul {
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	#nav li {
+		display:inline;
+		margin:0;
+		padding:0;
+	}
+	#main {
+		float:left;
+		width:480px;
+		padding:10px;
+	}
+	h2 {
+		margin:0 0 1em;
+	}
+	#sidebar {
+		float:right;
+		width:230px;
+		padding:10px;
+	}
+	#footer {
+		clear:both;
+		padding:5px 10px;
+	}
+	#footer p {
+		margin:0;
+    }
+	* html #footer {
+		height:1px;
+	}
+
+
+
 textarea {
    resize: none;
 }
@@ -678,7 +733,7 @@ value+=1
 	</header>
 	<br>
 	
-	
+	<div id="main">	
 	<br>
 	<label for="mainRole">Select Main Role</label>
 	<select id="mainRole" onchange="rolesChange(this); setFirstRole(mainRole)" >
@@ -967,8 +1022,10 @@ value+=1
   <input type="text" name="aspect3" placeholder="Third Aspect">
   <br>
 	</section>
-	
-	
+	</div>
+	<div id="sidebar">
+
+<a> Woop woop </a>	</div>	</div>
 	
 	</aside>
 	</div>
