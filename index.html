@@ -720,7 +720,7 @@ value+=1
 function characterSheetSpawn() {
 var myWindow = window.open("", "_blank","width=800, height=800");
 myWindow.document.write("<TITLE>Generated NPC</TITLE>")
-myWindow.document.write("<p style='font-family:arial'><b>Aspects </b><br>" + highConcept + "<br>" + trouble + "<br>" + aspect1 + "<br>" + aspect2 + "<br>" + aspect3 + "<br>" + "</p>");   
+myWindow.document.write("<p style='font-family:arial'><b>Aspects </b><br>" + document.getElementById('highConcept').value + "<br>" + document.getElementById('trouble').value + "<br>" + document.getElementById('aspect1').value + "<br>" + document.getElementById('aspect2').value + "<br>" + document.getElementById('aspect3').value + "<br>" + "</p>");   
 myWindow.document.write("</BODY>")
 myWindow.document.write("</HTML>")
 
