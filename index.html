@@ -653,8 +653,12 @@ document.getElementById('OriginLink').style.display = 'none'
 
 
 	
-
-
+value = 0
+function clearContents(element) {
+if(value == 0){
+  element.value = '';}
+value+=1
+}
 
 
 	
@@ -951,16 +955,11 @@ document.getElementById('OriginLink').style.display = 'none'
 <br>
 <button type="button" onclick="LegendaryMakerTotal()">Show Recommended Legendary Abilities and Skills !</button>	
 <br><br>
-<label for="highConcept" id = highConceptLabel style="float:left;display: none">High Concept</label>	   
-  <input type="text" name="highConcept"><br>
-<label for="trouble" id = troubleLabel style="float:left;display: none">Trouble</label>	   
-  <input type="text" name="trouble"><br>
-<label for="aspect1" id = aspect1Label style="float:left;display: none">Aspect 1</label>	   
-  <input type="text" name="aspect1"><br>
-<label for="aspect2" id = aspect2Label style="float:left;display: none">Aspect 2</label>	   
-  <input type="text" name="aspect2"><br>
-<label for="aspect3" id = aspect3Label style="float:left;display: none">Aspect 3</label>	   
-  <input type="text" name="aspect3">
+  <input type="text" name="highConcept" value="High Concept" onfocus="clearContents(this);"><br>
+  <input type="text" name="trouble" value="Trouble" onfocus="clearContents(this);"><br>
+  <input type="text" name="aspect1" value="First Aspect" onfocus="clearContents(this);"><br>
+  <input type="text" name="aspect2" value="Second Aspect" onfocus="clearContents(this);"><br>
+  <input type="text" name="aspect3" value="Third Aspect" onfocus="clearContents(this);">
   <br>
 	</section>
 	
