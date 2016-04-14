@@ -717,8 +717,14 @@ if(value == 0){
 value+=1
 }
 
+function characterSheetSpawn() {
+var myWindow = window.open("", "_blank","width=800, height=800");
+myWindow.document.write("<TITLE>Generated NPC</TITLE>")
+myWindow.document.write("<p style='font-family:arial'><b>Aspects </b><br>" + highConcept + "<br>" + trouble + "<br>" + aspect1 + "<br>" + aspect2 + "<br>" + aspect3 + "<br>" + "</p>");   
+myWindow.document.write("</BODY>")
+myWindow.document.write("</HTML>")
 
-	
+}	
 	
 	
 	
@@ -1048,9 +1054,9 @@ value+=1
 <a href="https://docs.google.com/document/d/11tnSPBJpm-V37btdGbzEGvBL8PIX-gZ47066eD76tsg/edit#" target="_blank">Ideas for Legendary Skills and Stunts</a>
 
 <br>
-  <textarea name="stunt1" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
-  <textarea name="stunt2" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
-  <textarea name="stunt3" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
+  <textarea name="legend1" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
+  <textarea name="legend2" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
+  <textarea name="legend3" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
  <br>
  </div>	</div>
 	
@@ -1059,7 +1065,6 @@ value+=1
 	</div>
 	<div id="footer">
 <button type="button" onclick="characterSheetSpawn()">Spawn a Character Sheet !</button> <br>	
-<button type="button" onclick="characterSheetSpawn2()">Spawn a Character Sheet ! (printer-friendly version)</button>	
 	</div>	
 	</body>
 	</html>
