@@ -73,9 +73,9 @@ textarea {
    resize: none;
 }
 
-a{display:block}
-a:link, a:visited {text-decoration: none;display: inline-block;}
-a:hover, a:active {background-color: lightblue;}
+a.one{display:block}
+a.one:link, a:visited {text-decoration: none;display: inline-block;}
+a.one:hover, a:active {background-color: lightblue;}
 
 
 label {
@@ -770,7 +770,7 @@ value+=1
         wyrdbornDisplay();">
 	<option value="empty">Select an Origin </option>
 	<select id="test" name="test" style="display: none">
-<a id="PantheonLink" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
+<a id="PantheonLink" class="one" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
 
 <br>	
 
@@ -997,7 +997,7 @@ value+=1
     <option value="Ogma">Ogma, God of Wisdom, Magic and Strength.</option>
 	</select>
 
-<a id="OriginLink" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
+<a id="OriginLink" class="one" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
 <br>	
 <label for="wyrdbornOrigin" id = wyrdbornOriginLabel  style="float:left;display: none">Select your Mythborn Species</label>
 <select id="wyrdbornOrigin" onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">
@@ -1019,11 +1019,11 @@ value+=1
 	</section>
 	</div>
 	<div id="main">
-<a href="http://scionprimarchs.wikia.com/wiki/Character_Creation">Guidance for Character Creation</a>
+<a class="one"href="http://scionprimarchs.wikia.com/wiki/Character_Creation">Guidance for Character Creation</a>
   <br>
   <br>
-<a href="http://fate-srd.com/fate-core/making-good-aspect" target="_blank">Guidance on creating Character Aspects</a> <br>
-<a href="https://wiki.rpg.net/index.php/Aspects_List#Character_Aspects" target="_blank">Ideas for Character Aspects</a>
+<a class="one"href="http://fate-srd.com/fate-core/making-good-aspect" target="_blank">Guidance on creating Character Aspects</a> <br>
+<a class="one"href="https://wiki.rpg.net/index.php/Aspects_List#Character_Aspects" target="_blank">Ideas for Character Aspects</a>
 
 <br>
   <input type="text" name="highConcept" placeholder="High Concept"> <br>
@@ -1032,8 +1032,8 @@ value+=1
   <input type="text" name="aspect2" placeholder="Second Aspect"> <br>
   <input type="text" name="aspect3" placeholder="Third Aspect"> 
   <br><br>
-<a href="http://fate-srd.com/fate-core/building-stunts" target="_blank">Guidance on creating Stunts</a> <br>
-<a href="http://evilhat.wikidot.com/fate-core-stunts" target="_blank">Ideas for Normal Stunts</a>
+<a class="one"href="http://fate-srd.com/fate-core/building-stunts" target="_blank">Guidance on creating Stunts</a> <br>
+<a class="one"href="http://evilhat.wikidot.com/fate-core-stunts" target="_blank">Ideas for Normal Stunts</a>
 
 <br>
   <textarea name="stunt1" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
