@@ -385,6 +385,12 @@ Coatl = new secondOrigin("Coatl","Jade Sea",[2,2,4,2,2,0,1,0,-1,1,0,-1,-2,-2,-3,
 Rakshasa = new secondOrigin("Rakshasa","Shambhala",[3,4,0,2,2,2,3,4,1,3,2,1,3,-1,2,3,1,3,2,0,2,1,2,0,2,1,0,3,-2,4,3,1,1,2,-1,-2,-1,-3,-3,-2,1,2,2,3,4,3,4,3,4,-4,3,4,-4,3,3,-3,-3,-3,-3,-3,-3,-3,-3,-3],[2,2,-1,1,0,3,3,3,3,4,4,2,3,2,2]),
 Asura = new secondOrigin("Asura","Shambhala",[4,4,-1,3,0,2,2,3,2,3,3,3,4,-2,2,4,2,3,4,2,3,1,3,-3,3,0,-1,-2,-2,3,1,-1,-2,-3,-3,-3,-4,-3,-3,-3,2,3,2,3,4,3,2,3,4,3,2,4,-4,3,3,-3,-3,-3,-3,-3,-3,-3,-3,-3],[1,2,-1,2,0,3,4,3,3,4,4,3,3,2,3]),
 
+
+// Enlightened
+
+// Circle of Merlin 
+
+
 ]
 
 
@@ -512,6 +518,7 @@ for(j=0;j<secondOriginArray.length;j++){
 	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
 	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala"]; 
 	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
+	countryLists["Elightened"] = ["Select an Origin","Cabal", "Circle of Merlin", "Illuminati", "Order of the Jade Fist"]; 
 	/* CountryChange() is called from the onchange event of a select element.
 	* param selectObj - the select object which fired the on change event. 
 	*/ 
@@ -617,7 +624,12 @@ function setWyrdborn(selectedBox){
 	godLists["Summer Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Jade Sea"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	godLists["Dark Forest"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	function speciesChange(selectObj) { 
+	godLists["Cabal"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Circle of Merlin"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Illuminati"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+	godLists["Order of the Jade Fist"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
+
+function speciesChange(selectObj) { 
 	var idx = selectObj.selectedIndex; 
 	var which = selectObj.options[idx].value; 
 	cList2 = godLists[which]; 
@@ -664,10 +676,17 @@ function setWyrdborn(selectedBox){
 	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheonLabel').style.display = 'block'; document.getElementById('dodekatheon').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orishaLabel').style.display = 'block'; document.getElementById('orisha').style.display = 'block'}
 	else if (document.getElementById('country').value == 'Neter: Egyptian Gods') {document.getElementById('neterLabel').style.display = 'block'; document.getElementById('neter').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'};
+	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'}
+
+// Enlightened Options
+	else if (document.getElementById('country').value == 'Cabal') {document.getElementById('cabalLabel').style.display = 'block'; document.getElementById('cabal').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Circle of Merlin') {document.getElementById('merlinLabel').style.display = 'block'; document.getElementById('merlin').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Illuminati') {document.getElementById('illuminatiLabel').style.display = 'block'; document.getElementById('illuminati').style.display = 'block'}
+	else if (document.getElementById('country').value == 'Order of the Jade Fist') {document.getElementById('jadefistLabel').style.display = 'block'; document.getElementById('jadefist').style.display = 'block'};
 
 	}
 	
+
 	
 	function hide() {
 // Hide Boxes
@@ -687,7 +706,12 @@ function setWyrdborn(selectedBox){
 	document.getElementById('dodekatheon').style.display = 'none'
 	document.getElementById('orisha').style.display = 'none'
 	document.getElementById('neter').style.display = 'none'
-	document.getElementById('tuatha').style.display = 'none';
+	document.getElementById('tuatha').style.display = 'none'
+// Enlightened Options
+	document.getElementById('cabal').style.display = 'none'
+	document.getElementById('merlin').style.display = 'none'
+	document.getElementById('illuminati').style.display = 'none'
+	document.getElementById('jadefist').style.display = 'none';
 	
 // Hide Labels
 // Mythborn Options
@@ -706,8 +730,14 @@ function setWyrdborn(selectedBox){
 	document.getElementById('dodekatheonLabel').style.display = 'none'
 	document.getElementById('orishaLabel').style.display = 'none'
 	document.getElementById('neterLabel').style.display = 'none'
-	document.getElementById('tuathaLabel').style.display = 'none';
+	document.getElementById('tuathaLabel').style.display = 'none'
+// Enlightened Options
+	document.getElementById('cabalLabel').style.display = 'none'
+	document.getElementById('merlinLabel').style.display = 'none'
+	document.getElementById('illuminatiLabel').style.display = 'none'
+	document.getElementById('jadefistLabel').style.display = 'none';
 	
+
 
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
 document.getElementById('OriginLink').style.display = 'none'
@@ -796,6 +826,7 @@ myWindow.document.write("</HTML>")
 	<option value="Godborn">Godborn - God + Human</option>
 	<option value="Mythborn">Mythborn - Legendary Creature</option>
 	<option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
+	<option value="Enlightened">Enlightened - Gifted Human</option>
 	</select>
 	<br>
 
@@ -1034,6 +1065,40 @@ myWindow.document.write("</HTML>")
     <option value="The Morrigan">The Morrigan, Goddess of prophecy, and the Underworld.</option>
     <option value="Ogma">Ogma, God of Wisdom, Magic and Strength.</option>
 	</select>
+	
+	
+<!-- Tuatha Dé Danaan -->
+
+<label for="illuminati" id = illuminatiLabel style="float:left;display: none">Select a Specialty</label>	   
+<select id="illuminati" name="illuminati"  onchange = setChosenGod(illuminati) style="float:left;display: none">
+    <option value="empty">Select a Specialty</option> 
+    <option value="Executives">Executives, Valued Immensely Largely.</option>
+    <option value="Security">Security, A Direct Influence on Social Tendencies.</option>
+    <option value="Consultants">Consultants, Ready to Alleviate Zombie Invasions Effectively and Satisfiedly.</option>
+	</select>
+	
+<label for="merlin" id = merlinLabel style="float:left;display: none">Select a Specialty</label>	   
+<select id="merlin" name="merlin"  onchange = setChosenGod(merlin) style="float:left;display: none">
+    <option value="empty">Select a Specialty</option> 
+    <option value="Druids">Druids, Protectors of Nature.</option>
+    <option value="Knights">Knights, Heirs of Arthur.</option>
+	</select>
+	
+<label for="jadefist" id = jadefistLabel style="float:left;display: none">Select a Specialty</label>	   
+<select id="jadefist" name="jadefist"  onchange = setChosenGod(jadefist) style="float:left;display: none">
+    <option value="empty">Select a Specialty</option> 
+    <option value="Druids">Druids, Protectors of Nature.</option>
+    <option value="Knights">Knights, Heirs of Arthur.</option>
+	</select>
+	
+<label for="cabal" id = cabalLabel style="float:left;display: none">Select a God</label>	   
+<select id="cabal" name="cabal"  onchange = setChosenGod(cabal) style="float:left;display: none">
+    <option value="empty">Select a Specialty</option> 
+    <option value="Nercomancers">Necromancers, Soul Masters.</option>
+    <option value="Seers">Seers, the Eyes and Ears.</option>
+    <option value="Invokators">Invokators, Titan Worshippers.</option>
+    <option value="Blackhearts">Blackhearts, Wetwork Experts.</option>
+</select>
 
 <a id="OriginLink" class="one" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
 <br>	
