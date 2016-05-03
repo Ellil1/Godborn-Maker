@@ -1165,7 +1165,7 @@ document.getElementById('inputTextToSave').value = "Aspects:     " +"\n" + docum
 
 function saveTextAsFile()
 {
-	var textToWrite = document.getElementById("inputTextToSave").value.replace(/\n\r?/g, '<br />');
+	var textToWrite = document.getElementById("inputTextToSave").value
 	var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
 	var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
 
