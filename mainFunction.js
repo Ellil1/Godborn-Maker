@@ -377,7 +377,7 @@ if(entry.roles.length === 2){return entry.roles[0].name === document.getElementB
 
 godCounter = 0
 
-if(newSecondOriginArray.length % 3 === 1){newSecondOriginArray.push( Default= new secondOrigin("Default"))}
+if(newSecondOriginArray.length % 3 === 1){newSecondOriginArray.push( Default= new secondOrigin(""))}
 if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Default= new secondOrigin(""));newSecondOriginArray.push( Default= new secondOrigin("Default"))}
 
 var table = document.getElementById("Table");
