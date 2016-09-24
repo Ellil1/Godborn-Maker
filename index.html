@@ -194,283 +194,32 @@
 	</select>
 	<br><br>
 	<label for="continent">Select Type</label>
-	<select id="continent" onchange="countryChange(this); hide(); wyrdbornHide();">
+	<select id="continent" onchange="addOption(document.getElementById('OriginSelect'))">
 	<option selected value="empty">Select Type</option>
-	<option value="Godborn">Godborn - God + Human</option>
-	<option value="Mythborn">Mythborn - Legendary Creature</option>
-	<option value="Wyrdborn">Wyrdborn - God + Mythborn</option>
+	<option value="God">Godborn - God/Human Hybrid</option>
+	<option value="Otherworld">Mythborn - Legendary Creature</option>
+	<option value="Titan">Titanspawn - Elemental Entity</option>
 	<option value="Enlightened">Enlightened - Gifted Human</option>
 	</select>
 	<br>
 
-	<label for="country">Select an Origin </label>
-	<select id="country" onchange="
-	speciesChange(this);
-	setChosenPantheon(this)
-	hide();
-	test();
-        wyrdbornDisplay();">
-	<option value="empty">Select an Origin </option>
-	<select id="test" name="test" style="display: none"><br>
-<a id="PantheonLink" class="one" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>	
-
-<br>	
-
-<!-- Dark Forest -->
-	
-	</select>
-	<label for="darkForest" id = darkForestLabel style="float:left;display: none">Select a Species</label>
-	<select id="darkForest" name="darkForest" onchange = setChosenGod(darkForest) style="float:left;display: none">
-    <option value="empty">Select a Species</option> 
-    <option value="Ent">Ent</option>
-    <option value="Nymph">Nymph</option>
-    <option value="Witch">Witch</option>
+<label for="OriginSelect" >Select an Global Origin</label>
+	<select id="OriginSelect" onchange="addOriginOption(document.getElementById('SecondOriginSelect')); setChosenPantheon(this)">
+	<option selected value="empty">Select Origin</option>
 
 	</select>
 	
-<!-- Summer Court -->
-	
-	<label for="summerCourt" id = summerCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="summerCourt" name="summerCourt" onchange = setChosenGod(summerCourt) style="float:left;display: none">
-    <option value="empty">Select a Species</option> 
-    <option value="Summer Fey">Fey</option>
-    <option value="Summer Elf">Elf</option>
-    <option value="Summer Small Folk">Small Folk</option>
-    <option value="Summer Pixie">Pixie</option>
-</select>
+<br>
+<a id="PantheonLink" class="one" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>
+	<br>
+<label for="SecondOriginSelect" >Select a Specific Origin</label>
+	<select id="SecondOriginSelect" onclick="setChosenGod(this)">
+	<option selected value="empty">Select Origin</option>
 
-<!-- Winter Court -->
-
-<label for="winterCourt" id = winterCourtLabel style="float:left;display: none">Select a Species</label>	
-<select id="winterCourt" name="winterCourt"  onchange = setChosenGod(winterCourt) style="float:left;display: none">
-    <option value="empty">Select a Species</option> 
-    <option value="Winter Fey">Fey</option>
-    <option value="Winter Elf">Elf</option>
-    <option value="Winter Small Folk">Small Folk</option>
-    <option value="Winter Pixie">Pixie</option>
-</select>
-
-<!-- Jade Sea -->
-
-<label for="jadeSea" id = jadeSeaLabel style="float:left;display: none">Select a Species</label>		
-<select id="jadeSea" name="jadeSea"  onchange = setChosenGod(jadeSea) style="float:left;display: none">
-    <option value="empty">Select a Species</option> 
-<option value="Eastern Dragon">Eastern Dragon</option>
-<option value="Western Dragon">Western Dragon</option>
-<option value="Naga">Naga</option>
-<option value="Coatl">Coatl</option>
-</select>
-
-<!-- Shambhalla -->
-<label for="shambhala" id = shambhalaLabel style="float:left;display: none">Select a Species</label>		
-<select id="shambhala" name="shambhala"  onchange = setChosenGod(shambhala) style="float:left;display: none">
-    <option value="empty">Select a Species</option> 
-    <option value="Asura">Asura</option>
-    <option value="Rakshasa">Rakshasa</option>
-    <option value="Naga">Naga</option>
-</select>
-
-
-<!-- Aesir -->
-<label for="aesir" id = aesirLabel style="float:left;display: none">Select a God</label>	
-<select id="aesir" name="aesir"  onchange = setChosenGod(aesir) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Baldur">Baldur, God of Light, Beauty, Love and Happiness.</option>
-    <option value="Freya">Freya, Goddess of the Gold, and War. </option>
-    <option value="Freyr">Freyr, God of Farming, Weather and Fertility. </option>
-    <option value="Frigg">Frigg, Queen of the Gods. </option>
-    <option value="Heimdall">Heimdall, Protector of Asgard.</option>
-    <option value="Hel">Hel, Goddess of the Dead. </option>
-    <option value="Loki">Loki, Trickster God.  </option>
-    <option value="Odin">Odin, King of Asgard, God of Magic and Prophecy </option>
-    <option value="Sif">Sif, Goddess of marriage. </option>
-    <option value="Thor">Thor, God of Thunder and War.</option>
-    <option value="Tyr">Tyr, God of Victory.</option>
-    <option value="Vidar">Vidar, God of Vengeance.</option>
-    </select>
-    
-<!-- Amatsukami -->
-<label for="amatsukami" id = amatsukamiLabel style="float:left;display: none">Select a God</label>	
-<select id="amatsukami" name="amatsukami"  onchange = setChosenGod(amatsukami) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Amaterasu">Amaterasu, Goddess of the sun.</option>
-    <option value="Hachiman">Hachiman, Lord of war, fishing, and fertility.</option>
-    <option value="Izanagi">Izanagi, Lord of the sky.</option>
-    <option value="Izanami">Izanami, Queen of the Underworld.</option>
-    <option value="Raiden">Raiden, Lord of Thunder and Lightning.</option>
-    <option value="Ryujin">Ryujin, Dragon God of the Ocean Depths.</option>
-    <option value="Susano-o">Susano-o, Lord of sea and storms.</option>
-    <option value="Tsuki-Yomi">Tsuki-Yomi, God of the moon.</option>
-</select>
-<!-- Atzlánti -->
-
-<label for="atzlanti" id = atzlantiLabel style="float:left;display: none">Select a God</label>	
-<select id="atzlanti" name="atzlanti"  onchange = setChosenGod(atzlanti) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Ellykha">Ellykha, Goddess of Spilt Blood.</option>
-    <option value="Huitzilopochtli">Huitzilopochtli, God of blood, war and the sun.</option>
-    <option value="Miclántecuhtli">Miclántecuhtli, God of the dead and spirits.</option>
-    <option value="Quetzalcoátl">Quetzalcoátl, God of beauty, creation and art.</option>
-    <option value="Tezcatlipoca">Tezcatlipoca, God of discord and destruction.</option>
-    <option value="Tlaloc">Tlaloc, God of rain and clouds.</option>
-    <option value="Tlazoltéotl">Tlazoltéotl, Goddess of filth.</option>
-    <option value="Xipe Totec">Xipe Totec, God of maize and growth.</option>
-</select>
-
-<!-- Celestial Bureaucracy -->
-
-<label for="celestialBureaucracy" id = celestialBureaucracyLabel style="float:left;display: none">Select a God</label>	
-<select id="celestialBureaucracy" name="celestialBureaucracy"  onchange = setChosenGod(celestialBureaucracy) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Chang'e">Chang'e, Goddess of the Moon.</option>
-    <option value="Fuxi">Fuxi, God of Culture and Refinement.</option>
-     <option value="Guanyin">Guanyin, Goddess of mercy and diplomacy.</option>
-    <option value="Guan Yu">Guan Yu, Jade Emperor, God of Strategy.</option>
-    <option value="Houyi">Houyi, God of the Sun.</option>
-    <option value="Huang Di">Huang Di, Yellow Emperor, God of Strategy and Law.</option>
-    <option value="Nezha">Nezha, Goddess of adventures and heroism.</option>
-    <option value="Nuwa">Nuwa, Goddess of the moon.</option>
-    <option value="Shennong">Shennong, God of medecine and agriculture.</option>
-    <option value="Sun Wukong">Sun Wukong, Monkey King, god of Trickery and Strength.</option>
-    <option value="Xiwangmu">Xiwangmu, Goddess of Growth and Destruction.</option>
-    <option value="Yanluo">Yanluo, Overseer of the Dead.</option>
-</select>
-
-<!-- Deva -->
-<label for="deva" id = devaLabel style="float:left;display: none">Select a God</label>	   
-<select id="deva" name="deva"  onchange = setChosenGod(deva) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Agni">Agni, God of FIre and Sacrifice.</option>
-    <option value="Brahma">Brahma, God of Creation.</option>    
-    <option value="Ganesha">Ganesha, God of good luck and Wisdom.</option>
-    <option value="Indra">Indra, God of war and weather.</option>    
-    <option value="Kali">Kali, Goddess of annihilation.</option>
-    <option value="Lakshmi">Lakshmi, Goddess of fortune.</option> 
-    <option value="Parvati">Parvati, Goddess of feminity.</option>    
-    <option value="Sarasvati">Sarasvati, Goddess of artists.</option>     
-    <option value="Shiva">Shiva, The Destroyer.</option>
-    <option value="Surya">Surya, God of the Sun.</option>     
-    <option value="Vishnu">Vishnu, The Preserver.</option>
-    <option value="Yama">Yama, Lord of the Dead.</option>     
-</select>
-
-<!-- Dodekatheon -->
-
-<label for="dodekatheon" id = dodekatheonLabel style="float:left;display: none">Select a God</label>	   
-<select id="dodekatheon" name="dodekatheon"  onchange = setChosenGod(dodekatheon) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Aphrodite">Aphrodite, Goddess of love and beauty.</option>
-    <option value="Apollo">Apollo, God of prophecy, the sun, and art.</option>
-    <option value="Archimedes">Archimedes, God of Logic.</option>
-    <option value="Ares">Ares, God of War.</option>
-    <option value="Artemis">Artemis, Goddess of chastity, the Moon, and hunting.</option>
-    <option value="Athena">Athena, Goddess of strategy and wisdom.</option>
-    <option value="Dionysus">Dionysus, God of Wine, Friendship and Freedom.</option>
-    <option value="Gerald">Gerald, God of Rock 'n' Roll.</option>
-    <option value="Hades">Hades, Ruler of the Underworld.</option>
-    <option value="Hephaestus">Hephaestus, God of the Forge and Invention.</option>
-    <option value="Hera">Hera, Goddess of marriage and politics.</option>
-    <option value="Herakles">Herakles, God of Strength.</option>
-    <option value="Hermes">Hermes, God of thieves, merchants, and tricksters.</option>
-    <option value="Lyra">Lyra, Goddess of Freedom.</option>
-    <option value="Poseidon">Poseidon, God of the sea.</option>
-    <option value="Zeus">Zeus, God of Leadership, Thunder, Sky, and Power.</option>
-</select>
-
-<!-- Orisha -->
-    
-<label for="orisha" id = orishaLabel style="float:left;display: none">Select a God</label>	   
-<select id="orisha" name="orisha"  onchange = setChosenGod(orisha) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Anansi">Anansi, Spider God of Tricksters and Stories.</option>
-    <option value="Baron Samedi">Baron Samedi, Gentleman God of death.</option>
-    <option value="Damballa">Damballa, God of creativity and sexuality.</option>
-    <option value="Erzulie">Erzulie, Goddess of Love.</option>
-    <option value="Kalfu">Kalfu, God of Darkness.</option>
-    <option value="Legba">Legba, God of Crossroads.</option>
-    <option value="Ogoun">Ogoun, God of iron.</option>
-    <option value="Shango">Shango, God of thunder.</option>
-</select>
-
-<!-- Neter -->
-
-
-<label for="neter" id = neterLabel style="float:left;display: none">Select a God</label>	   
-<select id="neter" name="neter"  onchange = setChosenGod(neter) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Anubis">Anubis, Judge of the Underworld.</option>
-    <option value="Atum Re">Atum Re, God of the Sun.</option>
-    <option value="Bastet">Bastet, Goddess of cats.</option>
-    <option value="Geb">Geb, God of the Earth.</option>
-    <option value="Hathor">Hathor, Goddess of Fertility and Motherhood.</option>
-    <option value="Horus">Horus, God of Justice.</option>
-    <option value="Isis">Isis, Goddess of magic.</option>
-    <option value="Khepri">Khepri, Goddess of Leadership.</option>
-    <option value="Osiris">Osiris, Lord of the Underworld.</option>
-    <option value="Ptah">Ptah, God of artistry.</option>
-    <option value="Rain">Rain, Goddess of the Veil.</option>
-    <option value="Sekhmet">Sekhmet, Goddess of War.</option>
-    <option value="Set">Set, God of disease and Guardian of the desert.</option>
-    <option value="Sobek">Sobek, God of crocodiles and righteous savagery.</option>
-    <option value="Thoth">Thoth, God of scribes.</option>
-</select>
-
-<!-- Tuatha Dé Danaan -->
-
-<label for="tuatha" id = tuathaLabel style="float:left;display: none">Select a God</label>	   
-<select id="tuatha" name="tuatha"  onchange = setChosenGod(tuatha) style="float:left;display: none">
-    <option value="empty">Select a God</option> 
-    <option value="Aengus">Aengus, God of Beauty and Youth.</option>
-    <option value="Brigid">Brigid, Goddess of healers and smiths.</option>
-    <option value="Cernunnos">Cernunnos, God of Druidism and Nature.</option>
-    <option value="Dagda">The Dagda, Warrior and King of the Tuatha.</option>
-    <option value="Dian Cécht">Dian Cécht, God of healing and craftsmanship.</option>
-    <option value="Lugh">Lugh, God of All Trades.</option>
-    <option value="Manannan mac Lir">Manannán mac Lir, God of the sea and Psychopomp.</option>
-    <option value="The Morrigan">The Morrigan, Goddess of prophecy, and the Underworld.</option>
-    <option value="Ogma">Ogma, God of Wisdom, Magic and Strength.</option>
 	</select>
-	
-	
-<!-- Tuatha Dé Danaan -->
-
-<label for="illuminati" id = illuminatiLabel style="float:left;display: none">Select a Specialty</label>	   
-<select id="illuminati" name="illuminati"  onchange = setChosenGod(illuminati) style="float:left;display: none">
-    <option value="empty">Select a Specialty</option> 
-    <option value="Executives">Executives, Valued Immensely Largely.</option>
-    <option value="Security">Security, A Direct Influence on Social Tendencies.</option>
-    <option value="Consultants">Consultants, Ready to Alleviate Zombie Invasions Effectively and Satisfiedly.</option>
-	</select>
-	
-<label for="merlin" id = merlinLabel style="float:left;display: none">Select a Specialty</label>	   
-<select id="merlin" name="merlin"  onchange = setChosenGod(merlin) style="float:left;display: none">
-    <option value="empty">Select a Specialty</option> 
-    <option value="Druids">Druids, Protectors of Nature.</option>
-    <option value="Knights">Knights, Heirs of Arthur.</option>
-	</select>
-	
-<label for="jadefist" id = jadefistLabel style="float:left;display: none">Select a Specialty</label>	   
-<select id="jadefist" name="jadefist"  onchange = setChosenGod(jadefist) style="float:left;display: none">
-    <option value="empty">Select a Specialty</option> 
-    <option value="Paladins">Paladins, Warriors of Light.</option>
-    <option value="Monks">Monks, Wise and Deadly.</option>
-   <option value="Ronin">Ronin, One-Man Armies.</option>
-	</select>
-	
-<label for="cabal" id = cabalLabel style="float:left;display: none">Select a God</label>	   
-<select id="cabal" name="cabal"  onchange = setChosenGod(cabal) style="float:left;display: none">
-    <option value="empty">Select a Specialty</option> 
-    <option value="Necromancers">Necromancers, Soul Masters.</option>
-    <option value="Seers">Seers, the Eyes and Ears.</option>
-    <option value="Invokators">Invokators, Titan Worshippers.</option>
-    <option value="Blackhearts">Blackhearts, Wetwork Experts.</option>
-</select>
+		
 <br>
 <a id="OriginLink" class="one" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
-<br>	
-<label for="wyrdbornOrigin" id = wyrdbornOriginLabel  style="float:left;display: none">Select your Mythborn Species</label>
-<select id="wyrdbornOrigin" onchange = setWyrdborn(wyrdbornOrigin) style="float:left;display: none">
-<option value="empty">Select your Mythborn Species</option> 
 </select>
 
 <br>		<br>	
