@@ -3,14 +3,12 @@ var LegendaryAbility = function(name,legendaries) {
   this.name = name;
   this.legendaries = legendaries;
 };
-
 var Role = function(name,legendaries,skills) {
   this.name = name;
   this.legendaries = legendaries;
   this.skills = skills;
 
 };
-
 var secondOrigin = function(name,originString,originVar,approaches,domains,roles) {
   this.name = name;
   this.originString = originString;
@@ -19,9 +17,6 @@ var secondOrigin = function(name,originString,originVar,approaches,domains,roles
   this.domains = domains;
   this.roles = roles;
 };
-
-
-
 var parameterCalculator = function(name,type,legendaries,skills) {
   this.name = name;
   this.type = type;
@@ -49,9 +44,8 @@ Stealth = new LegendaryAbility("Stealth"),
 Will = new LegendaryAbility("Will")
 
 ]
-  
-
 var rolesChoiceArray = [
+Default = new Role("Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]),
 MeatShield = new Role("Meat Shield",[2,4,3,1,3,2,3,1,1,3,3,2,-1,-1,3,-2,1,-2,-1,0,2,3,0,2,-1,3,1,-1,2,2,4,3,-1,1,2,2,-2,-1,3,2,-3,-2,0,-2,-1,4,3,4,2,-1,1,-1,0,-2,3,1,-1,2,-2,-1,-2,3,2,1,-2,3],[3,-2,-1,2,1,4,3,3,4,3,-1,-2,1,0,4]),
 DamageDealer = new Role("Damage Dealer",[2,0,0,1,2,3,2,4,2,4,3,-2,-3,-1,-2,4,1,-1,0,3,1,3,4,-1,3,2,1,0,-1,4,2,-1,3,1,2,2,3,1,3,3,-4,4,1,1,4,1,4,2,-1,-2,4,-2,-2,-1,1,2,3,4,2,1,2,1,4,4,-2,3],[3,-1,-2,3,-2,4,4,1,1,0,-1,-2,4,4,3]),
 PartyFace = new Role("Party Face",[1,1,0,3,1,4,2,-3,-3,-4,-3,1,4,3,3,1,1,2,4,2,4,1,-2,4,-1,-1,-1,-2,-1,-3,-3,-2,3,4,-1,-1,1,0,-3,-2,1,-3,-3,3,-2,-1,-4,-4,4,4,-4,4,4,-2,-3,3,-2,2,2,1,2,3,1,4,1,-2],[1,0,4,2,1,-2,2,2,-1,4,4,4,-2,-1,0]),
@@ -60,7 +54,6 @@ SupportController = new Role("Support-Controller",[4,4,3,3,4,4,4,1,3,3,4,4,4,2,4
 
 
 ]
-
 var parametersArray = [
 
 // Approaches
@@ -162,15 +155,14 @@ Merlin = new parameterCalculator("Circle of Merlin","Enlightened",[],[])
 
 
 ]
-
 var secondOriginArray = [
- Tumatauenga= new secondOrigin("Tumatauenga",Maori.name,Maori,[Forceful,Flashy,Clever],[War,Leader],[King,General]), 
+ Tūmatauenga= new secondOrigin("Tūmatauenga",Maori.name,Maori,[Forceful,Flashy,Clever],[War,Leader],[King,General]), 
  TaneMahuta= new secondOrigin("Tane Mahuta",Maori.name,Maori,[Clever,Forceful,Careful],[Nature,Wisdom],[Harmonizer,Thinker]), 
  Tangaroa= new secondOrigin("Tangaroa",Maori.name,Maori,[Careful,Forceful,Sneaky],[Water],[FreeSpirit,Harmonizer]), 
  Tawhirimatea= new secondOrigin("Tawhirimatea",Maori.name,Maori,[Forceful,Flashy,Sneaky],[Sky],[FreeSpirit,General]), 
  Rehua= new secondOrigin("Rehua",Maori.name,Maori,[Careful,Clever,Sneaky],[Sky,Wisdom],[Thinker,FreeSpirit]), 
  Maui= new secondOrigin("Maui",Maori.name,Maori,[Clever,Flashy,Quick],[Wit,War],[FreeSpirit,Politician]), 
- HineNuiTePo= new secondOrigin("Hine-Nui-Te-Po",Maori.name,Maori,[Clever,Sneaky,Careful],[Death,Moon],[Thinker,Politician]), 
+ HineNuiTePo= new secondOrigin("Hine-nui-te-po",Maori.name,Maori,[Clever,Sneaky,Careful],[Death,Moon],[Thinker,Politician]), 
  Ruaumoko= new secondOrigin("Ruaumoko",Maori.name,Maori,[Careful,Clever,Forceful],[Earth,Fire],[Harmonizer]), 
  Rongo= new secondOrigin("Rongo",Maori.name,Maori,[Clever,Sneaky,Careful],[Fertility,Wisdom],[Politician,Thinker]),
  HaumiaTiketike= new secondOrigin("Haumia-Tiketike",Maori.name,Maori,[Sneaky,Forceful,Careful],[Wit,Nature],[Hunter]),
@@ -385,17 +377,36 @@ var table = document.getElementById("Table");
 	 
 	 for(i=2;i<newSecondOriginArray.length;i+=3){
 godCounter+=1
- if(godCounter <= 15){
+ if(godCounter <= 10){
 
 var row = table.insertRow(-1);
 
 var cell1 = row.insertCell(0);
 var cell2 = row.insertCell(1);
 var cell3 = row.insertCell(2);
+var cell4 = row.insertCell(3);
+var cell5 = row.insertCell(4);
+var cell6 = row.insertCell(5);
 
-cell1.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">'+newSecondOriginArray[i-2].name+'</a>'
-cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">'+newSecondOriginArray[i-1].name+'</a>'
-cell3.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">'+newSecondOriginArray[i].name+'</a>'
+
+cell1.id = i.toString()
+cell3.id = i.toString()
+cell5.id = i.toString()
+
+cell1.innerHTML = newSecondOriginArray[i-2].name
+cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">Link</a>'
+cell3.innerHTML = newSecondOriginArray[i-1].name
+if(newSecondOriginArray[i-1].name.length !=0){cell4.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">Link</a>'}
+cell5.innerHTML = newSecondOriginArray[i].name
+if(newSecondOriginArray[i].name.length !=0){cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
+
+cell1.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-2].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+cell3.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-1].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+cell5.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+
 
 	 }
 }
@@ -418,18 +429,6 @@ else{
 	if(targetPropertyOrigin.roles.length === 1){Total.legendaries[i] += targetPropertyOrigin.roles[0].legendaries[i]/2}
 	if(targetPropertyOrigin.roles.length === 2){Total.legendaries[i] += (targetPropertyOrigin.roles[0].legendaries[i] + targetPropertyOrigin.roles[1].legendaries[i])/4}
 
-/*
-var secondOrigin = function(name,originString,originVar,approaches,domains,roles) {
-  this.name = name;
-  this.originString = originString;
-  this.originVar = originVar;
-  this.approaches = approaches;
-  this.domains = domains;
-  this.roles = roles;
-};
-Amaterasu = new secondOrigin("Amaterasu",Amatsukami.name,Amatsukami,[Clever,Flashy,Careful],[Sun,GodLeader],[Politician,Mother]),
-*/
-
 //+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4)) 
 }
 } 	
@@ -448,30 +447,41 @@ exampleLegendaryMaker(newAbilitiesArray,godFound,roleFound.legendaries,roleFound
 //exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills,"Skills")
 }
 
-function intelligenceChoiceFunction(){
 
-abilityName = prompt("What is the Name of this Variable ?")
-originName = prompt("What is this Species' Origin ?")
-variableName = abilityName.replace(/\s/g, '');
-properties=0
-propertiesSkill = 0
-name = variableName + " = new secondOrigin(\"" + abilityName + "\","    
-name+= "\"" + originName + "\","
-name+= originName + ".name,"
-for(i=0;i<legendaryAbilitiesArray.length;i++){
-if(properties===0){name += "[" + prompt(legendaryAbilitiesArray[i].name)}
-else{name+="," + prompt(legendaryAbilitiesArray[i].name)}
-properties+=1
-}
-for(i=0;i<skillsArray.length;i++){
-if(propertiesSkill===0){name+= "],[" + prompt(skillsArray[i].name)}
-else{name+="," + prompt(skillsArray[i].name)}
-propertiesSkill+=1
-}
+function addOption(selectChoice) {
+ 	if(document.getElementById("continent").value === "God"){newOriginArray = parametersArray.filter(function (entry) { return entry.type === "God" })}
+	if(document.getElementById("continent").value === "Otherworld"){newOriginArray = parametersArray.filter(function (entry) { return entry.type === "Otherworld" })}
+	if(document.getElementById("continent").value === "Titan"){newOriginArray = parametersArray.filter(function (entry) { return entry.type === "Titan" })}
+	if(document.getElementById("continent").value === "Enlightened"){newOriginArray = parametersArray.filter(function (entry) { return entry.type === "Enlightened" })}
 
 
-alert(name + "]),")
+for (j = 0; j < 100; j++) {
+  selectChoice.options[0] = null;
+}	
+for (i = 0; i < newOriginArray.length; i++) {
+    var x = selectChoice;
+    var option = document.createElement("option");
+    option.text = newOriginArray[i].name;
+    option.value = newOriginArray[i].name;
+   x.add(option);
 }
+}
+
+function addOriginOption(selectChoice) {
+
+for (j = 0; j < 100; j++) {
+  selectChoice.options[0] = null;
+}	console.log(document.getElementById("OriginSelect").value + " " + secondOriginArray[10].originString) 
+for (i = 0; i < secondOriginArray.length; i++) {
+if(document.getElementById("OriginSelect").value === secondOriginArray[i].originString){	
+    var x = selectChoice;
+    var option = document.createElement("option");
+    option.text = secondOriginArray[i].name;
+    option.value = secondOriginArray[i].name;
+   x.add(option);
+}}
+}
+
 
 function lengthChecker(){
 	length = ""
@@ -529,8 +539,6 @@ addAnAbility()
 //exampleLegendaryMaker(legendaryAbilitiesArray,godFound.legendaries,roleFound.legendaries,roleFound2.legendaries,9,wyrdbornFound.legendaries)
 // Test the Skills
 //exampleLegendaryMaker(skillsArray,godFound.skills,roleFound.skills,roleFound2.skills,7,wyrdbornFound.skills)
-// Create a new Origin
-//intelligenceChoiceFunction()
 // Create an Ability
 //addAnAbilityMaker()
 // Test the Legendaries AND Skills. Adds the extra Abilities
@@ -539,88 +547,33 @@ addAnAbility()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-// This Part deals with the Select Boxes and their displaying behaviors.
-
-  //__________________________________________________
-	// Types 
-  //__________________________________________________
-
-	
-	// array of possible countries in the same order as they appear in the country selection list 
-	var countryLists = new Array(3) 
-	countryLists["empty"] = ["Select an Origin"]; 
-	countryLists["Godborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	countryLists["Mythborn"] = ["Select an Origin","Dark Forest", "Summer Court", "Winter Court", "Jade Sea", "Shambhala"]; 
-	countryLists["Wyrdborn"] = ["Select an Origin","Aesir: Norse Gods", "Amatsukami: Japanese Gods", "Atzlánti: Aztec Gods", "Celestial Bureaucracy: Chinese Gods", "Deva: Hindu Gods", "Dodekatheon: Greek Gods", "Orisha: African Gods", "Neter: Egyptian Gods", "Tuatha Dé Danaan: Celtic Gods"]; 
-	countryLists["Enlightened"] = ["Select an Origin","Cabal", "Circle of Merlin", "Illuminati", "Order of the Jade Fist"]; 
-	/* CountryChange() is called from the onchange event of a select element.
-	* param selectObj - the select object which fired the on change event. 
-	*/ 
-	
-	function countryChange(selectObj2) { 
-	var idx = selectObj2.selectedIndex; 
-	var which = selectObj2.options[idx].value; 
-	cList2 = countryLists[which]; 
-	var cSelect = document.getElementById("country"); 
-	var len=cSelect.options.length; 
-	while (cSelect.options.length > 0) { 
-	cSelect.remove(0); 
-	} 
-	var newOption; 
-	for (var i=0; i<cList2.length; i++) { 
-	newOption = document.createElement("option"); 
-	newOption.value = cList2[i]; // assumes option string and value are the same 
-	newOption.text=cList2[i]; 
-	try { 
-	cSelect.add(newOption); // this will fail in DOM browsers but is needed for IE 
-	} 
-	catch (e) { 
-	cSelect.appendChild(newOption); 
-	} 
-	} 
-	} 
-
-ChosenFirstRole = "Weep"
-ChosenSecondRole = "Wuup"
+ChosenFirstRole = "Default"
+ChosenSecondRole = "Default"
 ChosenGod = "Woop"	
 ChosenWyrdborn = "Winter Fey"
 
 function setChosenPantheon(selectedBox){
-curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
+//curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
+curatedName = selectedBox.options[selectedBox.selectedIndex].value
+	console.log(curatedName)
+
 document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;
 document.getElementById ("PantheonLink").innerHTML = "Wiki Link: "+ curatedName;
 
 document.getElementById('OriginLink').style.display = 'none'
 
 }
-
 function setChosenGod(selectedBox){
 document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
 document.getElementById ("OriginLink").innerHTML = "Wiki Link: "+ selectedBox.options[selectedBox.selectedIndex].value;
 	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;
 document.getElementById('OriginLink').style.display = 'block'
 }
-
 function setFirstRole(selectedBox){
 	ChosenFirstRole = selectedBox.options[selectedBox.selectedIndex].value;}
-
 function setSecondRole(selectedBox){
 	ChosenSecondRole = selectedBox.options[selectedBox.selectedIndex].value;}
 
-function setWyrdborn(selectedBox){
-	ChosenWyrdborn = selectedBox.options[selectedBox.selectedIndex].value;}
 	
 	//__________________________________________________
 	// Roles
@@ -633,7 +586,7 @@ function setWyrdborn(selectedBox){
 	rolesLists["Skill Monkey"] = ["Select Role","Meat Shield", "Damage Dealer", "Party Face", "Support-Controller"]; 
 	rolesLists["Support-Controller"] = ["Select Role","Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 	
-	function rolesChange(selectObj2) { 
+function rolesChange(selectObj2) { 
 	var idx = selectObj2.selectedIndex; 
 	var which = selectObj2.options[idx].value; 
 	cList2 = rolesLists[which]; 
@@ -653,144 +606,7 @@ function setWyrdborn(selectedBox){
 	} 
 	} 
 	} 
-// Wyrdborn Options	
-	var godLists = new Array(9) 
-	godLists["empty"] = ["Select a Second Origin"]; 
-	godLists["Aesir: Norse Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon"]; 
-	godLists["Amatsukami: Japanese Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Eastern Dragon"]; 
-	godLists["Atzlánti: Aztec Gods"] = ["Witch", "Nymph", "Ent", "Coatl"]; 
-	godLists["Celestial Bureaucracy: Chinese Gods"] = ["Witch", "Nymph", "Summer Elf", "Winter Elf", "Eastern Dragon"]; 
-	godLists["Deva: Hindu Gods"] = ["Nymph", "Summer Elf", "Eastern Dragon","Naga","Asura","Rakshasa"]; 
-	godLists["Dodekatheon: Greek Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf"]; 
-	godLists["Orisha: African Gods"] = ["Witch", "Nymph", "Summer Fey", "Summer Elf"]; 
-	godLists["Neter: Egyptian Gods"] = ["Summer Elf","Summer Fey"]; 
-	godLists["Tuatha Dé Danaan: Celtic Gods"] = ["Witch", "Nymph", "Ent", "Summer Fey", "Summer Elf", "Winter Fey", "Winter Elf", "Western Dragon"]; 
-	godLists["Shambhala"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Winter Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Summer Court"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Jade Sea"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Dark Forest"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Cabal"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Circle of Merlin"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Illuminati"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
-	godLists["Order of the Jade Fist"] = ["Meat Shield", "Damage Dealer", "Party Face", "Skill Monkey"]; 
 
-function speciesChange(selectObj) { 
-	var idx = selectObj.selectedIndex; 
-	var which = selectObj.options[idx].value; 
-	cList2 = godLists[which]; 
-	var cSelect = document.getElementById("wyrdbornOrigin"); 
-	var len=cSelect.options.length; 
-	while (cSelect.options.length > 0) { cSelect.remove(0); } 
-	var newOption; 
-	for (var i=0; i<cList2.length; i++) { 
-	newOption = document.createElement("option"); 
-	newOption.value = cList2[i]; // assumes option string and value are the same 
-	newOption.text=cList2[i]; 
-	try { 
-	cSelect.add(newOption); // this will fail in DOM browsers but is needed for IE 
-	} 
-	catch (e) { 
-	cSelect.appendChild(newOption); 
-	} 
-	} 
-	} 
-	
-
-
-	// ______________________________________________
-	// Origins Test, trying to make a select box appear based on other select boxes
-	function wyrdbornDisplay(){
-	if (document.getElementById('continent').value == 'Wyrdborn') {document.getElementById('wyrdbornOrigin').style.display = 'block';document.getElementById('wyrdbornOriginLabel').style.display = 'block' } 
-	else {document.getElementById('wyrdbornOrigin').style.display = 'none';document.getElementById('wyrdbornOriginLabel').style.display = 'none' } 	
-	}
-	function wyrdbornHide(){document.getElementById('wyrdbornOrigin').style.display = 'none';document.getElementById('wyrdbornOriginLabel').style.display = 'none' }
-	function test() {
-// Mythborn Options
-	if (document.getElementById('country').value == 'Dark Forest') {document.getElementById('darkForestLabel').style.display = 'block';document.getElementById('darkForest').style.display = 'block' } 
-	else if (document.getElementById('country').value == 'Summer Court') {document.getElementById('summerCourtLabel').style.display = 'block'; document.getElementById('summerCourt').style.display = 'block'} 
-	else if (document.getElementById('country').value == 'Jade Sea') {document.getElementById('jadeSeaLabel').style.display = 'block'; document.getElementById('jadeSea').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Winter Court') {document.getElementById('winterCourtLabel').style.display = 'block'; document.getElementById('winterCourt').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Shambhala') {document.getElementById('shambhalaLabel').style.display = 'block'; document.getElementById('shambhala').style.display = 'block'}
-//	else if (document.getElementById('country').value == 'Other') {document.getElementById('othersLabel').style.display = 'block'; document.getElementById('others').style.display = 'block'}
-// God Options
-	else if (document.getElementById('country').value == 'Aesir: Norse Gods') {document.getElementById('aesirLabel').style.display = 'block'; document.getElementById('aesir').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Amatsukami: Japanese Gods') {document.getElementById('amatsukamiLabel').style.display = 'block'; document.getElementById('amatsukami').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Atzlánti: Aztec Gods') {document.getElementById('atzlantiLabel').style.display = 'block'; document.getElementById('atzlanti').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Celestial Bureaucracy: Chinese Gods') {document.getElementById('celestialBureaucracyLabel').style.display = 'block'; document.getElementById('celestialBureaucracy').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Deva: Hindu Gods') {document.getElementById('devaLabel').style.display = 'block'; document.getElementById('deva').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Dodekatheon: Greek Gods') {document.getElementById('dodekatheonLabel').style.display = 'block'; document.getElementById('dodekatheon').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Orisha: African Gods') {document.getElementById('orishaLabel').style.display = 'block'; document.getElementById('orisha').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Neter: Egyptian Gods') {document.getElementById('neterLabel').style.display = 'block'; document.getElementById('neter').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Tuatha Dé Danaan: Celtic Gods') {document.getElementById('tuathaLabel').style.display = 'block'; document.getElementById('tuatha').style.display = 'block'}
-
-// Enlightened Options
-	else if (document.getElementById('country').value == 'Cabal') {document.getElementById('cabalLabel').style.display = 'block'; document.getElementById('cabal').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Circle of Merlin') {document.getElementById('merlinLabel').style.display = 'block'; document.getElementById('merlin').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Illuminati') {document.getElementById('illuminatiLabel').style.display = 'block'; document.getElementById('illuminati').style.display = 'block'}
-	else if (document.getElementById('country').value == 'Order of the Jade Fist') {document.getElementById('jadefistLabel').style.display = 'block'; document.getElementById('jadefist').style.display = 'block'};
-
-	}
-	
-
-	
-	function hide() {
-// Hide Boxes
-// Mythborn Options
-	document.getElementById('darkForest').style.display = 'none' 
-	document.getElementById('summerCourt').style.display = 'none' 
-	document.getElementById('jadeSea').style.display = 'none'
-	document.getElementById('winterCourt').style.display = 'none'
-	document.getElementById('shambhala').style.display = 'none'
-	document.getElementById('others').style.display = 'none'
-// God Options
-	document.getElementById('aesir').style.display = 'none'
-	document.getElementById('amatsukami').style.display = 'none'
-	document.getElementById('atzlanti').style.display = 'none'
-	document.getElementById('celestialBureaucracy').style.display = 'none'
-	document.getElementById('deva').style.display = 'none'
-	document.getElementById('dodekatheon').style.display = 'none'
-	document.getElementById('orisha').style.display = 'none'
-	document.getElementById('neter').style.display = 'none'
-	document.getElementById('tuatha').style.display = 'none'
-// Enlightened Options
-	document.getElementById('cabal').style.display = 'none'
-	document.getElementById('merlin').style.display = 'none'
-	document.getElementById('illuminati').style.display = 'none'
-	document.getElementById('jadefist').style.display = 'none';
-	
-// Hide Labels
-// Mythborn Options
-	document.getElementById('darkForestLabel').style.display = 'none' 
-	document.getElementById('summerCourtLabel').style.display = 'none' 
-	document.getElementById('jadeSeaLabel').style.display = 'none'
-	document.getElementById('winterCourtLabel').style.display = 'none'
-	document.getElementById('shambhalaLabel').style.display = 'none'
-	document.getElementById('othersLabel').style.display = 'none'
-// God Options
-	document.getElementById('aesirLabel').style.display = 'none'
-	document.getElementById('amatsukamiLabel').style.display = 'none'
-	document.getElementById('atzlantiLabel').style.display = 'none'
-	document.getElementById('celestialBureaucracyLabel').style.display = 'none'
-	document.getElementById('devaLabel').style.display = 'none'
-	document.getElementById('dodekatheonLabel').style.display = 'none'
-	document.getElementById('orishaLabel').style.display = 'none'
-	document.getElementById('neterLabel').style.display = 'none'
-	document.getElementById('tuathaLabel').style.display = 'none'
-// Enlightened Options
-	document.getElementById('cabalLabel').style.display = 'none'
-	document.getElementById('merlinLabel').style.display = 'none'
-	document.getElementById('illuminatiLabel').style.display = 'none'
-	document.getElementById('jadefistLabel').style.display = 'none';
-	
-
-
-document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/"
-document.getElementById('OriginLink').style.display = 'none'
-	}
-
-
-	
 value = 0
 function clearContents(element) {
 if(value == 0){
