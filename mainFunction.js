@@ -339,15 +339,25 @@ var secondOriginArray = [
 
 function godRecommender(){
 
+
+if(
+document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value != "noPreference" ||
+document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value != "noPreference" ||
+document.getElementById("domains").options[document.getElementById("domains").selectedIndex].value != "noPreference" ||
+document.getElementById("personality").options[document.getElementById("personality").selectedIndex].value != "noPreference"){
+
 // Filters the Origins
+
+var newSecondOriginArray = secondOriginArray
+
+console.log(newSecondOriginArray[0].originString)
 if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value != "noPreference"){
-if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Gods"){newSecondOriginArray = secondOriginArray.filter(function (entry) { return entry.originVar.type ===  "God"})}
-else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Titans"){newSecondOriginArray = secondOriginArray.filter(function (entry) { return entry.originVar.type ===  "Titan"})}
-else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Otherworlds"){newSecondOriginArray = secondOriginArray.filter(function (entry) { return entry.originVar.type === "Otherworld"})}
-else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "SecretSocieties"){newSecondOriginArray = secondOriginArray.filter(function (entry) { return entry.originVar.type === "Enlightened" })}
-else{newSecondOriginArray = secondOriginArray.filter(function (entry) { return entry.originVar.name === document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value; })}
+if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Gods"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type ===  "God"})}
+else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Titans"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type ===  "Titan"})}
+else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Otherworlds"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type === "Otherworld"})}
+else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "SecretSocieties"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type === "Enlightened" })}
+else{newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.name === document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value; })}
 }
-else{newSecondOriginArray = secondOriginArray}
 
 // Filter the Approaches
 if(document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value != "noPreference"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) {
@@ -370,7 +380,7 @@ if(entry.roles.length === 2){return entry.roles[0].name === document.getElementB
 godCounter = 0
 
 if(newSecondOriginArray.length % 3 === 1){newSecondOriginArray.push( Default= new secondOrigin(""))}
-if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Default= new secondOrigin(""));newSecondOriginArray.push( Default= new secondOrigin("Default"))}
+else if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Default= new secondOrigin(""));newSecondOriginArray.push( Default= new secondOrigin("Default"))}
 
 var table = document.getElementById("Table");
 	table.innerHTML = "";
@@ -409,7 +419,7 @@ if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name;console.lo
 
 
 	 }
-}
+}}
 }
 
 function exampleLegendaryMaker(targetArray,targetPropertyOrigin,targetPropertyRole1,targetPropertyRole2,sizeLimit,targetWyrdbornOrigin,targetTextBox){
