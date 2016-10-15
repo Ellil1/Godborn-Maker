@@ -195,7 +195,7 @@ var secondOriginArray = [
  Change= new secondOrigin("Chang’e",Chinese.name,Chinese,[Careful,Clever,Sneaky],[Moon],[Diplomat]),
  Fuxi= new secondOrigin("Fuxi",Chinese.name,Chinese,[Careful,Clever,Flashy],[Crafting],[Harmonizer]),
  Guanyin= new secondOrigin("Guanyin",Chinese.name,Chinese,[Clever,Flashy,Forceful],[Wisdom],[Diplomat]),
- GuanYu= new secondOrigin("Guan Yu",Chinese.name,Chinese,[Careful,Forceful,Clever],[War,Leader],[Politician]),
+ GuanYu= new secondOrigin("Guan Yu",Chinese.name,Chinese,[Careful,Forceful,Clever],[War,Leader],[Politician,General]),
  Houyi= new secondOrigin("Houyi",Chinese.name,Chinese,[Quick,Flashy,Forceful],[Fire],[Enforcer]),
  Nezha= new secondOrigin("Nezha",Chinese.name,Chinese,[Flashy,Quick,Forceful],[Wit,Travel],[FreeSpirit]),
  Nuwa= new secondOrigin("Nuwa",Chinese.name,Chinese,[Careful,Forceful,Clever],[Moon,Wisdom],[Thinker]),
@@ -225,7 +225,7 @@ var secondOriginArray = [
  Set= new secondOrigin("Set",Neter.name,Neter,[Clever,Sneaky,Forceful],[Sky],[Manipulator,Protector]),
  Sekhmet= new secondOrigin("Sekhmet",Neter.name,Neter,[Forceful,Quick,Flashy],[War],[General,Hunter]),
  Bastet= new secondOrigin("Bastet",Neter.name,Neter,[Clever,Sneaky,Quick],[Wisdom],[Thinker,Protector]),
- Hapi= new secondOrigin("Hapi",Neter.name,Neter,[Flashy,Careful,Clever],[Fertility,Love],[Diplomat,Protector]), 
+ Hapi= new secondOrigin("Hapi",Neter.name,Neter,[Flashy,Careful,Clever],[Fertility,Love],[Harmonizer,Protector]), 
  Khepri= new secondOrigin("Khepri",Neter.name,Neter,[Forceful,Clever,Sneaky],[War,Wit],[General,Enforcer]),
  Ptah= new secondOrigin("Ptah",Neter.name,Neter,[Clever,Quick,Flashy],[Crafting],[Thinker,FreeSpirit]),
  Rain= new secondOrigin("Rain",Neter.name,Neter,[Careful,Clever,Forceful],[Death,Travel],[FreeSpirit,Protector]),
@@ -306,7 +306,6 @@ var secondOriginArray = [
  Janaleth= new secondOrigin("Janaleth",Aether.name,Aether,[Forceful,Sneaky,Careful],[Sun,Earth],[General,Harmonizer]),
  Rasaj= new secondOrigin("Rasaj",Aether.name,Aether,[Careful,Clever,Forceful],[Wit,Sun],[Diplomat,Manipulator]),
  Abzu= new secondOrigin("Abzu",Nun.name,Nun,[Careful,Sneaky,Forceful],[Water,Darkness],[King,Manipulator]),
- Cipactli= new secondOrigin("Cipactli",Nun.name,Nun,[Forceful,Quick,Sneaky],[Water,Death],[Enforcer,Manipulator]),
  Tiamat= new secondOrigin("Tiamat",Nun.name,Nun,[Clever,Careful,Sneaky],[Water,Fertility],[Mother]),
  SulTharash= new secondOrigin("Sul’Tharash",Nun.name,Nun,[Forceful,Clever,Sneaky],[Water,War],[Enforcer]),
  BeastBelow= new secondOrigin("Beast Below",Nun.name,Nun,[Forceful,Sneaky,Careful],[Water,Darkness],[Hunter]),
@@ -350,7 +349,6 @@ document.getElementById("personality").options[document.getElementById("personal
 
 var newSecondOriginArray = secondOriginArray
 
-console.log(newSecondOriginArray[0].originString)
 if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value != "noPreference"){
 if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Gods"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type ===  "God"})}
 else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "Titans"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type ===  "Titan"})}
@@ -358,12 +356,10 @@ else if(document.getElementById("origins").options[document.getElementById("orig
 else if(document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value === "SecretSocieties"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.type === "Enlightened" })}
 else{newSecondOriginArray = newSecondOriginArray.filter(function (entry) { return entry.originVar.name === document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value; })}
 }
-
 // Filter the Approaches
 if(document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value != "noPreference"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) {
 return entry.approaches[0].name === document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value || entry.approaches[1].name === document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value || entry.approaches[2].name === document.getElementById("approaches").options[document.getElementById("approaches").selectedIndex].value
 })}
-
 
 // Filters the Domains
 if(document.getElementById("domains").options[document.getElementById("domains").selectedIndex].value != "noPreference"){newSecondOriginArray = newSecondOriginArray.filter(function (entry) {
@@ -376,7 +372,7 @@ if(document.getElementById("personality").options[document.getElementById("perso
 if(entry.roles.length === 1){return entry.roles[0].name === document.getElementById("personality").options[document.getElementById("personality").selectedIndex].value; }
 if(entry.roles.length === 2){return entry.roles[0].name === document.getElementById("personality").options[document.getElementById("personality").selectedIndex].value || entry.roles[1].name === document.getElementById("personality").options[document.getElementById("personality").selectedIndex].value; }
 })}
-
+console.log(newSecondOriginArray.length)
 godCounter = 0
 
 if(newSecondOriginArray.length % 3 === 1){newSecondOriginArray.push( Default= new secondOrigin(""))}
@@ -385,7 +381,7 @@ else if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Defaul
 var table = document.getElementById("Table");
 	table.innerHTML = "";
 	 
-	 for(i=2;i<newSecondOriginArray.length;i+=3){
+	 for(i=2;i<newSecondOriginArray.length+3;i+=3){
 godCounter+=1
  if(godCounter <= 10){
 
@@ -411,11 +407,11 @@ cell5.innerHTML = newSecondOriginArray[i].name
 if(newSecondOriginArray[i].name.length !=0){cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
 
 cell1.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
-if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-2].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-2].name; LegendaryMakerTotal()}}}
 cell3.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
-if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-1].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-1].name; LegendaryMakerTotal()}}}
 cell5.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
-if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name;console.log(ChosenGod); LegendaryMakerTotal()}}}
+if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name;LegendaryMakerTotal()}}}
 
 
 	 }
@@ -423,16 +419,13 @@ if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name;console.lo
 }
 
 function exampleLegendaryMaker(targetArray,targetPropertyOrigin,targetPropertyRole1,targetPropertyRole2,sizeLimit,targetWyrdbornOrigin,targetTextBox){
-Total = new parameterCalculator("Total",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
 document.getElementById(targetTextBox).value = ""
   total = ""
   counter = 0
-  for(i=0;i<parametersArray.length;i++){
-if(document.getElementById('continent').value == "Wyrdborn"){
-Total.legendaries[i] = ((targetWyrdbornOrigin[i]+targetPropertyOrigin[i])/2+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4))) + "\n"
-}
-else{
+  for(i=0;i<newAbilitiesArray.length;i++){
+	console.log(Total.legendaries[i])
 	Total.legendaries[i] += targetPropertyOrigin.originVar.legendaries[i]/2 + (targetPropertyOrigin.approaches[0].legendaries[i]*3 + targetPropertyOrigin.approaches[1].legendaries[i]*2 + targetPropertyOrigin.approaches[2].legendaries[i])/12
 	if(targetPropertyOrigin.domains.length === 1){Total.legendaries[i] += targetPropertyOrigin.domains[0].legendaries[i]/2}
 	if(targetPropertyOrigin.domains.length === 2){Total.legendaries[i] += (targetPropertyOrigin.domains[0].legendaries[i] + targetPropertyOrigin.domains[1].legendaries[i])/4}
@@ -440,10 +433,14 @@ else{
 	if(targetPropertyOrigin.roles.length === 2){Total.legendaries[i] += (targetPropertyOrigin.roles[0].legendaries[i] + targetPropertyOrigin.roles[1].legendaries[i])/4}
 
 //+Math.floor((targetPropertyRole1[i]/10*6+targetPropertyRole2[i]/10*4)) 
-}
 } 	
+
 function adder(value){
-{for(i=0;i<targetArray.length;i++){if(Math.round(Total.legendaries[i])==value && counter<=sizeLimit){  document.getElementById(targetTextBox).value += targetArray[i].name + ": " + value+ "\n"; counter+=1}}}  
+	if(value === 9){console.log(Total.legendaries[17])}
+{for(i=0;i<targetArray.length;i++){if(Math.round(Total.legendaries[i])==value && counter<=sizeLimit){  document.getElementById(targetTextBox).value += targetArray[i].name + ": " + value+ "\n"; counter+=1}
+
+
+}}  
 }
 adder(9);adder(8);adder(7);adder(6);adder(5);adder(4);adder(3);adder(2);adder(1);adder(0);adder(-1);adder(-2);adder(-3);adder(-4);adder(-5);adder(-6);adder(-7);
 }
@@ -481,7 +478,7 @@ function addOriginOption(selectChoice) {
 
 for (j = 0; j < 100; j++) {
   selectChoice.options[0] = null;
-}	console.log(document.getElementById("OriginSelect").value + " " + secondOriginArray[10].originString) 
+}	 
 for (i = 0; i < secondOriginArray.length; i++) {
 if(document.getElementById("OriginSelect").value === secondOriginArray[i].originString){	
     var x = selectChoice;
@@ -528,7 +525,7 @@ InvokationDeathHorror = new LegendaryAbility("Invokation: Death - Horror",[1,2,4
 MentalismChwalRider = new LegendaryAbility("Mentalism: Chwal - Rider",[2,2,-1,-1,0,3,-1,0,0,1,0,-1,2,2,1,3,1,-1,0,2,3,0,2,1,0,-1,0,-2,1,1,-1,0,0,1,-1,-2,3,4,2,0,1,-2,1,4,1,-2,1,1,-1,-1,0,0,-1,2,2,1,-1,-1,-2,3,1,4,1,2,3,0,3,1,2,4,1,4,-1]),
 MentalismChwalPuppeteer = new LegendaryAbility("Mentalism: Chwal - Puppeteer",[1,2,-1,3,1,3,-2,0,2,0,0,1,2,2,0,2,3,0,1,0,3,-1,2,2,0,-1,1,0,4,1,2,0,1,2,0,1,4,2,2,-1,1,1,1,4,2,-1,2,1,2,0,-1,0,1,4,2,1,2,3,0,4,0,3,3,2,3,3,3,3,2,4,1,3,2]),
 MentalismHekuSoothe = new LegendaryAbility("Mentalism: Heku - Soothe",[2,1,2,1,0,2,-2,2,2,0,1,2,1,2,3,0,2,0,2,3,3,0,1,0,-1,1,3,1,2,2,2,3,1,4,0,-1,1,1,4,3,0,2,4,1,4,0,1,3,0,4,1,1,2,4,-2,2,3,1,1,3,2,3,3,2,0,1,3,2,0,0,3,2,3]),
-MentalismHekuRiot = new LegendaryAbility("Mentalism: Heku - Riot",[1,2,3,4,1,2,3,1,3,1,2,4,1,3,2,1,3,4,2,3,4,4,-1,3,0,2,0,4,3,3,3,2,-2,3,-1,0,4,2,2,3,3,2,0,3,0,2,3,0,4,-1,1,1,1,4,3,1,-1,2,4,3,1,4,2,4,-1,1,3,2,2,0,3,2,1]),
+MentalismHekuRiot = new LegendaryAbility("Mentalism: Heku - Riot",[1,2,3,4,1,2,3,1,3,1,2,4,1,3,2,1,3,4,2,3,4,4,-1,3,0,2,0,4,3,3,3,2,-2,3,-1,0,4,2,2,3,3,2,0,3,4,2,3,0,4,-1,1,1,1,4,3,1,-1,2,4,3,1,4,2,4,-1,1,3,2,2,0,3,2,1]),
 MentalismIllusion = new LegendaryAbility("Mentalism: Illusion",[2,2,-1,-1,1,3,-2,0,1,-1,-1,4,1,2,1,3,0,-1,-2,-2,4,2,1,4,-2,-1,-2,-2,3,1,1,-1,-1,2,1,-2,4,4,2,1,2,3,2,3,1,0,-1,2,0,4,-1,1,-1,4,2,1,0,0,-1,4,1,4,2,4,4,1,1,0,0,3,2,4,1]),
 WyrdseeingMystery = new LegendaryAbility("Wyrdseeing: Mystery",[2,1,0,-1,-1,1,-1,4,2,-1,-2,1,1,3,2,2,0,2,-1,3,4,2,4,1,0,1,2,1,1,3,1,0,3,2,-1,-2,1,0,2,2,2,1,4,2,3,1,2,3,0,2,1,4,1,2,4,3,2,1,1,3,3,2,2,2,2,2,3,4,2,2,3,1,4]),
 
@@ -565,7 +562,7 @@ ChosenWyrdborn = "Winter Fey"
 function setChosenPantheon(selectedBox){
 //curatedName = selectedBox.options[selectedBox.selectedIndex].value.substr(0,selectedBox.options[selectedBox.selectedIndex].value.indexOf(":"))
 curatedName = selectedBox.options[selectedBox.selectedIndex].value
-	console.log(curatedName)
+	
 
 document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;
 document.getElementById ("PantheonLink").innerHTML = "Wiki Link: "+ curatedName;
