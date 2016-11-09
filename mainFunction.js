@@ -374,9 +374,12 @@ if(entry.roles.length === 2){return entry.roles[0].name === document.getElementB
 })}
 console.log(newSecondOriginArray.length)
 godCounter = 0
+if(newSecondOriginArray.length === 0){document.getElementById("noMatch").innerHTML = "No Match Found !"}
+if(newSecondOriginArray.length != 0){document.getElementById("noMatch").innerHTML = " Click an Origin to check the recommended Legendary Abilities ! "}
+
 
 if(newSecondOriginArray.length % 3 === 1){newSecondOriginArray.push( Default= new secondOrigin(""))}
-else if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Default= new secondOrigin(""));newSecondOriginArray.push( Default= new secondOrigin("Default"))}
+else if(newSecondOriginArray.length % 3 === 2){newSecondOriginArray.push( Default= new secondOrigin(""));newSecondOriginArray.push( Default= new secondOrigin(""))}
 
 var table = document.getElementById("Table");
 	table.innerHTML = "";
@@ -399,12 +402,12 @@ cell1.id = i.toString()
 cell3.id = i.toString()
 cell5.id = i.toString()
 
-cell1.innerHTML = newSecondOriginArray[i-2].name
-cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">Link</a>'
-cell3.innerHTML = newSecondOriginArray[i-1].name
-if(newSecondOriginArray[i-1].name.length !=0){cell4.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">Link</a>'}
-cell5.innerHTML = newSecondOriginArray[i].name
-if(newSecondOriginArray[i].name.length !=0){cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
+if(newSecondOriginArray[i-2]){cell1.innerHTML = newSecondOriginArray[i-2].name}
+if(newSecondOriginArray[i-2] && newSecondOriginArray[i-2].name.length !=0){cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">Link</a>'}
+if(newSecondOriginArray[i-1]){cell3.innerHTML = newSecondOriginArray[i-1].name}
+if(newSecondOriginArray[i-1] && newSecondOriginArray[i-1].name.length !=0){cell4.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">Link</a>'}
+if(newSecondOriginArray[i]){cell5.innerHTML = newSecondOriginArray[i].name}
+if(newSecondOriginArray[i] && newSecondOriginArray[i].name.length !=0){cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
 
 cell1.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
 if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-2].name; LegendaryMakerTotal()}}}
@@ -497,7 +500,6 @@ length+= secondOriginArray[i].name + ": " + secondOriginArray[i].legendaries.len
 }
 	alert(length)
 }
-
 function addAnAbilityMaker(){
 abilityName = prompt("What is the Name of this Ability ?")
 variableName = abilityName.replace(/\s/g, '');
@@ -507,7 +509,6 @@ newLegendary.push(prompt(parametersArray[i].name + " - " + abilityName))
 }
 alert(variableName + " = new LegendaryAbility(\"" + abilityName + "\",[" + newLegendary + "])")
 }
-
 function addAnAbility(){
 	newAbilitiesArray = [
 DruidismGreenDruid = new LegendaryAbility("Druidism: Green Druid",[1,2,0,1,0,-1,-1,2,-1,0,2,-2,-2,1,0,1,-2,-2,2,-1,0,1,2,1,1,4,0,-2,-3,3,-2,1,1,3,-2,-2,-1,-1,1,2,1,-1,1,2,0,1,3,3,1,0,3,4,1,-4,-3,-4,-4,1,-3,-4,-2,-3,-4,4,4,4,1,2,-1,-2,0,1,4]),
@@ -528,6 +529,8 @@ MentalismHekuSoothe = new LegendaryAbility("Mentalism: Heku - Soothe",[2,1,2,1,0
 MentalismHekuRiot = new LegendaryAbility("Mentalism: Heku - Riot",[1,2,3,4,1,2,3,1,3,1,2,4,1,3,2,1,3,4,2,3,4,4,-1,3,0,2,0,4,3,3,3,2,-2,3,-1,0,4,2,2,3,3,2,0,3,4,2,3,0,4,-1,1,1,1,4,3,1,-1,2,4,3,1,4,2,4,-1,1,3,2,2,0,3,2,1]),
 MentalismIllusion = new LegendaryAbility("Mentalism: Illusion",[2,2,-1,-1,1,3,-2,0,1,-1,-1,4,1,2,1,3,0,-1,-2,-2,4,2,1,4,-2,-1,-2,-2,3,1,1,-1,-1,2,1,-2,4,4,2,1,2,3,2,3,1,0,-1,2,0,4,-1,1,-1,4,2,1,0,0,-1,4,1,4,2,4,4,1,1,0,0,3,2,4,1]),
 WyrdseeingMystery = new LegendaryAbility("Wyrdseeing: Mystery",[2,1,0,-1,-1,1,-1,4,2,-1,-2,1,1,3,2,2,0,2,-1,3,4,2,4,1,0,1,2,1,1,3,1,0,3,2,-1,-2,1,0,2,2,2,1,4,2,3,1,2,3,0,2,1,4,1,2,4,3,2,1,1,3,3,2,2,2,2,2,3,4,2,2,3,1,4]),
+WyrdseeingProphecy = new LegendaryAbility("Wyrdseeing: Prophecy",[2,3,1,-1,-2,0,-2,4,2,2,1,2,1,1,1,2,1,1,0,2,3,2,4,1,1,1,2,-1,1,2,2,0,4,1,1,-2,1,2,0,2,-2,2,1,2,2,3,0,0,1,2,2,3,1,2,0,1,2,-1,0,1,0,2,1,2,3,1,2,2,0,3,1,4,2]),
+EpicPhysiologyEpicStrength = new LegendaryAbility("Epic Physiology: Epic Strength",[-2,-2,3,4,1,-2,4,-3,1,-1,-2,-3,-4,-2,1,-3,-2,2,3,2,-3,1,-3,-2,0,-1,-1,3,-2,0,3,-1,-3,-4,2,4,-2,-3,-3,3,3,3,0,2,-1,2,3,-1,1,-1,1,2,-1,-2,-1,0,1,3,3,-2,1,-2,-2,-2,-1,0,-2,3,-2,-2,3,-3,1])
 
 
 	]
@@ -551,8 +554,34 @@ addAnAbility()
 // Test the Legendaries AND Skills. Adds the extra Abilities
 //LegendaryMakerTotal()
 
+// This function handles the tabs
+function openNW(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
 
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = [
+	document.getElementById("Display1"),
+	document.getElementById("Display2"),
+	document.getElementById("Display3")]    
+	
+	for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
 
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = [
+	document.getElementById("Display1Tab"),
+	document.getElementById("Display2Tab"),
+	document.getElementById("Display3Tab")]
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+	
+    // Show the current tab, and add an "active" class to the link that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
 
 ChosenFirstRole = "Default"
 ChosenSecondRole = "Default"
