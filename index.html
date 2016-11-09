@@ -26,14 +26,14 @@
 	</head>
 	
 	<body>
-	<header>
-	<div class="inner">
-	<h1>Scion-maker</h1>
-	<h2></h2>
-	</div>
-	</header>
+<ul class="tab">
+  <li><a id="Display1Tab" href="#" class="tablinks" onclick="openNW(event, 'Display1')">Aspects, Skills and Stunts Builder</a></li>
+  <li><a id="Display2Tab" href="#" class="tablinks" onclick="openNW(event, 'Display2')">God/Legendary Abilities Finder</a></li>
+  <li><a id="Display3Tab" href="#" class="tablinks" onclick="openNW(event, 'Display3')">Character Sheet Generation</a></li>
+</ul>
 	<br>
-	<div id="main">
+<div id="Display1" class="tabcontent" style="display:none">
+<div  style="float:left;width:400px">
 <a class="one"href="http://scionprimarchs.wikia.com/wiki/Character_Creation">Guidance for Character Creation</a>
   <br>
  <br><a class="two">Aspects</a>
@@ -47,28 +47,28 @@
   <input type="text" id="aspect1" placeholder="First Aspect"> <br>
   <input type="text" id="aspect2" placeholder="Second Aspect"> <br>
   <input type="text" id="aspect3" placeholder="Third Aspect"> 
+ <br> <br><a class="two">Skills</a>
+<br>
+<input type="text" id="31" placeholder="Skill" size="10"><br>
+<input type="text" id="21" placeholder="Skill" size="10"><input type="text" id="22" placeholder="Skill" size="10"><br>
+<input type="text" id="11" placeholder="Skill" size="10"><input type="text" id="12" placeholder="Skill" size="10"><input type="text" id="13" placeholder="Skill" size="10">
+
   <br><br>
+  </div>
+ <div style="float:left">
  <a class="two">Stunts</a>
 <a class="one" href="http://fate-srd.com/fate-core/building-stunts" target="_blank">Guidance on creating Stunts</a> <br>
 <a class="one" href="http://evilhat.wikidot.com/fate-core-stunts" target="_blank">Ideas for Normal Stunts</a><br>
   <textarea id="stunt1" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
   <textarea id="stunt2" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
   <textarea id="stunt3" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
-<br> <br><a class="two">Skills</a>
+ </div>
+ </div>
+<div id="Display2" class="tabcontent" style="display:none">
+<div id="godFinder" style="width:400px; float:left">
 <br>
-<input type="text" id="31" placeholder="Skill" size="10"><br>
-<input type="text" id="21" placeholder="Skill" size="10"><input type="text" id="22" placeholder="Skill" size="10"><br>
-<input type="text" id="11" placeholder="Skill" size="10"><input type="text" id="12" placeholder="Skill" size="10"><input type="text" id="13" placeholder="Skill" size="10">
-  
-
- 
- </div>		
-	<div id="sidebar">	
-
-<div id="godFinder">
-<br>
-<label for="approaches" style="float:left">Choose an Approach</label>	   
-<select id="approaches" name="approaches" style="float:left">
+<label for="approaches">Choose an Approach</label>	   
+<select id="approaches" name="approaches" onchange="godRecommender()">
     <option value="noPreference" selected="selected">No Preference</option> 
     <option value="Careful">Careful</option>
     <option value="Clever">Clever</option>
@@ -78,8 +78,8 @@
     <option value="Sneaky">Sneaky</option>
 </select>
 <br>
-<label for="domains" style="float:left">Choose a Domain</label>	   
-<select id="domains" name="domains" style="float:left">
+<label for="domains">Choose a Domain</label>	   
+<select id="domains" name="domains" onchange="godRecommender()">
     <option value="noPreference" selected="selected">No Preference</option> 
     <option value="Crafting Deity">Crafting</option>
     <option value="Darkness Deity">Darkness</option>
@@ -104,8 +104,8 @@
     <option value="Wit Deity">Wit</option>	</select>
 <br>
 
-<label for="personality" style="float:left">Choose a Personality</label>	   
-<select id="personality" name="personality" style="float:left">
+<label for="personality">Choose a Personality</label>	   
+<select id="personality" name="personality" onchange="godRecommender()" >
     <option value="noPreference" selected="selected">No Preference</option> 
     <option value="General">General</option>
     <option value="Politician">Politician</option>
@@ -124,8 +124,8 @@
 	</select>
 
 <br>
-<label for="origins" style="float:left">Choose an Origin</label>	   
-<select id="origins" name="origins" style="float:left">
+<label for="origins">Choose an Origin</label>	   
+<select id="origins" name="origins" onchange="godRecommender()">
     <option value="noPreference" selected="selected">No Preference</option> 
     <option value="Gods" >----Gods----</option>
     <option value="Aesir">Aesir</option>
@@ -135,11 +135,11 @@
     <option value="Celestial Bureaucracy">Celestial Bureaucracy</option>
     <option value="Deva">Deva</option>
     <option value="Neter">Neter</option>
-    <option value="Nga Tama A Rangi">Nga Tama A Rangi</option>
+    <option value="Nga Tama a Rangi">Nga Tama A Rangi</option>
     <option value="Orisha">Orisha</option>
     <option value="Teotl">Teotl</option>
     <option value="Theoi">Theoi</option>
-    <option value="Tuatha Dé Dànaan">Tuatha Dé Dànaan</option> 
+    <option value="Tuatha Dé Danaan">Tuatha Dé Dànaan</option> 
 
      <option value="Titans" >----Titans----</option>
    <option value="Aether">Aether</option>
@@ -169,12 +169,10 @@
 </select>
 <br><br>
 <table class="beta"  style="width: 100%;" id="Table" ></table>
-
-<a id="noMatch"></a><br>
-<button onclick="godRecommender()">Recommend an Origin</button>
+<br>
+<a id="noMatch"></a>
 </div>
-	<div id="notGodFinder" style="display:none">
-	<br>
+	<div id="notGodFinder" style="width:400px; display:block; float:left">
 <a class="two">Legendary Ability and Skill Recommendations</a>
 	<label for="mainRole">Select Main Role</label>
 	<select id="mainRole" onchange="rolesChange(this); setFirstRole(mainRole)" >
@@ -189,47 +187,20 @@
 	<br>
 
 	<label for="secondRole" >Select a Second Role</label>
-	<select id="secondRole" onchange = setSecondRole(secondRole)>
+	<select id="secondRole" onchange = "setSecondRole(secondRole)">
 	<option value="empty">Select a Second Role</option> 
 	</select>
 	<br><br>
-	<label for="continent">Select Type</label>
-	<select id="continent" onchange="addOption(document.getElementById('OriginSelect'))">
-	<option selected value="empty">Select Type</option>
-	<option value="God">Godborn - God/Human Hybrid</option>
-	<option value="Otherworld">Mythborn - Legendary Creature</option>
-	<option value="Titan">Titanspawn - Elemental Entity</option>
-	<option value="Enlightened">Enlightened - Gifted Human</option>
-	</select>
-	<br>
 
-<label for="OriginSelect" >Select an Global Origin</label>
-	<select id="OriginSelect" onchange="addOriginOption(document.getElementById('SecondOriginSelect')); setChosenPantheon(this)">
-	<option selected value="empty">Select Origin</option>
-
-	</select>
-	
-<br>
-<a id="PantheonLink" class="one" href="http://scionprimarchs.wikia.com/" target="_blank">  Wiki Link</a>
-	<br>
-<label for="SecondOriginSelect" >Select a Specific Origin</label>
-	<select id="SecondOriginSelect" onclick="setChosenGod(this)">
-	<option selected value="empty">Select Origin</option>
-
-	</select>
-		
-<br>
-<a id="OriginLink" class="one" href="http://ellil1.github.io/Scion-Maker/" target="_blank" style="display: none">  Wiki Link</a>	
-</select>
-
-<br>		<br>	
  <textarea id="LegendaryAbilities" rows="11" cols="30"></textarea> 
  <textarea id="Skills" rows="11" cols="12"></textarea>
 <br>
 <button type="button" onclick="LegendaryMakerTotal()">Show Recommended Legendary Abilities and Skills !</button>
 </div>	
 
-<br><br><a class="two">Legendary Abilities</a>
+	
+		<div style="width:400px; display:block; float:left">
+<a class="two">Legendary Abilities</a>
  <a href="http://scionprimarchs.wikia.com/wiki/Legendary_Disciplines" target="_blank">Explanations of the Legendary Skills and Stunts</a> <br>
 <a href="https://docs.google.com/document/d/11tnSPBJpm-V37btdGbzEGvBL8PIX-gZ47066eD76tsg/edit#" target="_blank">List of Legendary Abilities, with Examples for Legendary Skills and Stunts.</a>
 
@@ -238,17 +209,13 @@
   <textarea id="legend2" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
   <textarea id="legend3" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
  <br>
-
-	</section>
-	</div>
+ </div>
 </div>
-	
-	</aside>
-	</div>
-	</div>
-	<div id="footer">
+
+<div id="Display3" class="tabcontent" style="display:none">
+<button onclick="addAnAbilityMaker()"> Generate Legendary Ability </button>
 <button type="button" onclick="characterSheetSpawn()">Spawn a Character Sheet !</button> <br>	
-	</div>	
+
 
 
 	<a>Character Sheet:</a><br>
@@ -261,10 +228,7 @@
 	<a>Character Name:</a>
 	<input id="inputFileNameToSaveAs"></input>
 		<button onclick="saveTextAsFile()">Save Character Sheet</button>
-
-
-
-
+</div>
 	</body>
 	</html>
 	
