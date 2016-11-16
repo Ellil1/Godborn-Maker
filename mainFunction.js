@@ -449,7 +449,7 @@ function LegendaryMakerTotal(){
   roleFound2 = rolesChoiceArray.filter(function (entry) { return entry.name === ChosenSecondRole; })[0]
   wyrdbornFound = secondOriginArray.filter(function (entry) { return entry.name === ChosenWyrdborn; })[0]  
 exampleLegendaryMaker()  
-document.getElementById("hoverer2").innerHTML = "Hover over an Origin for extra information !"
+document.getElementById("hoverer2").innerHTML = "Hover over a Legendary Ability or Skill for extra information !"
 }
 
 
@@ -530,7 +530,7 @@ EpicPhysiologyEpicToughness = new LegendaryAbility("Epic Toughness","- Shrug off
 EpicPhysiologyEpicSenses = new LegendaryAbility("Epic Senses","- Gain amazing hearing\n- See from miles away.",[2,2,-1,-2,3,4,1,2,0,1,1,3,2,0,2,3,-2,2,1,3,4,1,2,3,-1,0,-1,0,1,2,-1,0,1,-1,-2,1,1,2,0,4,4,0,-1,1,-1,1,2,1,0,-1,1,1,2,2,3,0,-1,2,2,3,3,2,-1,4,3,1,0,-1,1,-1,2,1,0,0,3,1,3,-1]),
 EpicPhysiologyBeauty = new LegendaryAbility("Epic Beauty","- Charm others.\n- Pacify others with awe.",[1,2,4,0,1,3,-3,-2,2,2,3,4,0,1,1,2,-2,2,1,-1,3,3,0,-1,-2,1,-2,-2,1,1,2,1,-2,2,3,-2,2,3,2,-1,-3,2,0,0,1,-1,0,1,-1,0,0,2,0,3,-3,-2,-2,-1,2,-3,-1,2,-2,4,3,0,2,1,3,3,-1,1,0,4,-1,-2,-2,-1]),
 EpicPhysiologyUgliness = new LegendaryAbility("Epic Ugliness","- Terrify others.\n- ",[-1,-2,4,3,1,-3,1,-2,-2,-3,-2,-4,-3,-1,-1,-2,2,2,-1,-2,1,-3,-2,4,-3,-2,-2,-1,-3,-2,-2,-3,-3,-4,-3,2,2,1,-2,-3,0,-2,-2,-2,-2,-2,-2,-1,1,-1,0,-4,0,-3,3,1,-1,0,3,4,1,2,4,1,2,3,2,-1,-2,-2,-1,2,0,4,-1,-2,-2,-1]),
-Enech = new LegendaryAbility("Enech","- - ",[2,-1,1,3,0,-2,3,1,3,-1,-2,-2,-2,0,-2,-4,-1,-1,0,3,1,-1,-2,-3,-2,-1,2,2,2,-3,3,0,-1,2,3,3,-1,-4,2,4,0,-1,-2,1,2,2,1,0,-2,-1,1,8,1,-2,-3,-2,1,0,1,-3,-2,-3,-4,-1,-2,-2,2,-1,-2,-4,2,1,4,-2,3,2,1,0]),
+Enech = new LegendaryAbility("Enech","- Gain the \"Protection of Innocents\" Aspect\n- Gain the \"Zealous Faith\" Aspect",[2,-1,1,3,0,-2,3,1,3,-1,-2,-2,-2,0,-2,-4,-1,-1,0,3,1,-1,-2,-3,-2,-1,2,2,2,-3,3,0,-1,2,3,3,-1,-4,2,4,0,-1,-2,1,2,2,1,0,-2,-1,1,8,1,-2,-3,-2,1,0,1,-3,-2,-3,-4,-1,-2,-2,2,-1,-2,-4,2,1,4,-2,3,2,1,0]),
 FireDestruction = new LegendaryAbility("Fire - Destruction","- Burn a forest down\n- Throw a fireball.",[-3,-2,4,4,3,-3,2,-2,-2,-2,-1,0,-3,-4,1,-3,1,6,0,0,-2,4,-3,-3,1,0,-3,-1,-2,-1,-2,-1,-1,-2,1,2,0,1,-1,1,1,1,0,1,-1,1,-1,1,2,1,0,0,3,2,-4,-3,-3,-1,4,-3,2,-2,1,3,-3,-1,2,2,0,1,2,3,0,-2,-2,4,1,-1]),
 FireLife = new LegendaryAbility("Fire - Life","- Ressurect mortals\n- Heal allies.",[2,1,4,3,2,-4,-2,2,2,3,2,2,-2,-3,-2,-3,-4,5,1,-1,-3,6,-2,-3,2,1,-2,0,-2,2,2,3,1,4,1,-2,-3,-1,1,3,-2,1,0,1,0,1,1,2,0,2,0,1,3,-2,-4,-3,-3,1,4,-4,-2,-3,-4,4,-2,-2,2,1,2,-1,2,1,0,1,3,-1,1,4]),
 FireInvention = new LegendaryAbility("Fire - Invention","- Create an impossibly large gun.- Hack a computer.",[2,4,3,1,1,-2,1,2,0,-2,-3,-2,-3,-4,1,2,-3,5,2,0,-3,2,1,-3,6,-3,1,0,-2,2,0,-2,3,-1,-2,-3,-2,-3,-2,1,-2,1,1,-1,-1,0,-2,1,-1,0,0,1,-1,-3,-4,-3,1,1,4,-3,-2,-4,-4,2,-2,-3,-1,-1,5,2,1,3,0,-2,2,2,4,1]),
