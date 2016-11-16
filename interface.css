@@ -89,7 +89,8 @@ a.two{text-decoration: underline;}
 a.two{color: #000099;}
 
 
-a.three:hover{background-color:lightblue;}
+a.three:hover{background-color:lightblue}
+a.three{ color: black;}
 
 label {
   width:200px;
