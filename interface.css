@@ -52,7 +52,28 @@ html {
 		height:1px;
 	}
 
+* {
+   cursor: default;
+}
 
+td:hover{
+background-color:lightblue;
+}
+td:active{
+background-color:#0066ff;
+}
+
+
+
+#left {
+  float: left;
+  width: 65%;
+  overflow: hidden;
+}
+
+#right {
+  overflow: hidden;
+}
 
 textarea {
    resize: none;
@@ -66,6 +87,10 @@ a.two{display:block}
 a.two{font-weight: bold;}
 a.two{text-decoration: underline;}
 a.two{color: #000099;}
+
+
+a.three:hover{background-color:lightblue;}
+
 label {
   width:200px;
 
