@@ -25,15 +25,15 @@
 	<title>Scion-maker by Ellil1</title>
 	</head>
 	
-	<body>
+	<body onload="openNW(event, 'Display2')">
 <ul class="tab">
-  <li><a id="Display1Tab" href="#" class="tablinks" onclick="openNW(event, 'Display1')">Aspects, Skills and Stunts Builder</a></li>
   <li><a id="Display2Tab" href="#" class="tablinks" onclick="openNW(event, 'Display2')">God/Legendary Abilities Finder</a></li>
+  <li><a id="Display1Tab" href="#" class="tablinks" onclick="openNW(event, 'Display1')">Aspects, Skills and Stunts Builder</a></li>
   <li><a id="Display3Tab" href="#" class="tablinks" onclick="openNW(event, 'Display3')">Character Sheet Generation</a></li>
 </ul>
 	<br>
 <div id="Display1" class="tabcontent" style="display:none">
-<div  style="float:left;width:400px">
+<div  style="float:left;width:350px">
 <a class="one"href="http://scionprimarchs.wikia.com/wiki/Character_Creation">Guidance for Character Creation</a>
   <br>
  <br><a class="two">Aspects</a>
@@ -55,13 +55,24 @@
 
   <br><br>
   </div>
- <div style="float:left">
+ <div style="width:300px; float:left">
  <a class="two">Stunts</a>
 <a class="one" href="http://fate-srd.com/fate-core/building-stunts" target="_blank">Guidance on creating Stunts</a> <br>
 <a class="one" href="http://evilhat.wikidot.com/fate-core-stunts" target="_blank">Ideas for Normal Stunts</a><br>
-  <textarea id="stunt1" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
-  <textarea id="stunt2" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
-  <textarea id="stunt3" rows="4" cols="40" placeholder="Stunt"></textarea> <br>
+  <textarea id="stunt1" rows="4" cols="30" placeholder="Stunt"></textarea> <br>
+  <textarea id="stunt2" rows="4" cols="30" placeholder="Stunt"></textarea> <br>
+  <textarea id="stunt3" rows="4" cols="30" placeholder="Stunt"></textarea> <br>
+ </div>
+<div style="width:350px; display:block; float:left">
+<a class="two">Legendary Abilities</a>
+ <a href="http://scionprimarchs.wikia.com/wiki/Legendary_Disciplines" target="_blank">Explanations of the Legendary Skills and Stunts</a> <br>
+<a href="https://docs.google.com/document/d/11tnSPBJpm-V37btdGbzEGvBL8PIX-gZ47066eD76tsg/edit#" target="_blank">List of Legendary Abilities, with Examples for Legendary Skills and Stunts.</a>
+
+<br>
+  <textarea id="legend1" rows="4" cols="30" placeholder="Legendary Skill or Stunt"></textarea> <br>
+  <textarea id="legend2" rows="4" cols="30" placeholder="Legendary Skill or Stunt"></textarea> <br>
+  <textarea id="legend3" rows="4" cols="30" placeholder="Legendary Skill or Stunt"></textarea> <br>
+ <br>
  </div>
  </div>
 <div id="Display2" class="tabcontent" style="display:none">
@@ -127,31 +138,31 @@
 <label for="origins">Choose an Origin</label>	   
 <select id="origins" name="origins" onchange="godRecommender()">
     <option value="noPreference" selected="selected">No Preference</option> 
-    <option value="Gods" >----Gods----</option>
-    <option value="Aesir">Aesir</option>
-    <option value="Amatsukami">Amatsukami</option>
-    <option value="Ayllus">Ayllus</option>
-    <option value="Bogi Muzhchin">Bogi Muzhchin</option>
-    <option value="Celestial Bureaucracy">Celestial Bureaucracy</option>
-    <option value="Deva">Deva</option>
-    <option value="Neter">Neter</option>
-    <option value="Nga Tama a Rangi">Nga Tama A Rangi</option>
-    <option value="Orisha">Orisha</option>
-    <option value="Teotl">Teotl</option>
-    <option value="Theoi">Theoi</option>
-    <option value="Tuatha Dé Danaan">Tuatha Dé Dànaan</option> 
+    <option selected value="Gods" >----Gods----</option>
+    <option value="African">African</option>
+    <option value="Aztec">Aztec</option>
+    <option value="Celtic">Celtic</option> 
+    <option value="Chinese">Chinese</option>
+    <option value="Egyptian">Egyptian</option>
+    <option value="Greek">Greek</option>
+    <option value="Inca">Inca</option>
+    <option value="Indian">Indian</option>
+    <option value="Japanese">Japanese</option>
+    <option value="Maori">Maori</option>
+    <option value="Norse">Norse</option>
+    <option value="Slavic">Slavic</option>
 
      <option value="Titans" >----Titans----</option>
-   <option value="Aether">Aether</option>
-    <option value="Amaunet">Amaunet</option>
+    <option value="Abyss">Abyss</option>
+    <option value="Darkness">Darkness</option>
     <option value="Death">Death</option>
-    <option value="Kosmos">Kosmos</option>
-    <option value="Muspelheim">Muspelheim</option> 
-    <option value="Nun">Nun</option>
-    <option value="Nyx">Nyx</option>
-    <option value="Oceanus">Oceanus</option>
-    <option value="Soku-No-Kumi">Soku-No-Kumi</option>
-    <option value="Terra">Terra</option>
+    <option value="Fire">Fire</option> 
+    <option value="Light">Light</option>
+    <option value="Night">Night</option>
+    <option value="Ocean">Ocean</option>
+    <option value="Order">Order</option>
+    <option value="Sky">Sky</option>
+    <option value="World">World</option>
 
     <option value="Otherworlds" >----Otherworlds----</option>
     <option value="Dark Forest">Dark Forest</option>
@@ -170,7 +181,8 @@
 <br><br>
 <table class="beta"  style="width: 100%;" id="Table" ></table>
 <br>
-<a id="noMatch"></a>
+<a id="noMatch"></a><br><br>
+<a id="hoverer"> </a>
 </div>
 	<div id="notGodFinder" style="width:400px; display:block; float:left">
 <a class="two">Legendary Ability and Skill Recommendations</a>
@@ -192,24 +204,38 @@
 	</select>
 	<br><br>
 
- <textarea id="LegendaryAbilities" rows="11" cols="30"></textarea> 
- <textarea id="Skills" rows="11" cols="12"></textarea>
+ <textarea style="display:none" id="LegendaryAbilities" rows="11" cols="30"></textarea> 
+ <textarea style="display:none" id="Skills" rows="11" cols="12"></textarea>
+ 
+<div id="left" style="width:200px;">
+<a class="three" id="LegendaryFound1">   </a><br>
+<a class="three" id="LegendaryFound2">   </a><br>
+<a class="three" id="LegendaryFound3">   </a><br>
+<a class="three" id="LegendaryFound4">   </a><br>
+<a class="three" id="LegendaryFound5">   </a><br>
+<a class="three" id="LegendaryFound6">   </a><br>
+<a class="three" id="LegendaryFound7">   </a><br>
+<a class="three" id="LegendaryFound8">   </a><br>
+<a class="three" id="LegendaryFound9">   </a><br>
+<a class="three" id="LegendaryFound10">   </a><br>
+</div>
+  <div id="right" style="width:140px">
+<a class="three" id="SkillFound1">   </a><br>
+<a class="three" id="SkillFound2">   </a><br>
+<a class="three" id="SkillFound3">   </a><br>
+<a class="three" id="SkillFound4">   </a><br>
+<a class="three" id="SkillFound5">   </a><br>
+<a class="three" id="SkillFound6">   </a><br>
+<a class="three" id="SkillFound7">   </a><br>
+<a class="three" id="SkillFound8">   </a><br>
+<a class="three" id="SkillFound9">   </a><br>
+<a class="three" id="SkillFound10">   </a><br></div>
 <br>
-<button type="button" onclick="LegendaryMakerTotal()">Show Recommended Legendary Abilities and Skills !</button>
+<a id="hoverer2"> </a>
+
 </div>	
 
 	
-		<div style="width:400px; display:block; float:left">
-<a class="two">Legendary Abilities</a>
- <a href="http://scionprimarchs.wikia.com/wiki/Legendary_Disciplines" target="_blank">Explanations of the Legendary Skills and Stunts</a> <br>
-<a href="https://docs.google.com/document/d/11tnSPBJpm-V37btdGbzEGvBL8PIX-gZ47066eD76tsg/edit#" target="_blank">List of Legendary Abilities, with Examples for Legendary Skills and Stunts.</a>
-
-<br>
-  <textarea id="legend1" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
-  <textarea id="legend2" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
-  <textarea id="legend3" rows="4" cols="40" placeholder="Legendary Skill or Stunt"></textarea> <br>
- <br>
- </div>
 </div>
 
 <div id="Display3" class="tabcontent" style="display:none">
