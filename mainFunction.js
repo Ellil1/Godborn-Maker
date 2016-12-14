@@ -107,6 +107,7 @@ Inca = new parameterCalculator("Inca","God",[],[]),
 // Titans
 
 Light = new parameterCalculator("Light","Titan",[],[]),
+Abyss = new parameterCalculator("Abyss","Titan",[],[]),
 Ocean = new parameterCalculator("Ocean","Titan",[],[]),
 Order = new parameterCalculator("Order","Titan",[],[]),
 World = new parameterCalculator("World","Titan",[],[]),
@@ -115,6 +116,7 @@ Patala = new parameterCalculator("Depths","Titan",[],[]),
 Sky = new parameterCalculator("Sky","Titan",[],[]),
 Night = new parameterCalculator("Night","Titan",[],[]),
 DeathTitan = new parameterCalculator("Death","Titan",[],[]),
+
 
 // Mythborn
 
@@ -303,14 +305,31 @@ SunWukong= new secondOrigin("Sun Wukong","Monkey King, God of Trickery and Stren
 Xiwangmu= new secondOrigin("Xiwangmu","Queen-Mother of the West and Keeper of the Golden Orchard",Chinese.name,Chinese,[Careful,Quick,Clever],[Wisdom,Nature],[Mother,Harmonizer]),
 Yanluo= new secondOrigin("Yanluo","Overseer of the Dead and Keeper of Di Yu",Chinese.name,Chinese,[Clever,Forceful,Sneaky],[Death],[Thinker,Enforcer]),
 Zhuanxu= new secondOrigin("Zhuanxu","Chinese",Chinese.name,Chinese,[Forceful,Clever,Quick],[Sky],[Enforcer,General]),
-SummerNymph= new secondOrigin("Summer Nymph","Spirits of Springs and Flowers",SummerCourt.name,SummerCourt,[Flashy,Quick,Clever],[Fire,Fertility],[FreeSpirit,Harmonizer]),
-SummerDryad= new secondOrigin("Summer Dryad","Spirits of Trees and Mountains",SummerCourt.name,SummerCourt,[Careful,Flashy,Forceful],[Nature,Fertility],[FreeSpirit,Trickster]),
-LightElf= new secondOrigin("Light Elf","Organized, Martial Spirits of Fields and Plains",SummerCourt.name,SummerCourt,[Forceful,Careful,Flashy],[Light,Nature],[General,Diplomat]),
-SummerFey= new secondOrigin("Summer Fey","Spirits of Forests and Meadows",SummerCourt.name,SummerCourt,[Sneaky,Clever,Careful],[Wit,Nature],[Trickster,Diplomat]),
-SummerNaiad= new secondOrigin("Summer Naiad","Spirits of the Sea",SummerCourt.name,SummerCourt,[Careful,Sneaky,Forceful],[Water,Nature],[Trickster,Harmonizer]),
-Korrigans= new secondOrigin("Korrigans","Spirits of the Roots and Soil",SummerCourt.name,SummerCourt,[Clever,Sneaky,Quick],[Nature],[FreeSpirit]),
-Gnomes= new secondOrigin("Gnomes","Spirits of Technology and Creativity",SummerCourt.name,SummerCourt,[Clever,Flashy,Quick],[Nature,Crafting],[Thinker]),
-Leprechauns= new secondOrigin("Leprechauns","Spirits of Wealth and Fertility",SummerCourt.name,SummerCourt,[Sneaky,Quick,Clever],[Nature,Fertility],[Trickster,FreeSpirit]),
+
+Aengus= new secondOrigin("Aengus","God of Love and Youth",Celtic.name,Celtic,[Flashy,Quick,Forceful],[Love,Wit],[Harmonizer,Protector]),
+Aine= new secondOrigin("Aine","Goddess of Summer, Agriculture and Wealth",Celtic.name,Celtic,[Careful,Quick,Sneaky],[Nature,Fertility],[Diplomat,Protector]),
+Brigid= new secondOrigin("Brigid","Goddess of Spring, Fertility and Dawn",Celtic.name,Celtic,[Clever,Careful,Quick],[Fertility,Sky],[Diplomat,Thinker]),
+Cernunnos= new secondOrigin("Cernunnos","God of Druidism and Nature",Celtic.name,Celtic,[Clever,Careful,Sneaky],[Nature],[Harmonizer,FreeSpirit]),
+Dagda= new secondOrigin("Dagda","God of Masculinity and Magic, High King of Ireland",Celtic.name,Celtic,[Flashy,Forceful,Quick],[War,Nature],[General,King]),
+DianCécht= new secondOrigin("Dian Cécht","God of Crafting and Healing",Celtic.name,Celtic,[Careful,Clever,Forceful],[Nature,Knowledge],[Thinker,Protector]),
+Fand= new secondOrigin("Fand","Goddess of Mist",Celtic.name,Celtic,[Sneaky,Clever,Careful],[Water,Sky],[FreeSpirit]),
+Lugh= new secondOrigin("Lugh","God of Sky and Oaths",Celtic.name,Celtic,[Clever,Forceful,Quick],[Sky,Justice],[Enforcer,General]),
+ManannanmacLir= new secondOrigin("Manannan mac Lir","God of the Sea and Psychopomp",Celtic.name,Celtic,[Careful,Clever,Sneaky],[Water,Travel],[FreeSpirit,Protector]),
+Morrigan= new secondOrigin("The Morrigan","Goddess of War and Prophecy",Celtic.name,Celtic,[Forceful,Clever,Quick],[War,Death],[Thinker,Hunter]),
+Niamh= new secondOrigin("Niamh","Queen of Tir na nÓg",Celtic.name,Celtic,[Clever,Careful,Quick],[Travel,Leader],[King,Harmonizer]),
+NiemhMairbh= new secondOrigin("Niemh Mairbh","God of Retribution",Celtic.name,Celtic,[Sneaky,Clever,Forceful],[Death,Darkness],[Manipulator,Enforcer]),
+Ogma= new secondOrigin("Ogma","God of Strength and Eloquence",Celtic.name,Celtic,[Clever,Forceful,Careful],[War,Knowledge],[Thinker,General]),
+Zerris= new secondOrigin("Zerris","Machine-God of Technology",Celtic.name,Celtic,[Clever,Careful,Forceful],[Crafting,Fire],[Thinker]),
+
+Chasqua= new secondOrigin("Chasqua","Goddess of Love, Happiness and Health",Inca.name,Inca,[Clever,Careful,Flashy],[Love, Nature],[Harmonizer,FreeSpirit]),
+Cochamama= new secondOrigin("Cochamama","Goddess of the Sea",Inca.name,Inca,[Careful,Clever,Forceful],[Water, Wisdom],[Mother,Harmonizer]),
+Illapa= new secondOrigin("Illapa","God of War and Weather",Inca.name,Inca,[Clever,Sneaky,Forceful],[War, Sky],[Protector,Enforcer]),
+Inti= new secondOrigin("Inti","God of the Sun",Inca.name,Inca,[Flashy,Forceful,Quick],[Leader, Sun, Order],[King,Enforcer]),
+Kilyamama= new secondOrigin("Kilyamama","Goddess of the Moon",Inca.name,Inca,[Clever,Careful,Flashy],[Moon, Knowledge],[Politician,Thinker]),
+Supay= new secondOrigin("Supay","God of the Underworld",Inca.name,Inca,[Clever,Sneaky,Quick],[Death, Earth, Darkness],[Manipulator,Enforcer]),
+Urcaguary= new secondOrigin("Urcaguary","God of Metal and Greed",Inca.name,Inca,[Flashy,Quick,Forceful],[Earth, Crafting],[FreeSpirit,Manipulator]),
+Viracocha= new secondOrigin("Viracocha","God of Creation and the Sky",Inca.name,Inca,[Clever,Careful,Forceful],[Father, Order],[Thinker]),
+
 Abzu= new secondOrigin("Abzu","Titan of The Abyss",Patala.name,Patala,[Careful,Sneaky,Forceful],[Water,Darkness],[FreeSpirit,Manipulator]),
 CromCruach= new secondOrigin("Crom Cruach","Titan of Decay",Patala.name,Patala,[Forceful,Sneaky,Quick],[Earth,Death],[General,Enforcer]),
 DisPater= new secondOrigin("Dis Pater","Titan of Riches",Patala.name,Patala,[Clever,Flashy,Careful],[Earth,Crafting],[Harmonizer]),
@@ -329,17 +348,18 @@ Fenrir= new secondOrigin("Fenrir","Titan of Fear",Night.name,Night,[Forceful,Cle
 Dracula= new secondOrigin("Dracula","Titan of Nightmares",Night.name,Night,[Clever,Forceful,Flashy],[Death,Darkness],[Hunter,Manipulator]),
 Selene= new secondOrigin("Selene","Titan of Moon",Night.name,Night,[Clever,Careful,Quick],[Darkness,Moon],[Enforcer,Diplomat]),
 Hypnos= new secondOrigin("Hypnos","Titan of Sleep",Night.name,Night,[Clever,Sneaky,Quick],[Darkness,Order],[Harmonizer,Thinker]),
+
 Sōhei= new secondOrigin("Sōhei","Japanese Warrior Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Forceful,Clever,Quick],[War,Wisdom],[General,Diplomat]),
 Yamabushi= new secondOrigin("Yamabushi","Japanese Hermit Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Careful,Clever,Forceful],[Wisdom,Nature],[Thinker,FreeSpirit]),
 Shaolin= new secondOrigin("Shaolin","Chinese Warrior Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Forceful,Flashy,Careful],[War,Knowledge],[Enforcer,FreeSpirit]),
 Cuauhtlocelotl= new secondOrigin("Cuauhtlocelotl","Aztec Animal Warriors",OrderoftheJadeFist.name,OrderoftheJadeFist,[Sneaky,Clever,Careful],[War,Nature],[Hunter]),
-
 TeutonicKnights= new secondOrigin("Teutonic Knights","Secretive European Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Sneaky,Clever,Careful],[Darkness,Crafting],[Hunter,Politician]),
 TheSevenTriads= new secondOrigin("The Seven Triads","Chinese Criminal Gangs",OrderoftheJadeFist.name,OrderoftheJadeFist,[Sneaky,Forceful,Clever],[Darkness,Wit],[Enforcer,Politician]),
 Yakuza= new secondOrigin("Yakuza","Japanese Criminal Gangs",OrderoftheJadeFist.name,OrderoftheJadeFist,[Forceful,Sneaky,Quick],[Order,War],[Enforcer,Manipulator]),
 DzheydBratstvo= new secondOrigin("Dzheyd Bratstvo","Russian Criminal Gang",OrderoftheJadeFist.name,OrderoftheJadeFist,[Forceful,Flashy,Quick],[Darkness,Sky],[Enforcer]),
 SicilianMafia= new secondOrigin("Sicilian Mafia","Italian Criminal Gang",OrderoftheJadeFist.name,OrderoftheJadeFist,[Flashy,Careful,Forceful],[Water,Travel],[Prince,Diplomat]),
 TheTecuani= new secondOrigin("The Tecuani","Latin American Criminal Gang",OrderoftheJadeFist.name,OrderoftheJadeFist,[Careful,Sneaky,Forceful],[Nature,Darkness],[Hunter]),
+
 Keter= new secondOrigin("Keter","Prophets and Scholars",Cabal.name,Cabal,[Clever,Careful,Forceful],[Wisdom],[Thinker]),
 Binah= new secondOrigin("Binah","Analysts and Wizards",Cabal.name,Cabal,[Careful,Clever,Flashy],[Fertility,Wit],[Mother,Thinker]),
 Chokhmah= new secondOrigin("Chokhmah","Creative Geniuses",Cabal.name,Cabal,[Clever,Flashy,Quick],[Father,Crafting],[Thinker,Prince]),
@@ -351,32 +371,20 @@ Hod= new secondOrigin("Hod","Problem-Solvers",Cabal.name,Cabal,[Clever,Forceful,
 Netzach= new secondOrigin("Netzach","Generals and Businessmen",Cabal.name,Cabal,[Forceful,Flashy,Quick],[War,Leader],[General,Manipulator]),
 Yesod= new secondOrigin("Yesod","Link between the Spiritual and Physical",Cabal.name,Cabal,[Careful,Forceful,Sneaky],[Nature,Travel],[Enforcer,FreeSpirit]),
 Malkuth= new secondOrigin("Malkuth","Ground Operatives",Cabal.name,Cabal,[Sneaky,Careful,Clever],[Nature],[Enforcer]),
+
+SummerNymph= new secondOrigin("Summer Nymph","Spirits of Springs and Flowers",SummerCourt.name,SummerCourt,[Flashy,Quick,Clever],[Sun,Fertility],[FreeSpirit,Harmonizer]),
+SummerDryad= new secondOrigin("Summer Dryad","Spirits of Trees and Mountains",SummerCourt.name,SummerCourt,[Careful,Flashy,Forceful],[Nature,Sun],[FreeSpirit,Trickster]),
+LightElf= new secondOrigin("Light Elf","Organized, Martial Spirits of Fields and Plains",SummerCourt.name,SummerCourt,[Forceful,Careful,Flashy],[Light,Nature],[General,Diplomat]),
+SummerFey= new secondOrigin("Summer Fey","Spirits of Forests and Meadows",SummerCourt.name,SummerCourt,[Sneaky,Clever,Careful],[Wit,Light],[Trickster,Diplomat]),
+SummerNaiad= new secondOrigin("Summer Naiad","Spirits of the Sea",SummerCourt.name,SummerCourt,[Careful,Sneaky,Forceful],[Water,Nature],[Trickster,Harmonizer]),
+Korrigans= new secondOrigin("Korrigans","Spirits of the Roots and Soil",SummerCourt.name,SummerCourt,[Clever,Sneaky,Quick],[Nature],[FreeSpirit]),
+Gnomes= new secondOrigin("Gnomes","Spirits of Technology and Creativity",SummerCourt.name,SummerCourt,[Clever,Flashy,Quick],[Nature,Crafting],[Thinker]),
+Leprechauns= new secondOrigin("Leprechauns","Spirits of Wealth and Fertility",SummerCourt.name,SummerCourt,[Sneaky,Quick,Clever],[Nature,Fertility],[Trickster,FreeSpirit]),
+
 CopperLodge= new secondOrigin("Copper Lodge","Biochemists",Illuminati.name,Illuminati,[Clever,Careful,Flashy],[Nature,Crafting],[Thinker]),
 BronzeLodge= new secondOrigin("Bronze Lodge","Artists",Illuminati.name,Illuminati,[Flashy,Quick,Clever],[Light,Wit],[FreeSpirit]),
 SilverLodge= new secondOrigin("Silver Lodge","Engineers and Inventors",Illuminati.name,Illuminati,[Clever,Flashy,Quick],[Crafting],[Thinker]),
 GoldLodge= new secondOrigin("Gold Lodge","Bankers",Illuminati.name,Illuminati,[Careful,Clever,Sneaky],[Order,Knowledge],[Thinker,Manipulator]),
-Aengus= new secondOrigin("Aengus","God of Love and Youth",Celtic.name,Celtic,[Flashy,Quick,Forceful],[Love,Wit],[Harmonizer,Protector]),
-Aine= new secondOrigin("Aine","Goddess of Summer, Agriculture and Wealth",Celtic.name,Celtic,[Careful,Quick,Sneaky],[Nature,Fertility],[Diplomat,Protector]),
-Brigid= new secondOrigin("Brigid","Goddess of Spring, Fertility and Dawn",Celtic.name,Celtic,[Clever,Careful,Quick],[Fertility,Sky],[Diplomat,Thinker]),
-Cernunnos= new secondOrigin("Cernunnos","God of Druidism and Nature",Celtic.name,Celtic,[Clever,Careful,Sneaky],[Nature],[Harmonizer,FreeSpirit]),
-Dagda= new secondOrigin("Dagda","God of Masculinity and Magic, High King of Ireland",Celtic.name,Celtic,[Flashy,Forceful,Quick],[War,Nature],[General,King]),
-DianCécht= new secondOrigin("Dian Cécht","God of Crafting and Healing",Celtic.name,Celtic,[Careful,Clever,Forceful],[Nature,Knowledge],[Thinker,Protector]),
-Fand= new secondOrigin("Fand","Goddess of Mist",Celtic.name,Celtic,[Sneaky,Clever,Careful],[Water,Sky],[FreeSpirit]),
-Lugh= new secondOrigin("Lugh","God of Sky and Oaths",Celtic.name,Celtic,[Clever,Forceful,Quick],[Sky,Justice],[Enforcer,General]),
-ManannanmacLir= new secondOrigin("Manannan mac Lir","God of the Sea and Psychopomp",Celtic.name,Celtic,[Careful,Clever,Sneaky],[Water,Travel],[FreeSpirit,Protector]),
-Morrigan= new secondOrigin("The Morrigan","Goddess of War and Prophecy",Celtic.name,Celtic,[Forceful,Clever,Quick],[War,Death],[Thinker,Hunter]),
-Niamh= new secondOrigin("Niamh","Queen of Tir na nÓg",Celtic.name,Celtic,[Clever,Careful,Quick],[Travel,Leader],[King,Harmonizer]),
-NiemhMairbh= new secondOrigin("Niemh Mairbh","God of Retribution",Celtic.name,Celtic,[Sneaky,Clever,Forceful],[Death,Darkness],[Manipulator,Enforcer]),
-Ogma= new secondOrigin("Ogma","God of Strength and Eloquence",Celtic.name,Celtic,[Clever,Forceful,Careful],[War,Knowledge],[Thinker,General]),
-Zerris= new secondOrigin("Zerris","Machine-God of Technology",Celtic.name,Celtic,[Clever,Careful,Forceful],[Crafting,Fire],[Thinker]),
-Chasqua= new secondOrigin("Chasqua","Goddess of Love, Happiness and Health",Inca.name,Inca,[Clever,Careful,Flashy],[Love, Nature],[Harmonizer,FreeSpirit]),
-Cochamama= new secondOrigin("Cochamama","Goddess of the Sea",Inca.name,Inca,[Careful,Clever,Forceful],[Water, Wisdom],[Mother,Harmonizer]),
-Illapa= new secondOrigin("Illapa","God of War and Weather",Inca.name,Inca,[Clever,Sneaky,Forceful],[War, Sky],[Protector,Enforcer]),
-Inti= new secondOrigin("Inti","God of the Sun",Inca.name,Inca,[Flashy,Forceful,Quick],[Leader, Sun, Order],[King,Enforcer]),
-Kilyamama= new secondOrigin("Kilyamama","Goddess of the Moon",Inca.name,Inca,[Clever,Careful,Flashy],[Moon, Knowledge],[Politician,Thinker]),
-Supay= new secondOrigin("Supay","God of the Underworld",Inca.name,Inca,[Clever,Sneaky,Quick],[Death, Earth, Darkness],[Manipulator,Enforcer]),
-Urcaguary= new secondOrigin("Urcaguary","God of Metal and Greed",Inca.name,Inca,[Flashy,Quick,Forceful],[Earth, Crafting],[FreeSpirit,Manipulator]),
-Viracocha= new secondOrigin("Viracocha","God of Creation and the Sky",Inca.name,Inca,[Clever,Careful,Forceful],[Father, Order],[Thinker]),
 OrichalcumLodge= new secondOrigin("Orichalcum Lodge","Specialists of the Occult Arts",Illuminati.name,Illuminati,[Clever,Forceful,Careful],[Knowledge,Darkness],[Thinker]),
 IronLodge= new secondOrigin("Iron Lodge","Believers in Self-Improvement",Illuminati.name,Illuminati,[Forceful,Flashy,Quick],[War,Father],[Enforcer,Thinker]),
 LeadLodge= new secondOrigin("Lead Lodge","Criminals and Ne'er-do-wells",Illuminati.name,Illuminati,[Sneaky,Careful,Quick],[Darkness,Earth],[Manipulator,Enforcer]),
@@ -575,6 +583,7 @@ if(document.getElementById("OriginSelect").value === secondOriginArray[i].origin
 }
 
 
+
 function lengthChecker(){
 	length = ""
 for(i=0;i<secondOriginArray.length;i++){
@@ -604,7 +613,7 @@ InvokationDeathNecromancy = new LegendaryAbility("Death - Necromancy","- Raise t
 InvokationDeathShamanism = new LegendaryAbility("Death - Shamanism","- Gain the advice of an ancient wise spirit.\n- Tap into the power of a sanctified place.",[2,3,0,-2,0,1,-1,3,0,-1,-2,-2,4,3,1,1,4,1,2,2,2,0,1,2,-2,-2,1,1,0,1,0,1,2,4,0,-1,-2,0,3,3,-1,2,3,4,2,0,3,2,0,3,2,3,2,-4,-3,-1,-2,-2,-3,-4,-4,0,2,-2,1,1,2,2,0,0,3,2,1,2,1,0,4,3]),
 InvokationDeathSoulbinding = new LegendaryAbility("Death - Soulbinding","- Infuse Souls into your creations to increase their power\n- Exploit the power of a magical object.",[2,3,0,3,-1,1,1,1,1,-1,-3,-2,1,-1,-1,2,3,1,2,1,1,-1,2,2,4,-2,2,1,-1,-3,0,-2,1,-2,-1,0,3,2,0,3,-1,0,3,1,3,0,1,2,2,3,0,2,0,-3,2,1,2,1,3,2,0,2,4,-2,1,-1,2,2,3,4,3,3,2,-2,2,2,4,3]),
 InvokationDeathDestruction = new LegendaryAbility("Death - Destruction","- Send beams of pure Death\n- Crumble a wall to dust.",[-2,-2,3,4,2,-2,2,0,0,-2,-3,-2,2,2,1,-1,3,1,1,-1,1,-2,0,3,-1,-2,0,1,0,-1,0,-2,-1,-3,-1,3,2,-1,0,2,2,2,2,1,2,0,-1,2,3,1,0,1,0,-3,3,1,1,2,2,3,1,3,4,-3,3,3,3,2,0,1,2,4,-1,-3,0,4,1,-2]),
-InvokationDeathHorror = new LegendaryAbility("Death - Horror","- Terrify enemies.\n- Turn ghosts into insane wraiths.",[1,2,3,3,1,2,1,0,1,-2,-3,-1,1,2,2,-1,2,2,1,-1,1,-3,-1,2,0,-1,-2,2,1,-1,1,-2,-2,-2,-1,2,3,2,1,0,2,0,1,1,1,2,-2,2,3,-1,1,1,0,-1,3,2,-1,1,2,3,1,4,4,-3,3,3,2,0,-1,1,0,4,-1,4,2,-1,1,4]),
+InvokationDeathHorror = new LegendaryAbility("Death - Horror","- Terrify enemies.\n- Turn ghosts into insane wraiths.",[1,2,3,3,1,2,1,0,1,-2,-3,-1,1,2,2,-1,2,2,1,-1,1,-3,-1,2,0,-1,-2,2,1,-1,1,-2,-2,-2,-1,2,3,2,1,0,2,0,1,1,1,2,-2,2,3,-1,1,1,0,-1,3,2,-1,1,2,3,1,4,4,-3,2,2,2,0,-1,1,0,2,-1,3,2,-1,1,3]),
 MentalismChwalRider = new LegendaryAbility("Chwal - Rider","- See through the eyes on an unsuspecting individual.\n- Mark and find individuals.",[2,2,-1,-1,0,3,-1,0,0,1,0,-1,2,2,1,3,1,-1,0,2,3,0,2,1,0,-1,0,-2,1,1,-1,0,0,1,-1,-2,3,4,2,0,1,-2,1,4,1,-2,1,1,-1,-1,0,0,-1,2,2,1,-1,-1,-2,3,1,4,1,2,3,0,3,1,2,4,1,4,-1,1,-2,-3,4,2]),
 MentalismChwalPuppeteer = new LegendaryAbility("Chwal - Puppeteer","- Control an individual’s actions.\n- Stop an enemy mid-strike.",[1,2,-1,3,1,3,-2,0,2,0,0,1,2,2,0,2,3,0,1,0,3,-1,2,2,0,-1,1,0,4,1,2,0,1,2,0,1,4,2,2,-1,1,1,1,4,2,-1,2,1,2,0,-1,0,1,4,2,1,2,3,0,4,0,3,3,2,3,3,3,3,2,4,1,3,2,1,-2,-3,2,4]),
 MentalismHekuSoothe = new LegendaryAbility("Mentalism - Soothe","- Calm a crowd down.\n-  Bow an animal to your will.",[2,1,2,1,0,2,-2,2,2,0,1,2,1,2,3,0,2,0,2,3,3,0,1,0,-1,1,3,1,2,2,2,3,1,4,0,-1,1,1,4,3,0,2,4,1,4,0,1,3,0,4,1,1,2,4,-2,2,3,1,1,3,2,3,3,2,0,1,3,2,0,0,3,2,3,4,2,-3,1,2]),
@@ -687,6 +696,7 @@ for(j=0;j<parametersArray.length;j++){
 
 }
 addAnAbility()
+
 
 // Test the length of Legendaries
 //lengthChecker()
