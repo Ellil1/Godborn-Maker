@@ -109,11 +109,11 @@ Inca = new parameterCalculator("Inca","God",[],[]),
 Light = new parameterCalculator("Light","Titan",[],[]),
 Abyss = new parameterCalculator("Abyss","Titan",[],[]),
 Ocean = new parameterCalculator("Ocean","Titan",[],[]),
-Order = new parameterCalculator("Order","Titan",[],[]),
+OrderTitan = new parameterCalculator("Order","Titan",[],[]),
 World = new parameterCalculator("World","Titan",[],[]),
-Fire = new parameterCalculator("Fire","Titan",[],[]),
+FireTitan = new parameterCalculator("Fire","Titan",[],[]),
 Patala = new parameterCalculator("Depths","Titan",[],[]),
-Sky = new parameterCalculator("Sky","Titan",[],[]),
+SkyTitan = new parameterCalculator("Sky","Titan",[],[]),
 Night = new parameterCalculator("Night","Titan",[],[]),
 DeathTitan = new parameterCalculator("Death","Titan",[],[]),
 
@@ -171,7 +171,6 @@ var secondOriginArray = [
  Miclántecuhtli= new secondOrigin("Miclántecuhtli","God of the dead and spirits",Aztec.name,Aztec,[Careful,Clever,Sneaky],[Death],[Thinker]),
  Quetzalcoátl= new secondOrigin("Quetzalcoátl","God of beauty, creation and art",Aztec.name,Aztec,[Clever,Careful,Flashy],[Leader],[Harmonizer,Politician]),
  Tezcatlipoca= new secondOrigin("Tezcatlipoca","God of discord and destruction",Aztec.name,Aztec,[Clever,Sneaky,Forceful],[Moon,Darkness],[King]),
- Tlaloc= new secondOrigin("Tlaloc","God of rain and clouds",Aztec.name,Aztec,[Clever,Careful,Sneaky],[Sky,Wisdom],[FreeSpirit]),
  Tlazoltéotl= new secondOrigin("Tlazoltéotl","Goddess of filth",Aztec.name,Aztec,[Flashy,Careful,Clever],[Fertility,Love],[Harmonizer,Manipulator]),
  XipeTotec= new secondOrigin("Xipe Totec","God of maize and growth",Aztec.name,Aztec,[Clever,Sneaky,Forceful],[Fertility,Darkness],[Trickster]),
  Anubis= new secondOrigin("Anubis","God of Death and Judge of the Underworld ",Egyptian.name,Egyptian,[Clever,Careful,Forceful],[Death,Justice],[Enforcer]),
@@ -193,7 +192,7 @@ var secondOriginArray = [
  Agni= new secondOrigin("Agni","God of FIre and Sacrifice",Indian.name,Indian,[Clever,Flashy,Careful],[Fire],[FreeSpirit]),
  Brahma= new secondOrigin("Brahma","God of Creation",Indian.name,Indian,[Clever,Careful,Sneaky],[Knowledge,Father],[Thinker]),
  Ganesha= new secondOrigin("Ganesha","God of good luck and Wisdom",Indian.name,Indian,[Clever,Forceful,Sneaky],[Travel,Wisdom],[Harmonizer,Protector]),
- Indra= new secondOrigin("Indra","God of war and weather",Indian.name,Indian,[Forceful,Clever,Flashy],[War,Leader],[King]),
+ Indra= new secondOrigin("Indra","God of war and weather",Indian.name,Indian,[Forceful,Clever,Flashy],[Sky,Leader],[King]),
  Kali= new secondOrigin("Kali","Goddess of annihilation",Indian.name,Indian,[Forceful,Flashy,Quick],[War,Darkness],[Enforcer]),
  Lakshmi= new secondOrigin("Lakshmi","Goddess of fortune",Indian.name,Indian,[Clever,Careful,Sneaky],[Wit],[FreeSpirit,Manipulator]),
  Parvati= new secondOrigin("Parvati","Goddess of feminity",Indian.name,Indian,[Clever,Sneaky,Careful],[Love,Fertility],[Diplomat,Mother]),
@@ -205,7 +204,7 @@ var secondOriginArray = [
  Aphrodite= new secondOrigin("Aphrodite","Goddess of love and beauty",Greek.name,Greek,[Flashy,Forceful,Careful],[Love],[Manipulator]),
  Apollo= new secondOrigin("Apollo","God of prophecy, the sun, and art",Greek.name,Greek,[Flashy,Careful,Clever],[Sun,Crafting],[Politician]),
  Archimedes= new secondOrigin("Archimedes","God of Logic",Greek.name,Greek,[Clever,Careful,Forceful],[Crafting,Knowledge],[Thinker]),
- Ares= new secondOrigin("Ares","God of War",Greek.name,Greek,[Forceful,Flashy,Careful],[War],[Enforcer]),
+ Ares= new secondOrigin("Ares","God of War",Greek.name,Greek,[Forceful,Flashy,Careful],[War],[General]),
  Artemis= new secondOrigin("Artemis","Goddess of chastity, the moon, and hunting",Greek.name,Greek,[Careful,Sneaky,Quick],[Moon,War],[FreeSpirit]),
  Athena= new secondOrigin("Athena","Goddess of strategy and wisdom",Greek.name,Greek,[Clever,Careful,Forceful],[War,Wisdom],[General]),
  Demeter= new secondOrigin("Demeter","Goddess of Nature and Agriculture",Greek.name,Greek,[Flashy,Forceful,Clever],[Fertility],[Mother]),
@@ -245,11 +244,12 @@ var secondOriginArray = [
  Hors= new secondOrigin("Hors","God of Medicine and Arts",BogiMuzhchin.name,BogiMuzhchin,[Careful,Clever,Flashy],[Nature ,Knowledge],[Harmonizer,Protector]),
  Jarilo= new secondOrigin("Jarilo","God of War and Spring",BogiMuzhchin.name,BogiMuzhchin,[Careful,Quick,Forceful],[War,Sun],[Protector,Prince]),
  Morana= new secondOrigin("Morana","Goddess of Harvest, Winter and Death",BogiMuzhchin.name,BogiMuzhchin,[Careful,Forceful,Quick],[Death,Water],[Enforcer,Harmonizer]),
- Atlas= new secondOrigin("Atlas","Titan of Gravity",Order.name,Order,[Careful,Forceful,Flashy],[Order,Earth],[FreeSpirit,Protector]),
- Coeus= new secondOrigin("Coeus","Titan of Knowledge",Order.name,Order,[Clever,Sneaky,Careful],[Order,Knowledge],[Thinker,Manipulator]),
- Kronus= new secondOrigin("Kronus","Titan of Control",Order.name,Order,[Forceful,Clever,Careful],[Leader,Order],[King,General]),
- Themis= new secondOrigin("Themis","Titan of Law",Order.name,Order,[Careful,Clever,Forceful],[Order,Justice],[Thinker,Diplomat]),
- Chronos= new secondOrigin("Chronos","Titan of Time",Order.name,Order,[Careful,Clever,Forceful],[Order],[FreeSpirit,Thinker]),
+
+ Atlas= new secondOrigin("Atlas","Titan of Gravity",OrderTitan.name,OrderTitan,[Careful,Forceful,Flashy],[Order,Earth],[FreeSpirit,Protector]),
+ Coeus= new secondOrigin("Coeus","Titan of Knowledge",OrderTitan.name,OrderTitan,[Clever,Sneaky,Careful],[Order,Knowledge],[Thinker,Manipulator]),
+ Kronus= new secondOrigin("Kronus","Titan of Control",OrderTitan.name,OrderTitan,[Forceful,Clever,Careful],[Leader,Order],[King,General]),
+ Themis= new secondOrigin("Themis","Titan of Law",OrderTitan.name,OrderTitan,[Careful,Clever,Forceful],[Order,Justice],[Thinker,Diplomat]),
+ Chronos= new secondOrigin("Chronos","Titan of Time",OrderTitan.name,OrderTitan,[Careful,Clever,Forceful],[Order],[FreeSpirit,Thinker]),
  Aten= new secondOrigin("Aten","Titan of Brightness",Light.name,Light,[Clever,Forceful,Flashy],[Sun],[King,Manipulator]),
  Helios= new secondOrigin("Helios","Titan of the Sun",Light.name,Light,[Clever,Flashy,Quick],[Sun],[FreeSpirit]),
  Hemera= new secondOrigin("Hemera","Titan of Day",Light.name,Light,[Careful,Flashy,Clever],[Sun,Fertility],[Harmonizer,Mother]),
@@ -259,19 +259,18 @@ var secondOriginArray = [
  Charybdis= new secondOrigin("Charybdis","Titan of Drowning",Ocean.name,Ocean,[Forceful,Flashy,Sneaky],[Water,Death],[Hunter,Manipulator]),
  Yam= new secondOrigin("Yam","Titan of the Raging Sea",Ocean.name,Ocean,[Forceful,Flashy,Clever],[Leader,Water],[King,Manipulator]),
  Heget= new secondOrigin("Heget","Titan of Fertility",Ocean.name,Ocean,[Forceful,Clever,Sneaky],[Water,Fertility],[Protector]),
- DisPater= new secondOrigin("Dis Pater","Titan of Abundance",World.name,World,[Clever,Flashy,Careful],[Earth,Crafting],[Harmonizer]),
  Gaia= new secondOrigin("Gaia","Titan of Life",World.name,World,[Forceful,Careful,Flashy],[Fertility,Nature],[Mother]),
  GreenMan= new secondOrigin("The Green Man","Titan of Nature",World.name,World,[Sneaky,Careful,Flashy],[Nature],[Harmonizer,FreeSpirit]),
  CromCruach= new secondOrigin("Crom Cruach","Titan of Decay",World.name,World,[Forceful,Sneaky,Quick],[Earth,Death],[General,Enforcer]),
  Ourea= new secondOrigin("Ourea","Titan of Mountains",World.name,World,[Careful,Clever,Forceful],[Earth],[Thinker]),
  Kur= new secondOrigin("Kur","Titan of Expanse",World.name,World,[Forceful,Careful,Clever],[Earth,Travel],[FreeSpirit]),
- Surtr= new secondOrigin("Surtr","Titan of Destruction",Fire.name,Fire,[Forceful,Flashy,Quick],[Fire],[General,King]),
- Prometheus= new secondOrigin("Prometheus","Titan of Invention",Fire.name,Fire,[Clever,Quick,Flashy],[Fire,Crafting],[Thinker,FreeSpirit]),
- Kagutsuchi= new secondOrigin("Kagutsuchi","Titan of Lava",Fire.name,Fire,[Flashy,Forceful,Quick],[Fire,Earth],[Protector]),
- Nemesis= new secondOrigin("Nemesis","Titan of Divine Retribution",Fire.name,Fire,[Forceful,Careful,Flashy],[Fire,Justice],[Enforcer]),
- Vrtra= new secondOrigin("Vrtra","Titan of Drought",Fire.name,Fire,[Flashy,Careful,Clever],[Fire,Death],[Manipulator]),
- Xiuhtecuhtli= new secondOrigin("Xiuhtecuhtli","Titan of Life",Fire.name,Fire,[Flashy,Quick,Clever],[Fire,Fertility],[Harmonizer]),
- Auahituroa= new secondOrigin("Auahituroa","Titan of Stellar Fire",Fire.name,Fire,[Flashy,Forceful,Quick],[Fire,Sky],[FreeSpirit]),
+ Surtr= new secondOrigin("Surtr","Titan of Destruction",FireTitan.name,FireTitan,[Forceful,Flashy,Quick],[Fire],[General,King]),
+ Prometheus= new secondOrigin("Prometheus","Titan of Invention",FireTitan.name,FireTitan,[Clever,Quick,Flashy],[Fire,Crafting],[Thinker,FreeSpirit]),
+ Kagutsuchi= new secondOrigin("Kagutsuchi","Titan of Lava",FireTitan.name,FireTitan,[Flashy,Forceful,Quick],[Fire,Earth],[Protector]),
+ Nemesis= new secondOrigin("Nemesis","Titan of Divine Retribution",FireTitan.name,FireTitan,[Forceful,Careful,Flashy],[Fire,Justice],[Enforcer]),
+ Vrtra= new secondOrigin("Vrtra","Titan of Drought",FireTitan.name,FireTitan,[Flashy,Careful,Clever],[Fire,Death],[Manipulator]),
+ Xiuhtecuhtli= new secondOrigin("Xiuhtecuhtli","Titan of Life",FireTitan.name,FireTitan,[Flashy,Quick,Clever],[Fire,Fertility],[Harmonizer]),
+ Auahituroa= new secondOrigin("Auahituroa","Titan of Stellar Fire",FireTitan.name,FireTitan,[Flashy,Forceful,Quick],[Fire,Sky],[FreeSpirit]),
 
  Anansi= new secondOrigin("Anansi","Spider God of Tricks and Knowledge",African.name,African,[Clever,Flashy,Quick],[Knowledge,Wisdom],[Trickster,Harmonizer]),
 Ayao= new secondOrigin("Ayao","Goddess of Air",African.name,African,[Clever,Forceful,Sneaky],[Sky,Wit],[Hunter,General]),
@@ -338,8 +337,7 @@ Erlik= new secondOrigin("Erlik","Titan of Underground",Patala.name,Patala,[Force
 SulTharash= new secondOrigin("Sul’Tharash","Bane of Atlantis",Patala.name,Patala,[Forceful,Clever,Sneaky],[Water,War],[Enforcer]),
 Dolgrund= new secondOrigin("Dolgrund","Shadow King of An'leth",Patala.name,Patala,[Clever,Forceful,Quick],[Darkness,Order],[Enforcer,General]),
 Tiamat= new secondOrigin("Tiamat","Titan of Water as Life",Ocean.name,Ocean,[Clever,Careful,Sneaky],[Water,Fertility],[Mother]),
-Themis= new secondOrigin("Themis","Titan of Law",Order.name,Order,[Clever,Careful,Flashy],[Order,Justice],[Enforcer]),
-Idun= new secondOrigin("Idun","Titan of Selflessness",Order.name,Order,[Careful,Quick,Clever],[Order,Love],[Thinker,Protector]),
+Idun= new secondOrigin("Idun","Titan of Selflessness",OrderTitan.name,OrderTitan,[Careful,Quick,Clever],[Order,Love],[Thinker,Protector]),
 Apep= new secondOrigin("Apep","Titan of Darkness",Night.name,Night,[Clever,Forceful,Sneaky],[Darkness],[Hunter,Manipulator]),
 Mikaboshi= new secondOrigin("Mikaboshi","Titan of Void",Night.name,Night,[Clever,Forceful,Sneaky],[Darkness,Death],[Manipulator,Enforcer]),
 Nut= new secondOrigin("Nut","Titan of Stars",Night.name,Night,[Careful,Sneaky,Clever],[Darkness,Sky],[Thinker,Protector]),
@@ -348,6 +346,16 @@ Fenrir= new secondOrigin("Fenrir","Titan of Fear",Night.name,Night,[Forceful,Cle
 Dracula= new secondOrigin("Dracula","Titan of Nightmares",Night.name,Night,[Clever,Forceful,Flashy],[Death,Darkness],[Hunter,Manipulator]),
 Selene= new secondOrigin("Selene","Titan of Moon",Night.name,Night,[Clever,Careful,Quick],[Darkness,Moon],[Enforcer,Diplomat]),
 Hypnos= new secondOrigin("Hypnos","Titan of Sleep",Night.name,Night,[Clever,Sneaky,Quick],[Darkness,Order],[Harmonizer,Thinker]),
+
+Typhon= new secondOrigin("Typhon","Titan of Destruction",SkyTitan.name,SkyTitan,[Forceful,Flashy,Quick],[Sky,Death],[Hunter]),
+Ouranos= new secondOrigin("Ouranos","Titan of Calm",SkyTitan.name,SkyTitan,[Careful,Clever,Quick],[Sky,Order],[Harmonizer]),
+Tlaloc= new secondOrigin("Tlaloc","Titan of Rain",SkyTitan.name,SkyTitan,[Clever,Flashy,Quick],[Sky,Water],[FreeSpirit]),
+
+Camazotz= new secondOrigin("Camazotz","Titan of Devouring",DeathTitan.name,DeathTitan,[Forceful,Flashy,Quick],[Death],[Hunter]),
+GrimReaper= new secondOrigin("Grim Reaper","Titan of the Great Equalizer",DeathTitan.name,DeathTitan,[Forceful,Flashy,Clever],[Death],[King]),
+Styx= new secondOrigin("Styx","Titan of the Journey",DeathTitan.name,DeathTitan,[Careful,Clever,Quick],[Death,Travel],[Harmonizer]),
+Nirrti= new secondOrigin("Nirrti","Titan of Horror",DeathTitan.name,DeathTitan,[Flashy,Forceful,Sneaky],[Death],[Manipulator]),
+
 
 Sōhei= new secondOrigin("Sōhei","Japanese Warrior Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Forceful,Clever,Quick],[War,Wisdom],[General,Diplomat]),
 Yamabushi= new secondOrigin("Yamabushi","Japanese Hermit Monks",OrderoftheJadeFist.name,OrderoftheJadeFist,[Careful,Clever,Forceful],[Wisdom,Nature],[Thinker,FreeSpirit]),
@@ -372,15 +380,6 @@ Netzach= new secondOrigin("Netzach","Generals and Businessmen",Cabal.name,Cabal,
 Yesod= new secondOrigin("Yesod","Link between the Spiritual and Physical",Cabal.name,Cabal,[Careful,Forceful,Sneaky],[Nature,Travel],[Enforcer,FreeSpirit]),
 Malkuth= new secondOrigin("Malkuth","Ground Operatives",Cabal.name,Cabal,[Sneaky,Careful,Clever],[Nature],[Enforcer]),
 
-SummerNymph= new secondOrigin("Summer Nymph","Spirits of Springs and Flowers",SummerCourt.name,SummerCourt,[Flashy,Quick,Clever],[Sun,Fertility],[FreeSpirit,Harmonizer]),
-SummerDryad= new secondOrigin("Summer Dryad","Spirits of Trees and Mountains",SummerCourt.name,SummerCourt,[Careful,Flashy,Forceful],[Nature,Sun],[FreeSpirit,Trickster]),
-LightElf= new secondOrigin("Light Elf","Organized, Martial Spirits of Fields and Plains",SummerCourt.name,SummerCourt,[Forceful,Careful,Flashy],[Light,Nature],[General,Diplomat]),
-SummerFey= new secondOrigin("Summer Fey","Spirits of Forests and Meadows",SummerCourt.name,SummerCourt,[Sneaky,Clever,Careful],[Wit,Light],[Trickster,Diplomat]),
-SummerNaiad= new secondOrigin("Summer Naiad","Spirits of the Sea",SummerCourt.name,SummerCourt,[Careful,Sneaky,Forceful],[Water,Nature],[Trickster,Harmonizer]),
-Korrigans= new secondOrigin("Korrigans","Spirits of the Roots and Soil",SummerCourt.name,SummerCourt,[Clever,Sneaky,Quick],[Nature],[FreeSpirit]),
-Gnomes= new secondOrigin("Gnomes","Spirits of Technology and Creativity",SummerCourt.name,SummerCourt,[Clever,Flashy,Quick],[Nature,Crafting],[Thinker]),
-Leprechauns= new secondOrigin("Leprechauns","Spirits of Wealth and Fertility",SummerCourt.name,SummerCourt,[Sneaky,Quick,Clever],[Nature,Fertility],[Trickster,FreeSpirit]),
-
 CopperLodge= new secondOrigin("Copper Lodge","Biochemists",Illuminati.name,Illuminati,[Clever,Careful,Flashy],[Nature,Crafting],[Thinker]),
 BronzeLodge= new secondOrigin("Bronze Lodge","Artists",Illuminati.name,Illuminati,[Flashy,Quick,Clever],[Light,Wit],[FreeSpirit]),
 SilverLodge= new secondOrigin("Silver Lodge","Engineers and Inventors",Illuminati.name,Illuminati,[Clever,Flashy,Quick],[Crafting],[Thinker]),
@@ -394,11 +393,64 @@ GalahadsCastle= new secondOrigin("Galahad\'s Castle","Destroyers of Evil and Wic
 PercivalsCastle= new secondOrigin("Percival\'s Castle","Protectors of Relics and Lands",CircleofMerlin.name,CircleofMerlin,[Careful,Quick,Clever],[Knowledge,War],[Protector]),
 GawainsCastle= new secondOrigin("Gawain's Castle","Duelists and Assassins",CircleofMerlin.name,CircleofMerlin,[Flashy,Careful,Quick],[War,Death],[Enforcer]),
 LamorakCastle= new secondOrigin("Lamorak\'s Castle","Brawlers and Street Fighters",CircleofMerlin.name,CircleofMerlin,[Forceful,Flashy,Quick],[Earth,Darkness],[Enforcer]),
-BorsCastle= new secondOrigin("Bors\' Castle","Wanderers and Storytellers",CircleofMerlin.name,CircleofMerlin,[Careful,Clever,Sneaky],[Travel],[FreeSpirit])
+BorsCastle= new secondOrigin("Bors\' Castle","Wanderers and Storytellers",CircleofMerlin.name,CircleofMerlin,[Careful,Clever,Sneaky],[Travel],[FreeSpirit]),
+
+Templars= new secondOrigin("Templars","Amibitious European Oligarchs",OrderoftheJadeFist.name,OrderoftheJadeFist,[Clever,Sneaky,Forceful],[Justice,Earth],[Politician,Protector]), 
+TristansCastle= new secondOrigin("Tristan's Castle","Diplomats",CircleofMerlin.name,CircleofMerlin,[Careful,Flashy,Clever],[Light,Nature],[Harmonizer]), 
+GeraintsCastle= new secondOrigin("Geraint's Castle","Druidic Experts",CircleofMerlin.name,CircleofMerlin,[Clever,Careful,Quick],[Nature],[FreeSpirit]), 
+GarethsCastle= new secondOrigin("Gareth's Castle","Infiltrators and Information Gatherers",CircleofMerlin.name,CircleofMerlin,[Sneaky,Careful,Quick],[Darkness,Knowledge],[Trickster]), 
+BediveresCastle= new secondOrigin("Bedivere's Castle","Craftsmen",CircleofMerlin.name,CircleofMerlin,[Clever,Flashy,Quick],[Crafting],[Protector]), 
+KaysCastle= new secondOrigin("Kay's Castle","Brutish Enforcers",CircleofMerlin.name,CircleofMerlin,[Forceful,Flashy,Quick],[War],[Enforcer]), 
+GaherisCastle= new secondOrigin("Gaheri's Castle","Internal Police",CircleofMerlin.name,CircleofMerlin,[Sneaky,Flashy,Careful],[Darkness,Order],[Protector,Manipulator]), 
+ArthursCastle= new secondOrigin("Arthur's Castle","Leaders of the Knights",CircleofMerlin.name,CircleofMerlin,[Flashy,Careful,Clever],[Leader],[King,General]), 
+Lancelot= new secondOrigin("Lancelot","Secret Order",CircleofMerlin.name,CircleofMerlin,[Sneaky,Careful,Clever],[Darkness],[Enforcer,Manipulator]),
+
+SummerNymph= new secondOrigin("Summer Nymph","Spirits of Springs and Flowers",SummerCourt.name,SummerCourt,[Flashy,Quick,Clever],[Sun,Fertility],[FreeSpirit,Harmonizer]),
+SummerDryad= new secondOrigin("Summer Dryad","Spirits of Trees and Mountains",SummerCourt.name,SummerCourt,[Careful,Flashy,Forceful],[Nature,Sun],[FreeSpirit,Trickster]),
+LightElf= new secondOrigin("Light Elf","Organized, Martial Spirits of Fields and Plains",SummerCourt.name,SummerCourt,[Forceful,Careful,Flashy],[Light,Nature],[General,Diplomat]),
+SummerFey= new secondOrigin("Summer Fey","Spirits of Forests and Meadows",SummerCourt.name,SummerCourt,[Sneaky,Clever,Careful],[Wit,Light],[Trickster,Diplomat]),
+SummerNaiad= new secondOrigin("Summer Naiad","Spirits of the Sea",SummerCourt.name,SummerCourt,[Careful,Sneaky,Forceful],[Water,Nature],[Trickster,Harmonizer]),
+Korrigans= new secondOrigin("Summer Korrigans","Spirits of the Roots and Soil",SummerCourt.name,SummerCourt,[Clever,Sneaky,Quick],[Nature],[FreeSpirit]),
+Gnomes= new secondOrigin("Summer Gnomes","Spirits of Technology and Creativity",SummerCourt.name,SummerCourt,[Clever,Flashy,Quick],[Nature,Crafting],[Thinker]),
+Leprechauns= new secondOrigin("Summer Leprechauns","Spirits of Wealth and Fertility",SummerCourt.name,SummerCourt,[Sneaky,Quick,Clever],[Nature,Fertility],[Trickster,FreeSpirit]),
+
+WinterNymph= new secondOrigin("Winter Nymph","Spirits of Springs and Ice",WinterCourt.name,WinterCourt,[Flashy,Quick,Clever],[Moon,Nature],[FreeSpirit,Trickster]),
+WinterDryad= new secondOrigin("Winter Dryad","Spirits of Trees and Mountains",WinterCourt.name,WinterCourt,[Careful,Flashy,Forceful],[Nature,Darkness],[FreeSpirit,Trickster]),
+DarkElf= new secondOrigin("Dark Elf","Organized, Martial Spirits of Caves and Fjords",WinterCourt.name,WinterCourt,[Forceful,Careful,Flashy],[Darkness,Earth],[General,Enforcer]),
+WinterFey= new secondOrigin("Winter Fey","Spirits of Forests and Swamps",WinterCourt.name,WinterCourt,[Sneaky,Clever,Careful],[Wit,Darkness],[Manipulator]),
+WinterNaiad= new secondOrigin("Winter Naiad","Spirits of the Sea",WinterCourt.name,WinterCourt,[Careful,Sneaky,Forceful],[Water,Darkness],[Trickster]),
+WinterKorrigans= new secondOrigin("Winter Korrigans","Spirits of the Roots and Soil",WinterCourt.name,WinterCourt,[Clever,Sneaky,Quick],[Nature],[FreeSpirit]),
+WinterGnomes= new secondOrigin("Winter Gnomes","Spirits of Technology and Creativity",WinterCourt.name,WinterCourt,[Clever,Flashy,Quick],[Darkness,Crafting],[Thinker]),
+WinterLeprechauns= new secondOrigin("Winter Leprechauns","Spirits of Wealth and Caves",WinterCourt.name,WinterCourt,[Sneaky,Quick,Clever],[Nature,Death],[Manipulator,FreeSpirit]),
+
+EasternDragon= new secondOrigin("Eastern Dragon","Wise Dragons of Asia",JadeSea.name,JadeSea,[Clever,Careful,Flashy],[Water,Nature],[Thinker,Diplomat]), 
+WesternDragon= new secondOrigin("Western Dragon","Mighty and Proud Dragons of Northern Europe",JadeSea.name,JadeSea,[Forceful,Flashy,Clever],[Sky,Nature],[King,Manipulator]), 
+Coatl= new secondOrigin("Coatl","Free and Wild Dragons of South America",JadeSea.name,JadeSea,[Flashy,Clever,Sneaky],[Sky],[FreeSpirit]), 
+Naga= new secondOrigin("Naga","Organized and Ruthless Dragons of South Asia",JadeSea.name,JadeSea,[Forceful,Quick,Clever],[Water,Order],[Enforcer,Politician]), 
+Wyvern= new secondOrigin("Wyvern","Poisonous and Wicked Dragons of Western Europe",JadeSea.name,JadeSea,[Quick,Forceful,Flashy],[Death,Earth],[Enforcer,Manipulator]),
+
+Wereboar = new secondOrigin("Were-boar","Industrious and Brash Were-Boars",DarkForest.name,DarkForest,[Forceful,Clever,Flashy],[Crafting,Nature],[Enforcer,Thinker]), 
+LoupGarou= new secondOrigin("Loup-Garou","Proud and Wily Werewolves",DarkForest.name,DarkForest,[Sneaky,Clever,Quick],[Moon,Nature],[Politician,Enforcer]), 
+Hag= new secondOrigin("Hag","Wicked Witches",DarkForest.name,DarkForest,[Clever,Sneaky,Careful],[Death,Darkness],[FreeSpirit,Trickster]), 
+Ent= new secondOrigin("Ent","Walking Trees",DarkForest.name,DarkForest,[Forceful,Careful,Flashy],[Nature],[FreeSpirit]), 
+Minotaur= new secondOrigin("Minotaur","Half-Bull Hulking Giants",DarkForest.name,DarkForest,[Forceful,Flashy,Quick],[War],[Enforcer]), 
+Centaur = new secondOrigin("Centaur","Genius but Impulsive Half-Horses",DarkForest.name,DarkForest,[Clever,Careful,Quick],[Knowledge,War],[Thinker]), 
+Satyr= new secondOrigin("Satyr","Eccentric Half-Goat",DarkForest.name,DarkForest,[Quick,Sneaky,Flashy],[Fertility],[Trickster]), 
+Rakshasa= new secondOrigin("Rakshasa","Evil Demons",Shambhala.name,Shambhala,[Forceful,Flashy,Clever],[War,Darkness],[Enforcer,Manipulator]), 
+Asura= new secondOrigin("Asura","Ancient Enemies of the Gods",Shambhala.name,Shambhala,[Flashy,Clever,Careful],[Fire,Order],[Politician]), 
+Vanara= new secondOrigin("Vanara","Militaristic Half-Monkeys",Shambhala.name,Shambhala,[Flashy,Clever,Sneaky],[Nature,War],[Enforcer,Diplomat])
 ]
 
-function godRecommender(){
+function compare(a,b) {
+  if (a.name < b.name)
+    return -1;
+  if (a.name > b.name)
+    return 1;
+  return 0;
+}
 
+function godRecommender(){
+secondOriginArray = secondOriginArray.sort(compare)
 
 if(
 document.getElementById("origins").options[document.getElementById("origins").selectedIndex].value != "noPreference" ||
@@ -466,16 +518,16 @@ cell5.id = i.toString()
 
 if(newSecondOriginArray[i-2]){cell1.innerHTML = newSecondOriginArray[i-2].name;cell1.title = newSecondOriginArray[i-2].originString + " " + newSecondOriginArray[i-2].description}
 if(newSecondOriginArray[i-2] && newSecondOriginArray[i-2].name.length !=0){
-if(parametersArray.indexOf(newSecondOriginArray[i-2].originVar) < 63){cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">Link</a>'}
-else{cell2.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-2].originString + '"  target="_blank">Link</a>'}}
+if(parametersArray.indexOf(newSecondOriginArray[i-2].originVar) < 63){cell2.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i-2].name + '"  target="_blank">Link</a>'}
+else{cell2.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i-2].originString + '"  target="_blank">Link</a>'}}
 if(newSecondOriginArray[i-1]){cell3.innerHTML = newSecondOriginArray[i-1].name;cell3.title = newSecondOriginArray[i-1].originString + " " + newSecondOriginArray[i-1].description}
 if(newSecondOriginArray[i-1] && newSecondOriginArray[i-1].name.length !=0){
-if(parametersArray.indexOf(newSecondOriginArray[i-1].originVar) < 63){cell4.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">Link</a>'}
-else{cell4.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i-1].originString + '"  target="_blank">Link</a>'}}
+if(parametersArray.indexOf(newSecondOriginArray[i-1].originVar) < 63){cell4.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i-1].name + '"  target="_blank">Link</a>'}
+else{cell4.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i-1].originString + '"  target="_blank">Link</a>'}}
 if(newSecondOriginArray[i]){cell5.innerHTML = newSecondOriginArray[i].name;cell5.title = newSecondOriginArray[i].originString + " " + newSecondOriginArray[i].description}
 if(newSecondOriginArray[i] && newSecondOriginArray[i].name.length !=0){
-if(parametersArray.indexOf(newSecondOriginArray[i].originVar) < 63){cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
-else{cell6.innerHTML = '<a href="http://scionprimarchs.wikia.com/' + newSecondOriginArray[i].originString + '"  target="_blank">Link</a>'}}
+if(parametersArray.indexOf(newSecondOriginArray[i].originVar) < 63){cell6.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i].name + '"  target="_blank">Link</a>'}
+else{cell6.innerHTML = '<a href="http://wyrdwalkers.wikidot.com/' + newSecondOriginArray[i].originString + '"  target="_blank">Link</a>'}}
 
 cell1.onclick = function() { for(i=2;i<document.getElementById("Table").rows.length*3;i+=3){
 if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i-2].name}}LegendaryMakerTotal()}
@@ -602,49 +654,49 @@ alert(variableName + " = new LegendaryAbility(\"" + abilityName + "\",[" + newLe
 }
 function addAnAbility(){
 	newAbilitiesArray = [
-DruidismGreenDruid = new LegendaryAbility("Green Druid","- Summon an Ent to aid you in battle\n- Entangle enemies with roots.",[1,2,0,1,0,-1,-1,2,-1,0,2,-2,-2,1,0,1,-2,-2,2,-1,0,1,2,1,1,4,0,-2,-3,3,-2,1,1,3,-2,-2,-1,-1,1,2,1,-1,1,2,0,1,3,3,1,0,3,4,1,-4,-3,-4,-4,1,-3,-4,-2,-3,-4,4,4,4,1,2,-1,-2,0,1,4,2,2,-1,3,3]),
-DruidismRunicDruid = new LegendaryAbility("Runic Druid","- Create a ward that warns you when something comes past it.\n- Animate rocks into a golem to fight for you.",[2,2,0,1,-2,-1,1,2,0,-2,-2,-3,-1,-2,-2,1,-1,0,2,4,-1,-1,2,-1,3,1,3,0,-1,-2,2,0,1,0,-1,-2,-2,-3,2,4,1,3,1,-2,3,3,2,1,-1,-2,2,3,1,0,-1,0,4,2,1,0,-1,0,-2,1,2,-1,0,1,3,1,3,2,4,-2,3,0,4,2]),
+DruidismGreenDruid = new LegendaryAbility("Green Druid","- Summon an Ent to aid you in battle\n- Entangle enemies with roots.",[1,2,0,1,0,-1,-1,2,-1,0,2,-2,-2,1,0,1,-2,-2,2,-1,0,1,2,1,1,4,0,-2,-3,3,-2,1,1,3,-2,-2,-1,-1,1,2,1,-1,1,2,0,1,3,3,1,0,3,4,1,-4,-3,-4,-4,1,-3,1,-2,-3,-4,4,4,4,1,2,-1,-2,0,1,4,2,2,-1,3,3]),
+DruidismRunicDruid = new LegendaryAbility("Runic Druid","- Create a ward that warns you when something comes past it.\n- Animate rocks into a golem to fight for you.",[2,2,0,1,-2,-1,1,2,0,-2,-2,-3,-1,-2,-2,1,-1,0,2,4,-1,-1,2,-1,3,1,3,0,-1,-2,2,0,1,0,-1,-2,-2,-3,2,4,1,3,1,-2,3,3,2,1,-1,-2,2,3,1,0,-1,0,4,2,1,3,-1,0,-2,1,2,-1,0,1,3,1,3,2,4,-2,3,0,4,2]),
 DruidismFeySorcerySummer = new LegendaryAbility("Fey Sorcery - Summer","- Send a scorching ray of heat\n- Make yourself irresistibly attractive.",[-2,0,3,3,1,-3,-2,-1,-1,0,3,1,-1,0,1,0,-4,3,2,-2,-4,4,0,-3,1,3,-1,-2,2,2,0,1,0,3,1,2,0,-1,1,2,1,-2,-2,4,2,0,3,2,3,2,0,2,3,-1,-3,-4,-3,1,1,-4,-2,-4,-4,6,-4,0,2,1,0,-2,1,-1,2,4,2,2,3,2]),
-DruidismFeySorceryWinter = new LegendaryAbility("Fey Sorcery - Winter","- Raise a blizzard.\n- Create an illusion of yourself.",[2,3,0,1,1,3,-1,2,0,-3,-4,-2,2,2,1,2,2,-3,-1,-2,2,-4,1,3,1,2,0,-1,1,2,0,-2,1,-1,-2,1,3,3,0,1,2,-2,-1,-3,-2,4,-4,-1,-3,-3,3,2,-3,-4,-1,-1,-4,-2,-4,1,0,2,0,-4,4,2,-1,0,-1,1,-1,2,3,4,2,3,3,1]),
+DruidismFeySorceryWinter = new LegendaryAbility("Fey Sorcery - Winter","- Raise a blizzard.\n- Create an illusion of yourself.",[2,3,0,1,1,3,-1,2,0,-3,-4,-2,2,2,1,2,2,-3,-1,-2,2,-4,1,3,1,2,0,-1,1,2,0,-2,1,-1,-2,1,3,3,0,1,2,-2,-1,-3,-2,4,-4,-1,-3,-3,3,2,-3,-4,-1,-1,-4,-2,-4,2,0,2,0,-4,4,2,-1,0,-1,1,-1,2,3,4,2,3,3,1]),
 DruidismTechnodruidism = new LegendaryAbility("Technodruidism","- Manipulate electrical currents.\n- Take remote control of a computer system.",[1,3,1,0,2,1,-2,1,-2,-3,1,-2,-1,-2,-3,3,-1,1,2,0,0,-1,2,-1,4,2,-2,-2,-1,2,-3,-3,3,0,-1,0,-1,2,-1,-1,0,-1,0,1,1,1,-4,-3,1,-1,2,3,-4,-4,-4,-4,-4,0,0,-4,-2,-3,-4,1,1,-2,0,1,6,3,0,2,1,-1,2,2,4,1]),
-HematurgyYahuar = new LegendaryAbility("Yahuar","- Raise a Bone Shield to protect your allies.\n- Heal your allies.",[1,0,1,1,-1,-3,3,1,1,1,2,2,-1,1,0,-1,1,2,0,2,0,2,0,0,-1,-2,1,2,0,-2,2,2,0,2,1,3,1,-1,1,4,2,-2,-1,1,0,2,3,0,3,-1,-1,1,4,-3,-1,-2,-2,-3,0,-2,-3,-3,1,1,-1,0,1,0,-2,1,3,3,-1,-2,4,0,-1,3]),
-HematurgyItztli = new LegendaryAbility("Itztli","- Desecrate a sacred location.\n- Sacrifice an enemy for more power.",[-1,1,2,3,1,-1,3,1,2,0,1,2,0,1,1,1,3,3,1,2,0,4,0,1,-1,0,1,2,2,-2,3,1,-1,-1,2,4,2,1,0,2,4,-1,-1,1,0,1,1,-2,4,1,0,1,3,0,1,0,2,2,3,1,0,-1,2,3,1,1,2,2,0,3,2,4,-2,-2,1,4,2,0]),
+HematurgyYahuar = new LegendaryAbility("Yahuar","- Raise a Bone Shield to protect your allies.\n- Heal your allies.",[1,0,1,1,-1,-3,3,1,1,1,2,2,-1,1,0,-1,1,2,0,2,0,2,0,0,-1,-2,1,2,0,-2,2,2,0,2,1,3,1,-1,1,4,2,-2,-1,1,0,2,3,0,3,-1,-1,1,4,-3,-1,-2,-2,-3,0,1,-3,-3,1,1,-1,0,1,0,-2,1,3,3,-1,-2,4,0,-1,3]),
+HematurgyItztli = new LegendaryAbility("Itztli","- Desecrate a sacred location.\n- Sacrifice an enemy for more power.",[-1,1,2,3,1,-1,3,1,2,0,1,2,0,1,1,1,3,3,1,2,0,4,0,1,-1,0,1,2,2,-2,3,1,-1,-1,2,4,2,1,0,2,4,-1,-1,1,0,1,1,-2,4,1,0,1,3,0,1,0,2,2,3,2,0,-1,2,3,1,1,2,2,0,3,2,4,-2,-2,1,4,2,0]),
 InvokationDeathNecromancy = new LegendaryAbility("Death - Necromancy","- Raise the dead.\n- Consume Souls to gain power.",[1,3,0,4,1,-1,1,2,0,-2,-3,-3,3,2,0,1,4,-1,1,-1,0,-1,1,2,0,-2,-1,1,0,-2,1,-1,0,-3,0,2,2,0,-1,2,1,1,2,3,3,1,0,0,1,-1,1,1,0,-1,4,2,-1,-2,0,2,1,2,6,-2,2,3,1,0,-2,1,2,4,1,-2,1,3,1,2]),
-InvokationDeathShamanism = new LegendaryAbility("Death - Shamanism","- Gain the advice of an ancient wise spirit.\n- Tap into the power of a sanctified place.",[2,3,0,-2,0,1,-1,3,0,-1,-2,-2,4,3,1,1,4,1,2,2,2,0,1,2,-2,-2,1,1,0,1,0,1,2,4,0,-1,-2,0,3,3,-1,2,3,4,2,0,3,2,0,3,2,3,2,-4,-3,-1,-2,-2,-3,-4,-4,0,2,-2,1,1,2,2,0,0,3,2,1,2,1,0,4,3]),
-InvokationDeathSoulbinding = new LegendaryAbility("Death - Soulbinding","- Infuse Souls into your creations to increase their power\n- Exploit the power of a magical object.",[2,3,0,3,-1,1,1,1,1,-1,-3,-2,1,-1,-1,2,3,1,2,1,1,-1,2,2,4,-2,2,1,-1,-3,0,-2,1,-2,-1,0,3,2,0,3,-1,0,3,1,3,0,1,2,2,3,0,2,0,-3,2,1,2,1,3,2,0,2,4,-2,1,-1,2,2,3,4,3,3,2,-2,2,2,4,3]),
+InvokationDeathShamanism = new LegendaryAbility("Death - Shamanism","- Gain the advice of an ancient wise spirit.\n- Tap into the power of a sanctified place.",[2,3,0,-2,0,1,-1,3,0,-1,-2,-2,4,3,1,1,4,1,2,2,2,0,1,2,-2,-2,1,1,0,1,0,1,2,4,0,-1,-2,0,3,3,-1,2,3,4,2,0,3,2,0,3,2,3,2,-4,-3,-1,-2,-2,-3,2,-4,0,2,-2,1,1,2,2,0,0,3,2,1,2,1,0,4,3]),
+InvokationDeathSoulbinding = new LegendaryAbility("Death - Soulbinding","- Infuse Souls into your creations to increase their power\n- Exploit the power of a magical object.",[2,3,0,3,-1,1,1,1,1,-1,-3,-2,1,-1,-1,2,3,1,2,1,1,-1,2,2,4,-2,2,1,-1,-3,0,-2,1,-2,-1,0,3,2,0,3,-1,0,3,1,3,0,1,2,2,3,0,2,0,-3,2,1,2,1,3,0,0,2,4,-2,1,-1,2,2,3,4,3,3,2,-2,2,2,4,3]),
 InvokationDeathDestruction = new LegendaryAbility("Death - Destruction","- Send beams of pure Death\n- Crumble a wall to dust.",[-2,-2,3,4,2,-2,2,0,0,-2,-3,-2,2,2,1,-1,3,1,1,-1,1,-2,0,3,-1,-2,0,1,0,-1,0,-2,-1,-3,-1,3,2,-1,0,2,2,2,2,1,2,0,-1,2,3,1,0,1,0,-3,3,1,1,2,2,3,1,3,4,-3,3,3,3,2,0,1,2,4,-1,-3,0,4,1,-2]),
 InvokationDeathHorror = new LegendaryAbility("Death - Horror","- Terrify enemies.\n- Turn ghosts into insane wraiths.",[1,2,3,3,1,2,1,0,1,-2,-3,-1,1,2,2,-1,2,2,1,-1,1,-3,-1,2,0,-1,-2,2,1,-1,1,-2,-2,-2,-1,2,3,2,1,0,2,0,1,1,1,2,-2,2,3,-1,1,1,0,-1,3,2,-1,1,2,3,1,4,4,-3,2,2,2,0,-1,1,0,2,-1,3,2,-1,1,3]),
-MentalismChwalRider = new LegendaryAbility("Chwal - Rider","- See through the eyes on an unsuspecting individual.\n- Mark and find individuals.",[2,2,-1,-1,0,3,-1,0,0,1,0,-1,2,2,1,3,1,-1,0,2,3,0,2,1,0,-1,0,-2,1,1,-1,0,0,1,-1,-2,3,4,2,0,1,-2,1,4,1,-2,1,1,-1,-1,0,0,-1,2,2,1,-1,-1,-2,3,1,4,1,2,3,0,3,1,2,4,1,4,-1,1,-2,-3,4,2]),
-MentalismChwalPuppeteer = new LegendaryAbility("Chwal - Puppeteer","- Control an individual’s actions.\n- Stop an enemy mid-strike.",[1,2,-1,3,1,3,-2,0,2,0,0,1,2,2,0,2,3,0,1,0,3,-1,2,2,0,-1,1,0,4,1,2,0,1,2,0,1,4,2,2,-1,1,1,1,4,2,-1,2,1,2,0,-1,0,1,4,2,1,2,3,0,4,0,3,3,2,3,3,3,3,2,4,1,3,2,1,-2,-3,2,4]),
-MentalismHekuSoothe = new LegendaryAbility("Mentalism - Soothe","- Calm a crowd down.\n-  Bow an animal to your will.",[2,1,2,1,0,2,-2,2,2,0,1,2,1,2,3,0,2,0,2,3,3,0,1,0,-1,1,3,1,2,2,2,3,1,4,0,-1,1,1,4,3,0,2,4,1,4,0,1,3,0,4,1,1,2,4,-2,2,3,1,1,3,2,3,3,2,0,1,3,2,0,0,3,2,3,4,2,-3,1,2]),
+MentalismChwalRider = new LegendaryAbility("Chwal - Rider","- See through the eyes on an unsuspecting individual.\n- Mark and find individuals.",[2,2,-1,-1,0,3,-1,0,0,1,0,-1,2,2,1,3,1,-1,0,2,3,0,2,1,0,-1,0,-2,1,1,-1,0,0,1,-1,-2,3,4,2,0,1,-2,1,4,1,-2,1,1,-1,-1,0,0,-1,2,2,1,-1,-1,-2,1,1,4,1,2,3,0,3,1,2,4,1,4,-1,1,-2,-3,4,2]),
+MentalismChwalPuppeteer = new LegendaryAbility("Chwal - Puppeteer","- Control an individual’s actions.\n- Stop an enemy mid-strike.",[1,2,-1,3,1,3,-2,0,2,0,0,1,2,2,0,2,3,0,1,0,3,-1,2,2,0,-1,1,0,4,1,2,0,1,2,0,1,4,2,2,-1,1,1,1,4,2,-1,2,1,2,0,-1,0,1,4,2,1,2,3,0,2,0,3,3,2,3,3,3,3,2,4,1,3,2,1,-2,-3,2,4]),
+MentalismHekuSoothe = new LegendaryAbility("Mentalism - Soothe","- Calm a crowd down.\n-  Bow an animal to your will.",[2,1,2,1,0,2,-2,2,2,0,1,2,1,2,3,0,2,0,2,3,3,0,1,0,-1,1,3,1,2,2,2,3,1,4,0,-1,1,1,4,3,0,2,4,1,4,0,1,3,0,4,1,1,2,4,-2,2,3,1,1,-1,2,3,3,2,0,1,3,2,0,0,3,2,3,4,2,-3,1,2]),
 MentalismHekuRiot = new LegendaryAbility("Mentalism - Riot","- Create an angry mob.\n- Make someone fall in love.",[1,2,2,3,1,2,2,1,2,1,1,3,1,2,2,1,2,3,2,2,3,3,-1,2,0,2,0,3,2,2,2,2,-2,2,-1,0,3,2,1,2,2,0,0,1,3,2,2,0,3,-1,1,1,1,3,2,1,-1,2,3,3,1,3,2,3,-1,1,3,2,2,0,2,2,1,4,-2,0,3,1]),
 MentalismIllusion = new LegendaryAbility("Illusion","- Create fake copies of yourself\n- Disguise your footsteps.",[2,2,-1,-1,1,3,-2,0,1,-1,-1,4,1,2,1,3,0,-1,-2,-2,4,2,1,4,-2,-1,-2,-2,3,1,1,-1,-1,2,1,-2,4,4,2,1,2,3,2,3,1,0,-1,2,0,4,-1,1,-1,4,2,1,0,0,-1,4,1,4,2,4,4,1,1,0,0,3,2,4,1,4,2,-1,1,4]),
 WyrdseeingMystery = new LegendaryAbility("Mystery","- Reveal information hidden in the tangles of Fate.\n- Detect Fatebindings between two targets.",[2,1,0,-1,-1,1,-1,4,2,-1,-2,1,1,3,2,2,0,2,-1,3,4,2,4,1,0,1,2,1,1,3,1,0,3,2,-1,-2,1,0,2,2,2,1,4,2,3,1,2,3,0,2,1,4,1,2,4,3,2,1,1,3,3,2,2,2,2,2,3,4,2,2,3,1,4,-1,-1,-2,4,2]),
-WyrdseeingProphecy = new LegendaryAbility("Prophecy","- Sense an attack or ambush coming.\n- Decipher the future of an individual.",[2,3,1,-1,-2,0,-2,4,2,2,1,2,1,1,1,2,1,1,0,2,3,2,4,1,1,1,2,-1,1,2,2,0,4,1,1,-2,1,2,0,2,-2,2,1,2,2,3,0,0,1,2,2,3,1,2,0,1,2,-1,0,1,0,2,1,2,3,1,2,2,0,3,1,4,2,-2,2,-3,4,3]),
-EpicPhysiologyEpicStrength = new LegendaryAbility("Epic Strength","- Lift a car.\n- Rip a man in half.",[-2,-2,3,4,1,-2,4,-3,1,-1,-2,-3,-4,-2,1,-3,-2,2,3,2,-3,1,-3,-2,0,-1,-1,3,-2,0,3,-1,-3,-4,2,4,-2,-3,-3,3,3,3,0,2,-1,2,3,-1,1,-1,1,2,-1,-2,-1,0,1,3,3,-2,1,-2,-2,-2,-1,0,-2,3,-2,-2,3,-3,1,-2,2,4,1,-1]),
-EpicPhysiologyEpicToughness = new LegendaryAbility("Epic Toughness","- Shrug off a fireball\n- Run without stopping for days.",[1,-1,2,3,-2,-3,4,-2,1,2,2,-2,-3,-1,0,-2,1,0,3,4,-2,1,-2,-2,-1,0,3,2,-1,-2,1,2,-1,-2,1,4,-2,-3,-1,4,2,2,0,2,0,2,3,-1,1,-1,1,1,1,-2,2,1,2,3,2,0,1,-1,1,-2,-3,0,1,2,0,-2,3,-1,0,-2,4,1,-1,0]),
+WyrdseeingProphecy = new LegendaryAbility("Prophecy","- Sense an attack or ambush coming.\n- Decipher the future of an individual.",[2,3,1,-1,-2,0,-2,4,2,2,1,2,1,1,1,2,1,1,0,2,3,2,4,1,1,1,2,-1,1,2,2,0,4,1,1,-2,1,2,0,2,-2,2,1,2,2,3,0,0,1,2,2,3,1,2,0,1,2,-1,0,3,0,2,1,2,3,1,2,2,0,3,1,4,2,-2,2,-3,4,3]),
+EpicPhysiologyEpicStrength = new LegendaryAbility("Epic Strength","- Lift a car.\n- Rip a man in half.",[-2,-2,3,4,1,-2,4,-3,1,-1,-2,-3,-4,-2,1,-3,-2,2,3,2,-3,1,-3,-2,0,-1,-1,3,-2,0,3,-1,-3,-4,2,4,-2,-3,-3,3,3,3,0,2,-1,2,3,-1,1,-1,1,2,-1,-2,-1,0,1,3,3,3,1,-2,-2,-2,-1,0,-2,3,-2,-2,3,-3,1,-2,2,4,1,-1]),
+EpicPhysiologyEpicToughness = new LegendaryAbility("Epic Toughness","- Shrug off a fireball\n- Run without stopping for days.",[1,-1,2,3,-2,-3,4,-2,1,2,2,-2,-3,-1,0,-2,1,0,3,4,-2,1,-2,-2,-1,0,3,2,-1,-2,1,2,-1,-2,1,4,-2,-3,-1,4,2,2,0,2,0,2,3,-1,1,-1,1,1,1,-2,2,1,2,3,2,4,1,-1,1,-2,-3,0,1,2,0,-2,3,-1,0,-2,4,1,-1,0]),
 EpicPhysiologyEpicSenses = new LegendaryAbility("Epic Senses","- Gain amazing hearing\n- See from miles away.",[2,2,-1,-2,3,4,1,2,0,1,1,3,2,0,2,3,-2,2,1,3,4,1,2,3,-1,0,-1,0,1,2,-1,0,1,-1,-2,1,1,2,0,4,4,0,-1,1,-1,1,2,1,0,-1,1,1,2,2,3,0,-1,2,2,3,3,2,-1,4,3,1,0,-1,1,-1,2,1,0,0,3,1,3,-1]),
 EpicPhysiologyBeauty = new LegendaryAbility("Epic Beauty","- Charm others.\n- Pacify others with awe.",[1,2,4,0,1,3,-3,-2,2,2,3,4,0,1,1,2,-2,2,1,-1,3,3,0,-1,-2,1,-2,-2,1,1,2,1,-2,2,3,-2,2,3,2,-1,-3,2,0,0,1,-1,0,1,-1,0,0,2,0,3,-3,-2,-2,-1,2,-3,-1,2,-2,4,3,0,2,1,3,3,-1,1,0,4,-1,-2,-2,-1]),
-EpicPhysiologyUgliness = new LegendaryAbility("Epic Ugliness","- Terrify others.\n- ",[-1,-2,4,3,1,-3,1,-2,-2,-3,-2,-4,-3,-1,-1,-2,2,2,-1,-2,1,-3,-2,4,-3,-2,-2,-1,-3,-2,-2,-3,-3,-4,-3,2,2,1,-2,-3,0,-2,-2,-2,-2,-2,-2,-1,1,-1,0,-4,0,-3,3,1,-1,0,3,4,1,2,4,1,2,3,2,-1,-2,-2,-1,2,0,4,-1,-2,-2,-1]),
+EpicPhysiologyUgliness = new LegendaryAbility("Epic Ugliness","- Terrify others.\n- ",[-1,-2,4,3,1,-3,1,-2,-2,-3,-2,-4,-3,-1,-1,-2,2,2,-1,-2,1,-3,-2,4,-3,-2,-2,-1,-3,-2,-2,-3,-3,-4,-3,2,2,1,-2,-3,0,-2,-2,-2,-2,-2,-2,-1,1,-1,0,-4,0,-3,3,1,-1,0,3,3,1,2,4,1,2,3,2,-1,-2,-2,-1,2,0,4,-1,-2,-2,-1]),
 Enech = new LegendaryAbility("Enech","- Gain the \"Protection of Innocents\" Aspect\n- Gain the \"Zealous Faith\" Aspect",[2,-1,1,3,0,-2,3,1,3,-1,-2,-2,-2,0,-2,-4,-1,-1,0,3,1,-1,-2,-3,-2,-1,2,2,2,-3,3,0,-1,2,3,3,-1,-4,2,4,0,-1,-2,1,2,2,1,0,-2,-1,1,8,1,-2,-3,-2,1,0,1,-3,-2,-3,-4,-1,-2,-2,2,-1,-2,-4,2,1,4,-2,3,2,1,0]),
 FireDestruction = new LegendaryAbility("Fire - Destruction","- Burn a forest down\n- Throw a fireball.",[-3,-2,4,4,3,-3,2,-2,-2,-2,-1,0,-3,-4,1,-3,1,6,0,0,-2,4,-3,-3,1,0,-3,-1,-2,-1,-2,-1,-1,-2,1,2,0,1,-1,1,1,1,0,1,-1,1,-1,1,2,1,0,0,3,2,-4,-3,-3,-1,4,-3,2,-2,1,3,-3,-1,2,2,0,1,2,3,0,-2,-2,4,1,-1]),
 FireLife = new LegendaryAbility("Fire - Life","- Ressurect mortals\n- Heal allies.",[2,1,4,3,2,-4,-2,2,2,3,2,2,-2,-3,-2,-3,-4,5,1,-1,-3,6,-2,-3,2,1,-2,0,-2,2,2,3,1,4,1,-2,-3,-1,1,3,-2,1,0,1,0,1,1,2,0,2,0,1,3,-2,-4,-3,-3,1,4,-4,-2,-3,-4,4,-2,-2,2,1,2,-1,2,1,0,1,3,-1,1,4]),
 FireInvention = new LegendaryAbility("Fire - Invention","- Create an impossibly large gun.- Hack a computer.",[2,4,3,1,1,-2,1,2,0,-2,-3,-2,-3,-4,1,2,-3,5,2,0,-3,2,1,-3,6,-3,1,0,-2,2,0,-2,3,-1,-2,-3,-2,-3,-2,1,-2,1,1,-1,-1,0,-2,1,-1,0,0,1,-1,-3,-4,-3,1,1,4,-3,-2,-4,-4,2,-2,-3,-1,-1,5,2,1,3,0,-2,2,2,4,1]),
-FireMagma = new LegendaryAbility("Fire - Magma","- Create and control flows of magma\n- Rupture volcanoes from the ground.",[-3,-2,4,4,-1,-3,1,-2,-1,-2,0,-1,-3,-4,1,-3,1,4,3,-1,-3,1,-3,-4,1,0,-2,0,-3,-2,0,-2,-3,-3,0,3,-2,-3,-2,2,0,0,-1,0,0,1,1,1,1,1,-1,-1,2,-2,-4,-4,1,2,4,-4,-3,-4,-1,2,-4,-2,2,3,1,-1,2,3,0,-3,3,3,-1,1]),
-FireDrought = new LegendaryAbility("Fire - Drought","- Dry up water and blood.\n- Turn enemies to ash.",[-2,-3,2,2,3,0,1,-3,-2,-3,-4,-3,-4,-6,2,-3,2,4,0,-2,-4,1,-3,1,0,-2,-3,1,-2,-3,-2,-4,-3,-3,-2,2,-2,-3,-3,-4,1,-1,-1,1,1,-1,-1,0,1,-4,0,0,0,2,-4,-4,-4,1,4,2,1,-3,3,4,-4,-2,2,1,-3,-2,-1,2,-3,-2,1,2,-1,4]),
-WaWorldgingSea = new LegendaryAbility("Water - Raging Sea","- Create anger.\n- Raise a tidal wave.",[-3,-2,4,4,2,-3,1,-1,-2,-3,0,-3,1,5,3,-1,0,-4,-1,-2,2,-2,-1,1,-3,-2,-3,-1,-2,1,2,-2,-1,0,0,3,1,-2,-3,3,1,0,-1,0,-1,2,2,2,0,0,0,1,0,-3,4,6,-1,2,-3,1,3,-3,-2,2,2,-1,1,4,0,-2,1,2,0,-2,1,2,2,3]),
-WaterAbyss = new LegendaryAbility("Water - Abyss","- Summon creatures from the dark Abyss.- Drown your enemies.",[2,3,0,1,-3,2,-2,1,1,3,2,-3,1,4,-3,-2,2,-4,-1,-3,-2,-4,1,3,-2,-4,-3,-2,-2,0,1,2,2,-3,-2,1,2,0,-2,0,2,-1,-1,-1,1,0,0,1,-1,0,0,0,0,-3,6,4,-3,-1,-4,2,-3,0,2,-3,2,1,1,3,1,-2,-3,2,-1,2,4,2,0,1]),
+FireMagma = new LegendaryAbility("Fire - Magma","- Create and control flows of magma\n- Rupture volcanoes from the ground.",[-3,-2,4,4,-1,-3,1,-2,-1,-2,0,-1,-3,-4,1,-3,1,4,3,-1,-3,1,-3,-4,1,0,-2,0,-3,-2,0,-2,-3,-3,0,3,-2,-3,-2,2,0,0,-1,0,0,1,1,1,1,1,-1,-1,2,-2,-4,-4,1,2,4,2,-3,-4,-1,2,-4,-2,2,3,1,-1,2,3,0,-3,3,3,-1,1]),
+FireDrought = new LegendaryAbility("Fire - Drought","- Dry up water and blood.\n- Turn enemies to ash.",[-2,-3,2,2,3,0,1,-3,-2,-3,-4,-3,-4,-6,2,-3,2,4,0,-2,-4,1,-3,1,0,-2,-3,1,-2,-3,-2,-4,-3,-3,-2,2,-2,-3,-3,-4,1,-1,-1,1,1,-1,-1,0,1,-4,0,0,0,2,-4,-4,-4,1,4,1,1,-3,3,4,-4,-2,2,1,-3,-2,-1,2,-3,-2,1,2,-1,4]),
+WaWorldgingSea = new LegendaryAbility("Water - Raging Sea","- Create anger.\n- Raise a tidal wave.",[-3,-2,4,4,2,-3,1,-1,-2,-3,0,-3,1,5,3,-1,0,-4,-1,-2,2,-2,-1,1,-3,-2,-3,-1,-2,1,2,-2,-1,0,0,3,1,-2,-3,3,1,0,-1,0,-1,2,2,2,0,0,0,1,0,-3,4,6,-1,2,-3,3,3,-3,-2,2,2,-1,1,4,0,-2,1,2,0,-2,1,2,2,3]),
+WaterAbyss = new LegendaryAbility("Water - Abyss","- Summon creatures from the dark Abyss.- Drown your enemies.",[2,3,0,1,-3,2,-2,1,1,3,2,-3,1,4,-3,-2,2,-4,-1,-3,-2,-4,1,3,-2,-4,-3,-2,-2,0,1,2,2,-3,-2,1,2,0,-2,0,2,-1,-1,-1,1,0,0,1,-1,0,0,0,0,-3,6,4,-3,-1,-4,6,-3,0,2,-3,2,1,1,3,1,-2,-3,2,-1,2,4,2,0,1]),
 WaterLife = new LegendaryAbility("Water - Life","- Spring forth impossible animals.\n- Fortify your allies.",[2,1,3,2,0,-2,-4,2,1,3,2,1,1,4,1,2,-4,-4,1,0,2,-3,0,-3,-2,2,0,-3,-1,1,0,3,0,4,-1,-2,-3,-3,2,3,-3,1,-1,1,1,1,1,2,-1,1,0,1,-1,-3,4,4,1,2,-4,-3,1,-1,-4,4,0,1,2,2,2,-2,0,1,3,1,3,-2,-2,4]),
 LightBrightness = new LegendaryAbility("Light - Brightness","- Blind your enemies\n- Dazzle an audience.",[1,3,4,4,3,1,1,-2,3,-1,-2,3,0,-2,1,1,-3,2,-1,0,-4,3,-2,-4,-3,-2,1,0,4,-2,3,-1,-2,2,3,-1,4,2,2,1,-2,1,1,1,2,-1,-1,1,1,1,0,1,1,6,-4,0,0,-1,1,-4,1,-4,-3,4,-2,-4,2,3,2,4,2,1,-2,4,2,-1,-2,3]),
 LightIllumination = new LegendaryAbility("Light - Illumination","- Engage in intense concentration to reveal mysteries\n- Inspire others to create and learn.",[2,4,3,0,2,-3,-2,3,2,-3,-2,2,2,-1,-1,2,-3,2,-1,-2,3,4,3,-4,2,0,1,-1,1,2,2,-1,3,1,-2,-3,-2,-3,2,-2,-3,1,1,1,1,-1,-1,1,0,2,0,0,0,3,-4,-1,0,-2,1,-4,0,1,-4,3,-1,0,2,3,6,5,2,1,0,1,-2,-3,4,2]),
 LightSun = new LegendaryAbility("Light - Sun","- Send rays of heat.\n- Travel on a sunbeam.",[-1,-1,4,3,4,-3,-1,-2,2,-1,-2,0,-1,-3,2,-2,-4,3,1,-1,-4,6,-1,-4,0,1,0,-1,1,0,2,-2,-1,-1,3,0,-2,-3,1,2,-2,0,0,1,2,-1,0,1,1,0,-1,0,2,4,-4,-2,-1,1,2,-4,2,-4,-4,5,-3,-3,1,1,1,2,3,1,0,2,2,3,0,2]),
 SkyDestruction = new LegendaryAbility("Sky - Destruction","- Crush enemies with storms.\n- Summon tornadoes.",[-2,-1,4,4,3,-3,2,-2,0,-2,-3,-2,-1,0,4,-2,2,2,1,1,-1,1,-2,0,-2,-2,-1,1,-1,-2,2,-2,-3,-4,2,3,-1,1,-2,1,3,1,0,1,0,1,1,-1,0,-1,0,-1,-1,1,-3,2,0,-1,2,-2,6,-2,3,3,4,0,1,3,-2,-2,-1,2,-2,-2,-1,4,-2,-1]),
-SkyTempest = new LegendaryAbility("Sky - Tempest","- Create Storms.\n- Fly.",[-2,-1,4,3,2,-2,3,-2,1,-2,-1,-2,1,2,4,-1,1,0,2,1,0,-2,-3,1,-2,-1,-1,2,0,1,2,-1,-3,-2,2,2,-1,1,0,2,3,1,0,1,-1,1,1,0,0,-1,1,-1,-1,-1,-3,3,0,1,-1,2,6,-1,-3,3,3,1,2,4,-1,2,2,3,0,-2,2,3,1,2]),
+SkyTempest = new LegendaryAbility("Sky - Tempest","- Create Storms.\n- Fly.",[-2,-1,4,3,2,-2,3,-2,1,-2,-1,-2,1,2,4,-1,1,0,2,1,0,-2,-3,1,-2,-1,-1,2,0,1,2,-1,-3,-2,2,2,-1,1,0,2,3,1,0,1,-1,1,1,0,0,-1,1,-1,-1,-1,-3,3,0,1,-1,-2,6,-1,-3,3,3,1,2,4,-1,2,2,3,0,-2,2,3,1,2]),
 SkyPeace = new LegendaryAbility("Sky - Peace","- Pacify Enemies\n- Stop a bullet in its tracks.",[3,2,1,0,2,1,-4,2,1,1,1,2,2,2,4,0,-3,-3,2,2,3,1,2,-2,0,1,3,-2,1,3,3,2,0,4,-2,-3,1,-2,4,3,-2,1,0,1,1,-1,1,1,0,1,-1,0,0,0,-4,2,2,1,-2,-3,6,3,-3,3,-1,1,3,3,2,-2,1,-1,2,3,3,-2,1,2]),
-DarknessVoid = new LegendaryAbility("Darkness - Void","- Remove the sense of sight or hearing from your foes.\n- Erase an enemy from existence.",[1,2,4,4,3,-2,2,-2,-1,-3,-4,-3,0,-2,-2,-3,3,-1,1,-2,1,-3,-2,4,-2,-3,-2,1,1,-1,0,-2,1,-3,1,3,2,2,-1,-2,3,0,-1,0,-2,0,0,1,1,-1,-1,-1,-1,-4,3,1,1,1,-1,6,1,2,3,-3,3,4,2,2,-3,2,-2,4,-3,-4]),
-DarknessShadows = new LegendaryAbility("Darkness - Shadows","- Hide in shadows\n- Remove light.",[4,2,-1,-2,2,4,-2,0,-2,-3,-2,1,2,0,-1,3,2,-2,-1,-3,3,-3,-1,4,0,1,-1,-2,1,2,-1,-2,1,-2,-1,1,3,4,0,1,4,0,0,-1,0,0,0,1,1,-1,1,-1,0,-4,2,-1,0,-1,-2,6,0,3,3,-1,4,4,1,-1,3,3,1,4,2,1,2,-2,4,3]),
-DarknessUnderground = new LegendaryAbility("Darkness - Underground","- See in the dark.\n- Have the Earth swallow enemies.",[3,1,0,-1,-2,4,-1,-1,-2,1,2,-2,2,-2,-4,0,3,-2,3,1,-4,-4,1,4,2,2,1,-2,0,-1,-1,1,0,-2,-3,2,1,2,0,3,1,0,0,1,-1,0,-1,1,0,-1,1,-2,0,-4,-1,-3,0,3,-1,5,-4,-3,3,-3,3,3,1,-1,1,-1,0,3,1,-2,2,-2,-1,4]),
-WorldAbundance = new LegendaryAbility("World - Abundance","- Summon riches.\n- Summon weapons for a whole army.",[2,4,3,0,1,-1,-2,1,2,1,3,1,2,2,2,-1,-3,0,3,0,-1,2,1,-2,4,2,2,-2,1,-1,2,4,1,3,2,-1,-2,0,2,3,-1,1,0,1,-1,-1,1,1,0,1,1,1,0,-3,0,1,2,5,2,-3,1,-1,-3,4,0,-2,1,2,4,4,-1,-2,2,1,0,-1,4,3]),
+DarknessVoid = new LegendaryAbility("Darkness - Void","- Remove the sense of sight or hearing from your foes.\n- Erase an enemy from existence.",[1,2,4,4,3,-2,2,-2,-1,-3,-4,-3,0,-2,-2,-3,3,-1,1,-2,1,-3,-2,4,-2,-3,-2,1,1,-1,0,-2,1,-3,1,3,2,2,-1,-2,3,0,-1,0,-2,0,0,1,1,-1,-1,-1,-1,-4,3,1,1,1,-1,3,1,2,3,-3,3,4,2,2,-3,2,-2,4,-3,-4]),
+DarknessShadows = new LegendaryAbility("Darkness - Shadows","- Hide in shadows\n- Remove light.",[4,2,-1,-2,2,4,-2,0,-2,-3,-2,1,2,0,-1,3,2,-2,-1,-3,3,-3,-1,4,0,1,-1,-2,1,2,-1,-2,1,-2,-1,1,3,4,0,1,4,0,0,-1,0,0,0,1,1,-1,1,-1,0,-4,2,-1,0,-1,-2,4,0,3,3,-1,4,4,1,-1,3,3,1,4,2,1,2,-2,4,3]),
+DarknessUnderground = new LegendaryAbility("Darkness - Underground","- See in the dark.\n- Have the Earth swallow enemies.",[3,1,0,-1,-2,4,-1,-1,-2,1,2,-2,2,-2,-4,0,3,-2,3,1,-4,-4,1,4,2,2,1,-2,0,-1,-1,1,0,-2,-3,2,1,2,0,3,1,0,0,1,-1,0,-1,1,0,-1,1,-2,0,-4,-1,-3,0,3,-1,6,-4,-3,3,-3,3,3,1,-1,1,-1,0,3,1,-2,2,-2,-1,4]),
+WorldAbundance = new LegendaryAbility("World - Abundance","- Summon riches.\n- Summon weapons for a whole army.",[2,4,3,0,1,-1,-2,1,2,1,3,1,2,2,2,-1,-3,0,3,0,-1,2,1,-2,4,2,2,-2,1,-1,2,4,1,3,2,-1,-2,0,2,3,-1,1,0,1,-1,-1,1,1,0,1,1,1,0,-3,0,1,2,5,2,4,1,-1,-3,4,0,-2,1,2,4,4,-1,-2,2,1,0,-1,4,3]),
 WorldLife = new LegendaryAbility("World - Life","- Summon plants and animals.\n- Heal a forest.",[2,1,4,0,2,-2,-3,2,1,4,4,2,0,2,-1,-2,-4,1,4,-1,0,3,1,-2,1,3,-1,-2,0,2,1,4,-1,2,1,-2,-1,-2,1,3,2,0,-1,1,-1,0,2,0,-1,-1,1,1,0,-2,1,2,-1,6,2,-2,1,-2,-4,4,-4,3,2,1,3,-2,1,2,4,-2,2,2,3,4]),
 WorldStone = new LegendaryAbility("World - Stone","- Crush enemies with a boulder.\n- Turn your fist into stone.",[3,-1,1,2,-2,-2,3,1,1,-2,-2,-2,-1,0,-1,-2,0,1,4,2,-2,-2,0,1,2,2,3,2,0,0,2,-1,-2,0,1,3,-2,-1,-2,4,1,1,0,1,2,0,-1,0,0,1,2,1,1,0,-2,0,2,4,2,2,0,-2,0,-1,2,-1,3,3,3,1,4,-1,1,-2,5,3,1,3]),
 WorldDecay = new LegendaryAbility("World - Decay","- Rot an enemy from the inside.\n- Summon an army of worms.",[-1,2,2,3,1,-1,3,-3,-2,-2,1,-2,-1,-2,-4,-3,4,1,4,-3,-2,-3,-3,3,0,2,-2,2,-1,-2,-2,-3,0,-2,1,4,2,3,-2,-2,3,0,-1,0,-2,-1,0,1,1,-2,1,-2,0,-3,1,0,-2,5,2,4,-4,-2,4,-2,4,3,-2,1,-2,3,-1,4,1,-3,1,4,2,3]),
@@ -657,8 +709,8 @@ NightDarkness = new LegendaryAbility("Night - Darkness","- Blind an enemy.\n- Hi
 NightVeil = new LegendaryAbility("Night - Veil","- Turn invisible.\n- Defend yourself from magic.",[3,1,0,-1,2,4,-2,1,-1,-2,-2,1,2,2,2,2,2,-4,1,1,3,-4,1,4,0,0,1,-1,1,2,0,2,1,1,2,-1,2,4,1,3,4,0,0,1,-1,0,1,-1,2,-1,1,0,-1,-4,2,1,0,1,-4,3,2,5,3,-3,4,4,-1,-2,3,3,1,4,2,0,2,1,3,4]),
 NightStars = new LegendaryAbility("Night - Stars","- Divine the future.\n- Call down the fire of the Stars.",[2,4,0,0,2,2,-2,4,2,1,-1,2,2,1,3,2,-2,1,-1,1,3,1,4,-2,0,0,1,-1,0,4,2,1,2,2,3,-2,-2,-3,1,2,-1,0,-1,0,0,-1,1,1,1,0,1,0,2,1,-4,1,1,1,1,-3,2,5,0,-3,3,1,-1,2,1,1,2,4,2,1,-1,-2,4,3]),
 NightFear = new LegendaryAbility("Night - Fear","- Terrify enemies.\n- Lurk hidden in the shadows.",[0,-1,3,4,2,2,1,-1,0,-2,-3,1,-1,1,2,0,2,-4,1,0,1,-4,-2,4,0,-1,-2,1,1,0,1,-2,-1,-3,1,2,4,3,-2,-1,3,0,-1,0,-2,-2,0,-1,1,-1,0,-1,-1,-4,3,1,-2,1,-4,3,2,5,3,-2,4,4,-1,0,-2,1,0,3,-1,4,2,0,1,3]),
-TaiYiNature = new LegendaryAbility("Tai Yi - Nature","- Change an enemy into a servant.\n- Reshape a Titanspawn.",[1,0,2,4,1,3,1,2,3,2,1,1,1,1,2,-2,0,1,2,4,2,2,2,3,2,-1,4,2,3,-3,4,1,0,3,3,-2,4,-1,1,3,-2,-1,4,1,3,-1,-2,1,1,2,-3,0,-2,3,-4,0,5,2,1,2,2,2,2,-3,-3,-2,2,1,-3,3,1,4,-3,-3,-2,-3,4,2]),
-TaiYiFlow = new LegendaryAbility("Tai Yi - Flow","- Redirect a Spell.\n- Manipulate flows of Legend.",[2,3,2,1,4,1,-1,3,1,2,3,4,3,3,2,3,2,2,-1,2,3,3,1,0,1,3,4,0,1,3,0,1,2,4,2,0,3,3,2,4,0,0,1,1,0,-1,1,1,1,-1,1,1,0,3,1,3,4,-1,2,1,3,3,2,3,3,2,3,3,4,3,1,4,2,-3,2,-1,4,3]),
+TaiYiNature = new LegendaryAbility("Tai Yi - Nature","- Change an enemy into a servant.\n- Reshape a Titanspawn.",[1,0,2,4,1,3,1,2,3,2,1,1,1,1,2,-2,0,1,2,4,2,2,2,3,2,-1,4,2,3,-3,4,1,0,3,3,-2,4,-1,1,3,-2,-1,4,1,3,-1,-2,1,1,2,-3,0,-2,3,-4,0,5,2,1,-3,2,2,2,-3,-3,-2,2,1,-3,3,1,4,-3,-3,-2,-3,4,2]),
+TaiYiFlow = new LegendaryAbility("Tai Yi - Flow","- Redirect a Spell.\n- Manipulate flows of Legend.",[2,3,2,1,4,1,-1,3,1,2,3,4,3,3,2,3,2,2,-1,2,3,3,1,0,1,3,4,0,1,3,0,1,2,4,2,0,3,3,2,4,0,0,1,1,0,-1,1,1,1,-1,1,1,0,3,1,3,4,-1,2,3,3,3,2,3,3,2,3,3,4,3,1,4,2,-3,2,-1,4,3]),
 
 
 
@@ -748,14 +800,14 @@ function setChosenPantheon(selectedBox){
 curatedName = selectedBox.options[selectedBox.selectedIndex].value
 	
 
-document.getElementById ("PantheonLink").href = "http://scionprimarchs.wikia.com/wiki/"+ curatedName;
+document.getElementById ("PantheonLink").href = "http://wyrdwalkers.wikidot.com/"+ curatedName;
 document.getElementById ("PantheonLink").innerHTML = "Wiki Link: "+ curatedName;
 
 document.getElementById('OriginLink').style.display = 'none'
 
 }
 function setChosenGod(selectedBox){
-document.getElementById ("OriginLink").href = "http://scionprimarchs.wikia.com/wiki/"+ selectedBox.options[selectedBox.selectedIndex].value;
+document.getElementById ("OriginLink").href = "http://wyrdwalkers.wikidot.com/"+ selectedBox.options[selectedBox.selectedIndex].value;
 document.getElementById ("OriginLink").innerHTML = "Wiki Link: "+ selectedBox.options[selectedBox.selectedIndex].value;
 	ChosenGod = selectedBox.options[selectedBox.selectedIndex].value;
 document.getElementById('OriginLink').style.display = 'block'
