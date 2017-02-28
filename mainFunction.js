@@ -183,11 +183,12 @@ var secondOriginArray = [
  Lakshmi= new secondOrigin("Lakshmi","Goddess of fortune",Indian.name,Indian,[Clever,Careful,Sneaky],[Wit],[FreeSpirit,Manipulator]),
  Parvati= new secondOrigin("Parvati","Goddess of feminity",Indian.name,Indian,[Clever,Sneaky,Careful],[Love,Fertility],[Diplomat,Mother]),
  Sarasvati= new secondOrigin("Sarasvati","Goddess of artists",Indian.name,Indian,[Flashy,Careful,Sneaky],[Crafting],[FreeSpirit]),
- Shiva= new secondOrigin("Shiva","The Destroyer",Indian.name,Indian,[Clever,Flashy,Forceful],[Order,War],[FreeSpirit,Thinker]),
+ Shiva= new secondOrigin("Shiva","The Destroyer",Indian.name,Indian,[Clever,Flashy,Forceful],[Order,Father],[FreeSpirit,Thinker]),
  Surya= new secondOrigin("Surya","God of the sun",Indian.name,Indian,[Flashy,Forceful,Quick],[Sun],[FreeSpirit]),
  Vishnu= new secondOrigin("Vishnu","The Preserver",Indian.name,Indian,[Careful,Forceful,Clever],[Wisdom,Order],[Protector,Harmonizer]),
  Yama= new secondOrigin("Yama","Lord of the Dead",Indian.name,Indian,[Sneaky,Careful,Clever],[Death],[Enforcer,Thinker]),
-
+ Murugan= new secondOrigin("Murugan","General of the Divine Armies",Indian.name,Indian,[Forceful,Flashy,Quick],[War],[General]),
+ 
  Aphrodite= new secondOrigin("Aphrodite","Goddess of love and beauty",Greek.name,Greek,[Flashy,Forceful,Careful],[Love],[Manipulator]),
  Apollo= new secondOrigin("Apollo","God of prophecy, the sun, and art",Greek.name,Greek,[Flashy,Careful,Clever],[Sun,Crafting],[Politician]),
  Archimedes= new secondOrigin("Archimedes","God of Logic",Greek.name,Greek,[Clever,Careful,Forceful],[Crafting,Knowledge],[Thinker]),
