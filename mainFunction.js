@@ -362,10 +362,7 @@ CromCruach= new secondOrigin("Crom Cruach","Titan of Decay",Patala.name,Patala,[
 DisPater= new secondOrigin("Dis Pater","Titan of Riches",Patala.name,Patala,[Clever,Flashy,Careful],[Earth,Crafting],[Harmonizer]),
 Erebus= new secondOrigin("Erebus","Titan of Darkness",Patala.name,Patala,[Careful,Sneaky,Clever],[Earth,Darkness],[Diplomat,Thinker]),
 Erlik= new secondOrigin("Erlik","Titan of Underground",Patala.name,Patala,[Forceful,Flashy,Sneaky],[Earth,Death],[King,Manipulator]),
-SulTharash= new secondOrigin("Sul’Tharash","Bane of Atlantis",Patala.name,Patala,[Forceful,Clever,Sneaky],[Water,War],[Enforcer]),
-Dolgrund= new secondOrigin("Dolgrund","Shadow King of An'leth",Patala.name,Patala,[Clever,Forceful,Quick],[Darkness,Order],[Enforcer,General]),
 Tiamat= new secondOrigin("Tiamat","Titan of Water as Life",Ocean.name,Ocean,[Clever,Careful,Sneaky],[Water,Fertility],[Mother]),
-Idun= new secondOrigin("Idun","Titan of Selflessness",OrderTitan.name,OrderTitan,[Careful,Quick,Clever],[Order,Love],[Thinker,Protector]),
 
 Apep= new secondOrigin("Apep","Titan of Darkness",Night.name,Night,[Clever,Forceful,Sneaky],[Darkness],[Hunter,Manipulator]),
 Mikaboshi= new secondOrigin("Mikaboshi","Titan of Void",Night.name,Night,[Clever,Forceful,Sneaky],[Darkness,Death],[Manipulator,Enforcer]),
@@ -569,7 +566,7 @@ if(this.id === i.toString()){ChosenGod = newSecondOriginArray[i].name}}Legendary
 
 function exampleLegendaryMaker(){
 
-Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
+Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
 
   counter = 0
   for(i=0;i<newAbilitiesArray.length;i++){
@@ -580,6 +577,7 @@ Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 	if(godFound.roles.length === 2){Total.legendaries[i] += (godFound.roles[0].legendaries[i] + godFound.roles[1].legendaries[i])/4}
 
 	Total.legendaries[i]+=Math.floor((roleFound.legendaries[i]/20*6+roleFound2.legendaries[i]/20*4)) 
+	console.log(newAbilitiesArray[i].name + " - " + Total.legendaries.length)
 } 	
 
 
@@ -610,8 +608,6 @@ for(i=0;i<9;i++){document.getElementById("LegendaryFound" + (i+1)).title = legen
 
 for(i=0;i<7;i++){document.getElementById("SkillFound" + (i+1)).innerHTML = skillsFound[i][0]}
 for(i=0;i<7;i++){document.getElementById("SkillFound" + (i+1)).title = skillsFound[i][1]}
-
-
 }
 
 function LegendaryMakerTotal(){
@@ -682,11 +678,12 @@ function addAnAbility(){
 	newAbilitiesArray = [
 DruidismGreenDruid = new LegendaryAbility("Green Druid","- Summon an Ent to aid you in battle\n- Entangle enemies with roots.",[1,2,0,1,0,-1,-1,2,-1,0,2,-2,-2,1,0,1,-2,-2,2,-1,0,1,2,1,1,4,0,-2,-3,3,-2,1,1,3,-2,-2,-1,-1,1,2,1,-1,1,2,0,1,3,3,1,0,3,4,1,-4,-3,-4,-4,1,-3,1,-2,-3,-4,4,4,4,1,2,-1,-2,0,1,4,2,2,-1,3,3]),
 DruidismRunicDruid = new LegendaryAbility("Runic Druid","- Create a ward that warns you when something comes past it.\n- Animate rocks into a golem to fight for you.",[2,2,0,1,-2,-1,1,2,0,-2,-2,-3,-1,-2,-2,1,-1,0,2,4,-1,-1,2,-1,3,1,3,0,-1,-2,2,0,1,0,-1,-2,-2,-3,2,4,1,3,1,-2,3,3,2,1,-1,-2,2,3,1,0,-1,0,4,2,1,3,-1,0,-2,1,2,-1,0,1,3,1,3,2,4,-2,3,0,4,2]),
+Mythcalling = new LegendaryAbility("Mythcalling","- Summon a swarm of bees,\n- Empower your animal companion.",[1,2,2,0,2,1,2,2,2,3,3,3,2,1,1,2,-1,0,1,-2,2,2,2,0,3,3,1,3,1,3,4,3,2,2,1,-2,-1,2,3,2,2,2,3,0,-1,2,-1,4,-1,1,2,3,-1,-2,-1,1,-1,2,0,-2,-1,-2,-4,4,4,4,4,4,4,1,3,2,4,-2,1,0,2,3]),
 DruidismFeySorcerySummer = new LegendaryAbility("Fey Sorcery - Summer","- Send a scorching ray of heat\n- Make yourself irresistibly attractive.",[-2,0,3,3,1,-3,-2,-1,-1,0,3,1,-1,0,1,0,-4,3,2,-2,-4,4,0,-3,1,3,-1,-2,2,2,0,1,0,3,1,2,0,-1,1,2,1,-2,-2,4,2,0,3,2,3,2,0,2,3,-1,-3,-4,-3,1,1,-4,-2,-4,-4,6,-4,0,2,1,0,-2,1,-1,2,4,2,2,3,2]),
 DruidismFeySorceryWinter = new LegendaryAbility("Fey Sorcery - Winter","- Raise a blizzard.\n- Create an illusion of yourself.",[2,3,0,1,1,3,-1,2,0,-3,-4,-2,2,2,1,2,2,-3,-1,-2,2,-4,1,3,1,2,0,-1,1,2,0,-2,1,-1,-2,1,3,3,0,1,2,-2,-1,-3,-2,4,-4,-1,-3,-3,3,2,-3,-4,-1,-1,-4,-2,-4,2,0,2,0,-4,4,2,-1,0,-1,1,-1,2,3,4,2,3,3,1]),
 DruidismTechnodruidism = new LegendaryAbility("Technodruidism","- Manipulate electrical currents.\n- Take remote control of a computer system.",[1,3,1,0,2,1,-2,1,-2,-3,1,-2,-1,-2,-3,3,-1,1,2,0,0,-1,2,-1,4,2,-2,-2,-1,2,-3,-3,3,0,-1,0,-1,2,-1,-1,0,-1,0,1,1,1,-4,-3,1,-1,2,3,-4,-4,-4,-4,-4,0,0,-4,-2,-3,-4,1,1,-2,0,1,6,3,0,2,1,-1,2,2,4,1]),
 HematurgyYahuar = new LegendaryAbility("Yahuar","- Raise a Bone Shield to protect your allies.\n- Heal your allies.",[1,0,1,1,-1,-3,3,1,1,1,2,2,-1,1,0,-1,1,2,0,2,0,2,0,0,-1,-2,1,2,0,-2,2,2,0,2,1,3,1,-1,1,4,2,-2,-1,1,0,2,3,0,3,-1,-1,1,4,-3,-1,-2,-2,-3,0,1,-3,-3,1,1,-1,0,1,0,-2,1,3,3,-1,-2,4,0,-1,3]),
-HematurgyItztli = new LegendaryAbility("Itztli","- Desecrate a sacred location.\n- Sacrifice an enemy for more power.",[-1,1,2,3,1,-1,3,1,2,0,1,2,0,1,1,1,3,3,1,2,0,4,0,1,-1,0,1,2,2,-2,3,1,-1,-1,2,4,2,1,0,2,4,-1,-1,1,0,1,1,-2,4,1,0,1,3,0,1,0,2,2,3,2,0,-1,2,3,1,1,2,2,0,3,2,4,-2,-2,1,4,2,0]),
+HematurgyItztli = new LegendaryAbility("Itztli","- Desecrate a sacred location.\n- Sacrifice an enemy for more power.",[-1,1,1,2,0,-1,2,1,1,0,1,1,0,0,1,0,2,2,1,1,0,3,0,0,-1,0,1,1,1,-2,2,1,-1,-1,1,3,1,0,0,1,3,-1,-1,0,0,1,0,-2,3,0,0,1,2,0,1,0,1,1,2,1,0,-1,1,2,1,0,1,1,0,2,2,3,-2,-2,1,3,1,0]),
 InvokationDeathNecromancy = new LegendaryAbility("Spiritwalking - Necromancy","- Raise the dead.\n- Consume Souls to gain power.",[1,2,0,3,1,-1,1,1,0,-2,-3,-3,2,1,0,1,3,-1,1,-1,0,-10,1,0,-2,-1,1,0,-2,1,-1,0,-3,0,1,1,0,-1,2,1,1,2,2,2,1,0,0,1,-1,1,0,0,-1,3,2,-1,-2,0,2,1,2,6,-2,2,1,1,0,-2,1,1,3,1,-2,1,2,1,1]),
 InvokationDeathShamanism = new LegendaryAbility("Spiritwalking - Shamanism","- Gain the advice of an ancient wise spirit.\n- Tap into the power of a sanctified place.",[2,3,0,-2,0,1,-1,3,0,-1,-2,-2,4,3,1,1,4,1,2,2,2,0,1,2,-2,-2,1,1,0,1,0,1,2,4,0,-1,-2,0,3,3,-1,2,3,4,2,0,3,2,0,3,2,3,2,-4,-3,-1,-2,-2,-3,2,-4,0,2,-2,1,1,2,2,0,0,3,2,1,2,1,0,4,3]),
 InvokationDeathSoulbinding = new LegendaryAbility("Spiritwalking - Soulbinding","- Infuse Souls into your creations to increase their power\n- Exploit the power of a magical object.",[2,3,0,3,-1,1,1,1,1,-1,-3,-2,1,-1,-1,2,3,1,2,1,1,-1,2,2,4,-2,2,1,-1,-3,0,-2,1,-2,-1,0,3,2,0,3,-1,0,3,1,3,0,1,2,2,3,0,2,0,-3,2,1,2,1,3,0,0,2,4,-2,1,-1,2,2,3,4,3,3,2,-2,2,2,4,3]),
@@ -710,8 +707,9 @@ FireLife = new LegendaryAbility("Fire - Life","- Ressurect mortals\n- Heal allie
 FireInvention = new LegendaryAbility("Fire - Invention","- Create an impossibly large gun.- Hack a computer.",[2,4,3,1,1,-2,1,2,0,-2,-3,-2,-3,-4,1,2,-3,5,2,0,-3,2,1,-3,6,-3,1,0,-2,2,0,-2,3,-1,-2,-3,-2,-3,-2,1,-2,1,1,-1,-1,0,-2,1,-1,0,0,1,-1,-3,-4,-3,1,1,4,-3,-2,-4,-4,2,-2,-3,-1,-1,5,2,1,3,0,-2,2,2,4,1]),
 FireMagma = new LegendaryAbility("Fire - Magma","- Create and control flows of magma\n- Rupture volcanoes from the ground.",[-3,-2,4,4,-1,-3,1,-2,-1,-2,0,-1,-3,-4,1,-3,1,4,3,-1,-3,1,-3,-4,1,0,-2,0,-3,-2,0,-2,-3,-3,0,3,-2,-3,-2,2,0,0,-1,0,0,1,1,1,1,1,-1,-1,2,-2,-4,-4,1,2,4,2,-3,-4,-1,2,-4,-2,2,3,1,-1,2,3,0,-3,3,3,-1,1]),
 FireDrought = new LegendaryAbility("Fire - Drought","- Dry up water and blood.\n- Turn enemies to ash.",[-2,-3,2,2,3,0,1,-3,-2,-3,-4,-3,-4,-6,2,-3,2,4,0,-2,-4,1,-3,1,0,-2,-3,1,-2,-3,-2,-4,-3,-3,-2,2,-2,-3,-3,-4,1,-1,-1,1,1,-1,-1,0,1,-4,0,0,0,2,-4,-4,-4,1,4,1,1,-3,3,4,-4,-2,2,1,-3,-2,-1,2,-3,-2,1,2,-1,4]),
+FireStrife = new LegendaryAbility("Fire - Strife","- Turn friends against each other.\n- Start a bar fight.",[-1,2,3,3,2,1,4,-1,0,-3,-3,3,-1,0,1,1,0,4,-2,-4,1,3,-1,-3,-2,-3,-2,2,3,-1,1,-2,-3,-4,2,1,3,4,0,-2,2,2,-1,2,-2,1,1,-1,1,-2,1,1,2,2,-4,-4,-4,-4,4,-4,2,-3,-3,3,1,-1,1,0,1,2,1,3,0,4,2,1,2,4]),
 WaWorldgingSea = new LegendaryAbility("Water - Raging Sea","- Create anger.\n- Raise a tidal wave.",[-3,-2,4,4,2,-3,1,-1,-2,-3,0,-3,1,5,3,-1,0,-4,-1,-2,2,-2,-1,1,-3,-2,-3,-1,-2,1,2,-2,-1,0,0,3,1,-2,-3,3,1,0,-1,0,-1,2,2,2,0,0,0,1,0,-3,4,6,-1,2,-3,3,3,-3,-2,2,2,-1,1,4,0,-2,1,2,0,-2,1,2,2,3]),
-WaterAbyss = new LegendaryAbility("Water - Abyss","- Summon creatures from the dark Abyss.- Drown your enemies.",[2,3,0,1,-3,2,-2,1,1,3,2,-3,1,4,-3,-2,2,-4,-1,-3,-2,-4,1,3,-2,-4,-3,-2,-2,0,1,2,2,-3,-2,1,2,0,-2,0,2,-1,-1,-1,1,0,0,1,-1,0,0,0,0,-3,6,4,-3,-1,-4,6,-3,0,2,-3,2,1,1,3,1,-2,-3,2,-1,2,4,2,0,1]),
+WaterAbyss = new LegendaryAbility("Depths - Abyss","- Summon creatures from the dark Abyss.- Drown your enemies.",[2,3,0,1,-3,2,-2,1,1,3,2,-3,1,4,-3,-2,2,-4,-1,-3,-2,-4,1,3,-2,-4,-3,-2,-2,0,1,2,2,-3,-2,1,2,0,-2,0,2,-1,-1,-1,1,0,0,1,-1,0,0,0,0,-3,6,4,-3,-1,-4,6,-3,0,2,-3,2,1,1,3,1,-2,-3,2,-1,2,4,2,0,1]),
 WaterLife = new LegendaryAbility("Water - Life","- Spring forth impossible animals.\n- Fortify your allies.",[2,1,3,2,0,-2,-4,2,1,3,2,1,1,4,1,2,-4,-4,1,0,2,-3,0,-3,-2,2,0,-3,-1,1,0,3,0,4,-1,-2,-3,-3,2,3,-3,1,-1,1,1,1,1,2,-1,1,0,1,-1,-3,4,4,1,2,-4,-3,1,-1,-4,4,0,1,2,2,2,-2,0,1,3,1,3,-2,-2,4]),
 LightBrightness = new LegendaryAbility("Light - Brightness","- Blind your enemies\n- Dazzle an audience.",[1,3,4,4,3,1,1,-2,3,-1,-2,3,0,-2,1,1,-3,2,-1,0,-4,3,-2,-4,-3,-2,1,0,4,-2,3,-1,-2,2,3,-1,4,2,2,1,-2,1,1,1,2,-1,-1,1,1,1,0,1,1,6,-4,0,0,-1,1,-4,1,-4,-3,4,-2,-4,2,3,2,4,2,1,-2,4,2,-1,-2,3]),
 LightIllumination = new LegendaryAbility("Light - Illumination","- Engage in intense concentration to reveal mysteries\n- Inspire others to create and learn.",[2,4,3,0,2,-3,-2,3,2,-3,-2,2,2,-1,-1,2,-3,2,-1,-2,3,4,3,-4,2,0,1,-1,1,2,2,-1,3,1,-2,-3,-2,-3,2,-2,-3,1,1,1,1,-1,-1,1,0,2,0,0,0,3,-4,-1,0,-2,1,-4,0,1,-4,3,-1,0,2,3,6,5,2,1,0,1,-2,-3,4,2]),
@@ -719,28 +717,39 @@ LightSun = new LegendaryAbility("Light - Sun","- Send rays of heat.\n- Travel on
 SkyDestruction = new LegendaryAbility("Sky - Destruction","- Crush enemies with storms.\n- Summon tornadoes.",[-2,-1,4,4,3,-3,2,-2,0,-2,-3,-2,-1,0,4,-2,2,2,1,1,-1,1,-2,0,-2,-2,-1,1,-1,-2,2,-2,-3,-4,2,3,-1,1,-2,1,3,1,0,1,0,1,1,-1,0,-1,0,-1,-1,1,-3,2,0,-1,2,-2,6,-2,3,3,4,0,1,3,-2,-2,-1,2,-2,-2,-1,4,-2,-1]),
 SkyTempest = new LegendaryAbility("Sky - Tempest","- Create Storms.\n- Fly.",[-2,-1,4,3,2,-2,3,-2,1,-2,-1,-2,1,2,4,-1,1,0,2,1,0,-2,-3,1,-2,-1,-1,2,0,1,2,-1,-3,-2,2,2,-1,1,0,2,3,1,0,1,-1,1,1,0,0,-1,1,-1,-1,-1,-3,3,0,1,-1,-2,6,-1,-3,3,3,1,2,4,-1,2,2,3,0,-2,2,3,1,2]),
 SkyPeace = new LegendaryAbility("Sky - Peace","- Pacify Enemies\n- Stop a bullet in its tracks.",[3,2,1,0,2,1,-4,2,1,1,1,2,2,2,4,0,-3,-3,2,2,3,1,2,-2,0,1,3,-2,1,3,3,2,0,4,-2,-3,1,-2,4,3,-2,1,0,1,1,-1,1,1,0,1,-1,0,0,0,-4,2,2,1,-2,-3,6,3,-3,3,-1,1,3,3,2,-2,1,-1,2,3,3,-2,1,2]),
-DarknessVoid = new LegendaryAbility("Darkness - Void","- Remove the sense of sight or hearing from your foes.\n- Erase an enemy from existence.",[1,2,4,4,3,-2,2,-2,-1,-3,-4,-3,0,-2,-2,-3,3,-1,1,-2,1,-3,-2,4,-2,-3,-2,1,1,-1,0,-2,1,-3,1,3,2,2,-1,-2,3,0,-1,0,-2,0,0,1,1,-1,-1,-1,-1,-4,3,1,1,1,-1,3,1,2,3,-3,3,4,2,2,-3,2,-2,4,-3,-4]),
-DarknessShadows = new LegendaryAbility("Darkness - Shadows","- Hide in shadows\n- Remove light.",[4,2,-1,-2,2,4,-2,0,-2,-3,-2,1,2,0,-1,3,2,-2,-1,-3,3,-3,-1,4,0,1,-1,-2,1,2,-1,-2,1,-2,-1,1,3,4,0,1,4,0,0,-1,0,0,0,1,1,-1,1,-1,0,-4,2,-1,0,-1,-2,4,0,3,3,-1,4,4,1,-1,3,3,1,4,2,1,2,-2,4,3]),
-DarknessUnderground = new LegendaryAbility("Darkness - Underground","- See in the dark.\n- Have the Earth swallow enemies.",[3,1,0,-1,-2,4,-1,-1,-2,1,2,-2,2,-2,-4,0,3,-2,3,1,-4,-4,1,4,2,2,1,-2,0,-1,-1,1,0,-2,-3,2,1,2,0,3,1,0,0,1,-1,0,-1,1,0,-1,1,-2,0,-4,-1,-3,0,3,-1,6,-4,-3,3,-3,3,3,1,-1,1,-1,0,3,1,-2,2,-2,-1,4]),
-WorldAbundance = new LegendaryAbility("World - Abundance","- Summon riches.\n- Summon weapons for a whole army.",[2,4,3,0,1,-1,-2,1,2,1,3,1,2,2,2,-1,-3,0,3,0,-1,2,1,-2,4,2,2,-2,1,-1,2,4,1,3,2,-1,-2,0,2,3,-1,1,0,1,-1,-1,1,1,0,1,1,1,0,-3,0,1,2,5,2,4,1,-1,-3,4,0,-2,1,2,4,4,-1,-2,2,1,0,-1,4,3]),
+SkyRain = new LegendaryAbility("Sky - Rain","- Create a soothing rain\n- Summon a raging monsoon.",[2,1,0,-1,0,1,-2,2,1,2,3,1,2,4,4,1,-2,-4,-1,-2,0,-3,1,-2,-3,1,-1,-3,0,2,0,1,1,2,-1,-3,-1,-1,1,1,-2,1,1,-1,-3,-1,0,2,1,1,1,1,-1,-4,-4,2,-1,1,-4,-4,5,-3,-4,4,2,2,1,3,-1,-1,1,2,2,0,-1,-2,2,3]),
+DarknessVoid = new LegendaryAbility("Night - Void","- Remove the sense of sight or hearing from your foes.\n- Erase an enemy from existence.",[1,2,4,4,3,-2,2,-2,-1,-3,-4,-3,0,-2,-2,-3,3,-1,1,-2,1,-3,-2,4,-2,-3,-2,1,1,-1,0,-2,1,-3,1,3,2,2,-1,-2,3,0,-1,0,-2,0,0,1,1,-1,-1,-1,-1,-4,3,1,1,1,-1,3,1,2,3,-3,3,4,2,2,-3,2,-2,4,-3,-4]),
+DarknessShadows = new LegendaryAbility("Depths - Shadows","- Hide in shadows\n- Remove light.",[4,2,-1,-2,2,4,-2,0,-2,-3,-2,1,2,0,-1,3,2,-2,-1,-3,3,-3,-1,4,0,1,-1,-2,1,2,-1,-2,1,-2,-1,1,3,4,0,1,4,0,0,-1,0,0,0,1,1,-1,1,-1,0,-4,2,-1,0,-1,-2,4,0,3,3,-1,4,4,1,-1,3,3,1,4,2,1,2,-2,4,3]),
+DarknessUnderground = new LegendaryAbility("Depths - Underground","- See in the dark.\n- Have the Earth swallow enemies.",[3,1,0,-1,-2,4,-1,-1,-2,1,2,-2,2,-2,-4,0,3,-2,3,1,-4,-4,1,4,2,2,1,-2,0,-1,-1,1,0,-2,-3,2,1,2,0,3,1,0,0,1,-1,0,-1,1,0,-1,1,-2,0,-4,-1,-3,0,3,-1,6,-4,-3,3,-3,3,3,1,-1,1,-1,0,3,1,-2,2,-2,-1,4]),
+WorldAbundance = new LegendaryAbility("Depths - Abundance","- Summon riches.\n- Summon weapons for a whole army.",[2,4,3,0,1,-1,-2,1,2,1,3,1,2,2,2,-1,-3,0,3,0,-1,2,1,-2,4,2,2,-2,1,-1,2,4,1,3,2,-1,-2,0,2,3,-1,1,0,1,-1,-1,1,1,0,1,1,1,0,-3,0,1,2,5,2,4,1,-1,-3,4,0,-2,1,2,4,4,-1,-2,2,1,0,-1,4,3]),
 WorldLife = new LegendaryAbility("World - Life","- Summon plants and animals.\n- Heal a forest.",[2,1,4,0,2,-2,-3,2,1,4,4,2,0,2,-1,-2,-4,1,4,-1,0,3,1,-2,1,3,-1,-2,0,2,1,4,-1,2,1,-2,-1,-2,1,3,2,0,-1,1,-1,0,2,0,-1,-1,1,1,0,-2,1,2,-1,6,2,-2,1,-2,-4,4,-4,3,2,1,3,-2,1,2,4,-2,2,2,3,4]),
 WorldStone = new LegendaryAbility("World - Stone","- Crush enemies with a boulder.\n- Turn your fist into stone.",[3,-1,1,2,-2,-2,3,1,1,-2,-2,-2,-1,0,-1,-2,0,1,4,2,-2,-2,0,1,2,2,3,2,0,0,2,-1,-2,0,1,3,-2,-1,-2,4,1,1,0,1,2,0,-1,0,0,1,2,1,1,0,-2,0,2,4,2,2,0,-2,0,-1,2,-1,3,3,3,1,4,-1,1,-2,5,3,1,3]),
 WorldDecay = new LegendaryAbility("World - Decay","- Rot an enemy from the inside.\n- Summon an army of worms.",[-1,2,2,3,1,-1,3,-3,-2,-2,1,-2,-1,-2,-4,-3,4,1,4,-3,-2,-3,-3,3,0,2,-2,2,-1,-2,-2,-3,0,-2,1,4,2,3,-2,-2,3,0,-1,0,-2,-1,0,1,1,-2,1,-2,0,-3,1,0,-2,5,2,4,-4,-2,4,-2,4,3,-2,1,-2,3,-1,4,1,-3,1,4,2,3]),
 WorldExpanse = new LegendaryAbility("World - Expanse","- Travel quickly.\n- Plague your foes with exotic diseases.",[1,2,0,-1,2,0,-1,1,1,0,2,-1,3,2,3,-1,-2,-1,4,0,0,1,2,-2,0,3,-2,-2,-3,4,2,2,2,1,2,0,-1,-2,1,3,3,-1,-1,1,-1,1,2,0,0,0,2,0,1,0,2,2,-2,4,1,-1,2,-2,-1,3,3,5,2,4,4,-2,1,3,2,-1,2,0,4,3]),
 OrderGravity = new LegendaryAbility("Order - Gravity","- Slam an enemy into the floor.\n- Float into the air.",[-1,1,3,3,2,0,1,2,2,-1,-2,1,3,1,0,1,1,2,2,3,2,1,3,0,1,1,4,1,2,1,1,-1,-1,1,2,3,0,1,1,4,0,1,0,0,1,-1,-1,0,0,1,-1,0,0,2,1,1,6,2,2,-2,1,-1,-2,1,1,0,3,0,2,3,2,1,0,-2,3,2,2,4]),
 OrderControl = new LegendaryAbility("Order - Control","- Compel someone to obey your orders.\n- Take control of an ongoing spell.",[0,1,2,4,2,-2,2,2,3,-2,-2,2,1,1,2,-2,-1,2,3,4,2,2,1,1,1,1,4,2,4,-3,3,-1,-2,0,2,3,4,1,2,3,-1,1,0,-1,2,0,-1,1,0,1,-1,0,0,1,-2,0,6,3,2,-1,2,0,-1,-2,-2,-1,3,1,2,4,2,3,1,2,3,0,-1,3]),
+KannagaranoMichi = new LegendaryAbility("Kannagara no Michi","- Bond yourself to a Kami or Mythborn.\n- Separate a Legendary being from its power source.",[2,4,3,1,2,0,2,4,2,2,3,2,2,2,0,1,-4,0,3,0,2,2,-2,-2,1,5,-2,1,-2,4,2,3,2,4,0,-1,-1,-2,1,3,-1,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,2,3,4,8,4,3,3,4,2]),
+DeathDevourer = new LegendaryAbility("Death - Devourer","- Invade someone’s mind and turn them to depression or suicide.\n- Harden one’s emotions to make them commit murder",[-2,-2,3,4,3,1,1,-3,-3,-3,-3,-3,-3,0,-2,-3,3,-1,-2,1,1,-3,-4,3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,0,3,-2,-3,-3,-3,3,-1,0,-1,0,-1,-1,-1,1,0,-1,0,-1,-4,2,1,-3,-3,2,4,-2,1,5,-4,3,4,1,-2,-3,-2,-1,2,-3,-2,3,3,1,2]),
+TheMiddleWay = new LegendaryAbility("The Middle Way","- Distance yourself from Reality to resist uses of Legendary Abilities.\n- Project yourself to your ideal Self to increase your mental abilities.",[4,3,0,-2,0,1,-3,6,1,2,1,3,1,2,3,4,-2,0,-2,0,1,1,4,-2,-2,2,2,-3,0,4,1,2,4,3,-2,-4,-2,-3,2,-1,-4,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,1,-1,-4,3,2,3,4,5,3,4,2,4,-2,2,3]),
+Isfet = new LegendaryAbility("Isfet","- Gain the Isfet Aspect “Compulsive Liar”.\n- Gain the Isfet Aspect “Greed is Good”.",[-2,0,4,3,2,2,2,-1,3,-2,2,3,1,2,2,3,2,3,1,-4,3,3,2,4,-1,2,-4,3,4,3,2,0,-2,-3,4,3,4,2,-1,-2,2,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,3,3,1,2,0,2,5,1,5,3,3,1,3,4,3]),
+Nihilism = new LegendaryAbility("Nihilism","- Deny the existence of Legend to harm Legendary beings.\n- Rely on Reason to defend against Legendary attacks.",[2,4,3,2,1,1,1,4,2,-2,0,1,1,2,1,3,0,1,1,2,1,1,4,2,-2,1,2,1,2,3,1,0,4,0,2,3,0,1,2,4,0,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,-6,5,3,7,5,0,4,4,3,3]),
 OrderKnowledge = new LegendaryAbility("Order - Knowledge","- Learn ancient mysteries.\n- Have an incredible memory.",[2,4,1,-1,1,-1,-2,3,-1,-2,-1,1,0,2,0,2,-1,1,2,2,1,0,4,-2,2,0,4,-2,-1,2,1,-1,3,1,-1,-2,1,-1,0,2,-1,0,0,-1,1,0,0,1,0,1,-1,0,0,1,-2,-1,4,1,1,-2,1,1,-2,-1,1,-2,3,1,2,4,0,2,1,-2,-1,-1,4,2]),
 NightMoon = new LegendaryAbility("Night - Moon","- Turn someone insane.\n- Soothe a pained friend.",[4,3,0,-1,2,2,-1,1,-1,0,2,1,2,2,2,3,2,-4,-1,-2,6,-4,1,-3,-1,1,-2,-1,1,3,0,2,3,3,-1,-2,3,4,2,1,3,0,1,0,-1,0,0,1,0,-1,2,0,-2,-4,-3,2,-2,0,-4,-4,2,5,2,-2,4,3,-1,2,3,3,1,4,2,4,1,-1,3,4]),
-NightDarkness = new LegendaryAbility("Night - Darkness","- Blind an enemy.\n- Hide in the shadows.",[2,3,2,4,3,2,1,-1,1,-2,-2,-3,-2,2,2,1,2,-3,1,-4,-3,-4,1,5,-2,-1,-4,1,2,0,-1,-2,1,-3,1,3,4,4,-2,-4,4,0,-1,0,-2,0,0,-1,1,-1,1,-1,-1,-4,3,1,-4,-2,-3,4,2,5,3,-4,4,4,-2,1,-3,3,1,4,-2,0,3,1,4,3]),
+NightDarkness = new LegendaryAbility("Night - Obscurity","- Blind an enemy.\n- Hide in the shadows.",[2,3,2,4,3,2,1,-1,1,-2,-2,-3,-2,2,2,1,2,-3,1,-4,-3,-4,1,5,-2,-1,-4,1,2,0,-1,-2,1,-3,1,3,4,4,-2,-4,4,0,-1,0,-2,0,0,-1,1,-1,1,-1,-1,-4,3,1,-4,-2,-3,4,2,5,3,-4,4,4,-2,1,-3,3,1,4,-2,0,3,1,4,3]),
 NightVeil = new LegendaryAbility("Night - Veil","- Turn invisible.\n- Defend yourself from magic.",[3,1,0,-1,2,4,-2,1,-1,-2,-2,1,2,2,2,2,2,-4,1,1,3,-4,1,4,0,0,1,-1,1,2,0,2,1,1,2,-1,2,4,1,3,4,0,0,1,-1,0,1,-1,2,-1,1,0,-1,-4,2,1,0,1,-4,3,2,5,3,-3,4,4,-1,-2,3,3,1,4,2,0,2,1,3,4]),
 NightStars = new LegendaryAbility("Night - Stars","- Divine the future.\n- Call down the fire of the Stars.",[2,4,0,0,2,2,-2,4,2,1,-1,2,2,1,3,2,-2,1,-1,1,3,1,4,-2,0,0,1,-1,0,4,2,1,2,2,3,-2,-2,-3,1,2,-1,0,-1,0,0,-1,1,1,1,0,1,0,2,1,-4,1,1,1,1,-3,2,5,0,-3,3,1,-1,2,1,1,2,4,2,1,-1,-2,4,3]),
 NightFear = new LegendaryAbility("Night - Fear","- Terrify enemies.\n- Lurk hidden in the shadows.",[0,-1,3,4,2,2,1,-1,0,-2,-3,1,-1,1,2,0,2,-4,1,0,1,-4,-2,4,0,-1,-2,1,1,0,1,-2,-1,-3,1,2,4,3,-2,-1,3,0,-1,0,-2,-2,0,-1,1,-1,0,-1,-1,-4,3,1,-2,1,-4,3,2,5,3,-2,4,4,-1,0,-2,1,0,3,-1,4,2,0,1,3]),
 TaiYiNature = new LegendaryAbility("Tai Yi - Nature","- Change an enemy into a servant.\n- Reshape a Titanspawn.",[1,0,2,4,1,3,1,2,3,2,1,1,1,1,2,-2,0,1,2,4,2,2,2,3,2,-1,4,2,3,-3,4,1,0,3,3,-2,4,-1,1,3,-2,-1,4,1,3,-1,-2,1,1,2,-3,0,-2,3,-4,0,5,2,1,-3,2,2,2,-3,-3,-2,2,1,-3,3,1,4,-3,-3,-2,-3,4,2]),
 TaiYiFlow = new LegendaryAbility("Tai Yi - Flow","- Redirect a Spell.\n- Manipulate flows of Legend.",[2,3,2,1,4,1,-1,3,1,2,3,4,3,3,2,3,2,2,-1,2,3,3,1,0,1,3,4,0,1,3,0,1,2,4,2,0,3,3,2,4,0,0,1,1,0,-1,1,1,1,-1,1,1,0,3,1,3,4,-1,2,3,3,3,2,3,3,2,3,3,4,3,1,4,2,-3,2,-1,4,3]),
+Heku = new LegendaryAbility("Heku","- Have someone look your way at the right moment.\n- Single out the perfect person to influence in a crowd.",[3,3,2,1,-1,1,2,2,3,-1,-2,4,1,2,2,3,0,-1,-2,3,3,2,2,2,-2,-1,3,2,4,-2,4,2,-1,3,2,-2,2,1,4,2,-2,1,2,0,4,0,-2,1,0,2,-1,-2,-1,1,-1,0,2,-1,-2,-3,0,1,-2,2,0,-2,1,1,0,3,2,4,1,3,1,1,3,2]),
+FleshShaping = new LegendaryAbility("Flesh-Shaping","- Grow Wings.\n- Regrow an Arm.",[-2,-3,4,3,2,-2,2,-2,-1,1,1,-1,-2,-2,-3,-3,2,0,1,-1,-2,-2,-3,0,-3,-2,-3,2,-2,-3,-2,1,-2,-3,1,3,-3,-4,-4,1,3,-2,-1,0,-2,1,1,0,2,-3,1,1,1,-2,-3,-2,-2,0,-1,1,0,-1,0,-1,1,1,0,0,-1,-2,1,2,-1,-3,3,3,-2,-3]),
+EpicPresence = new LegendaryAbility("Epic Presence","- Give rousing speeches.\n- Intimidate an individual.",[-1,0,4,2,1,-2,4,1,4,0,-2,2,-1,0,2,-1,2,3,1,3,-1,3,-2,1,-1,-2,2,5,5,-2,5,1,-3,-1,2,2,1,-2,-2,2,0,1,1,1,2,1,1,0,1,0,-1,-1,-2,3,1,2,3,-1,2,2,2,-1,1,2,2,0,1,2,-1,2,2,0,-1,4,2,-1,1,2]),
 
-
-
-
+/*
+Night - Nightmares
+Death - Journey
+Order - Law
+*/
 	]
 
 	skillsArray = [
@@ -775,6 +784,7 @@ for(j=0;j<parametersArray.length;j++){
 }
 addAnAbility()
 
+//addAnAbilityMaker()
 
 // Test the length of Legendaries
 //lengthChecker()
