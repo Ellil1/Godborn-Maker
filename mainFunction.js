@@ -28,7 +28,7 @@ var parameterCalculator = function(name,type,legendaries,skills) {
 };
 
 var rolesChoiceArray = [
-Default = new Role("Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]),
+Default = new Role("Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]),
 MeatShield = new Role("Meat Shield",[2,4,3,1,3,2,3,1,1,3,3,2,-1,-1,3,-2,1,-2,-1,0,2,3,0,2,-1,3,1,-1,2,2,4,3,-1,1,2,2,-2,-1,3,2,-3,-2,0,-2,-1,4,3,4,2,-1,1,-1,0,-2,3,1,-1,2,-2,-1,-2,3,2,1,-2,3],[3,-2,-1,2,1,4,3,3,4,3,-1,-2,1,0,4]),
 DamageDealer = new Role("Damage Dealer",[2,0,0,1,2,3,2,4,2,4,3,-2,-3,-1,-2,4,1,-1,0,3,1,3,4,-1,3,2,1,0,-1,4,2,-1,3,1,2,2,3,1,3,3,-4,4,1,1,4,1,4,2,-1,-2,4,-2,-2,-1,1,2,3,4,2,1,2,1,4,4,-2,3],[3,-1,-2,3,-2,4,4,1,1,0,-1,-2,4,4,3]),
 PartyFace = new Role("Party Face",[1,1,0,3,1,4,2,-3,-3,-4,-3,1,4,3,3,1,1,2,4,2,4,1,-2,4,-1,-1,-1,-2,-1,-3,-3,-2,3,4,-1,-1,1,0,-3,-2,1,-3,-3,3,-2,-1,-4,-4,4,4,-4,4,4,-2,-3,3,-2,2,2,1,2,3,1,4,1,-2],[1,0,4,2,1,-2,2,2,-1,4,4,4,-2,-1,0]),
@@ -570,6 +570,7 @@ Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
   counter = 0
   for(i=0;i<newAbilitiesArray.length;i++){
+
 	Total.legendaries[i] += godFound.originVar.legendaries[i]/2 + (godFound.approaches[0].legendaries[i]*3 + godFound.approaches[1].legendaries[i]*2 + godFound.approaches[2].legendaries[i])/12
 	if(godFound.domains.length === 1){Total.legendaries[i] += godFound.domains[0].legendaries[i]/2}
 	if(godFound.domains.length === 2){Total.legendaries[i] += (godFound.domains[0].legendaries[i] + godFound.domains[1].legendaries[i])/4}
@@ -577,7 +578,7 @@ Total = new parameterCalculator("Total","Default",[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 	if(godFound.roles.length === 2){Total.legendaries[i] += (godFound.roles[0].legendaries[i] + godFound.roles[1].legendaries[i])/4}
 
 	Total.legendaries[i]+=Math.floor((roleFound.legendaries[i]/20*6+roleFound2.legendaries[i]/20*4)) 
-	console.log(newAbilitiesArray[i].name + " - " + Total.legendaries.length)
+	  	console.log(newAbilitiesArray[i].name + " - " + Total.legendaries[i])
 } 	
 
 
@@ -741,7 +742,7 @@ NightStars = new LegendaryAbility("Night - Stars","- Divine the future.\n- Call 
 NightFear = new LegendaryAbility("Night - Fear","- Terrify enemies.\n- Lurk hidden in the shadows.",[0,-1,3,4,2,2,1,-1,0,-2,-3,1,-1,1,2,0,2,-4,1,0,1,-4,-2,4,0,-1,-2,1,1,0,1,-2,-1,-3,1,2,4,3,-2,-1,3,0,-1,0,-2,-2,0,-1,1,-1,0,-1,-1,-4,3,1,-2,1,-4,3,2,5,3,-2,4,4,-1,0,-2,1,0,3,-1,4,2,0,1,3]),
 TaiYiNature = new LegendaryAbility("Tai Yi - Nature","- Change an enemy into a servant.\n- Reshape a Titanspawn.",[1,0,2,4,1,3,1,2,3,2,1,1,1,1,2,-2,0,1,2,4,2,2,2,3,2,-1,4,2,3,-3,4,1,0,3,3,-2,4,-1,1,3,-2,-1,4,1,3,-1,-2,1,1,2,-3,0,-2,3,-4,0,5,2,1,-3,2,2,2,-3,-3,-2,2,1,-3,3,1,4,-3,-3,-2,-3,4,2]),
 TaiYiFlow = new LegendaryAbility("Tai Yi - Flow","- Redirect a Spell.\n- Manipulate flows of Legend.",[2,3,2,1,4,1,-1,3,1,2,3,4,3,3,2,3,2,2,-1,2,3,3,1,0,1,3,4,0,1,3,0,1,2,4,2,0,3,3,2,4,0,0,1,1,0,-1,1,1,1,-1,1,1,0,3,1,3,4,-1,2,3,3,3,2,3,3,2,3,3,4,3,1,4,2,-3,2,-1,4,3]),
-Heku = new LegendaryAbility("Heku","- Have someone look your way at the right moment.\n- Single out the perfect person to influence in a crowd.",[3,3,2,1,-1,1,2,2,3,-1,-2,4,1,2,2,3,0,-1,-2,3,3,2,2,2,-2,-1,3,2,4,-2,4,2,-1,3,2,-2,2,1,4,2,-2,1,2,0,6,0,-2,2,0,3,-1,-2,-1,3,-1,0,2,-1,-2,-3,0,1,-2,2,0,-2,1,1,0,3,2,4,1,3,1,1,3,2]),
+Heku = new LegendaryAbility("Heku","- Have someone look your way at the right moment.\n- Single out the perfect person to influence in a crowd.",[3,3,2,1,-1,1,2,2,3,-1,-2,4,1,2,2,3,0,-1,-2,3,3,2,2,2,-2,-1,3,2,4,-2,4,2,-1,3,2,-2,2,1,4,2,-2,1,2,0,4,0,-2,1,0,2,-1,-2,-1,1,-1,0,2,-1,-2,-3,0,1,-2,2,0,-2,1,1,0,3,2,4,1,3,1,1,3,2]),
 FleshShaping = new LegendaryAbility("Flesh-Shaping","- Grow Wings.\n- Regrow an Arm.",[-2,-3,4,3,2,-2,2,-2,-1,1,1,-1,-2,-2,-3,-3,2,0,1,-1,-2,-2,-3,0,-3,-2,-3,2,-2,-3,-2,1,-2,-3,1,3,-3,-4,-4,1,3,-2,-1,0,-2,1,1,0,2,-3,1,1,1,-2,-3,-2,-2,0,-1,1,0,-1,0,-1,1,1,0,0,-1,-2,1,2,-1,-3,3,3,-2,-3]),
 EpicPresence = new LegendaryAbility("Epic Presence","- Give rousing speeches.\n- Intimidate an individual.",[-1,0,4,2,1,-2,4,1,4,0,-2,2,-1,0,2,-1,2,3,1,3,-1,3,-2,1,-1,-2,2,5,5,-2,5,1,-3,-1,2,2,1,-2,-2,2,0,1,1,1,2,1,1,0,1,0,-1,-1,-2,3,1,2,3,-1,2,2,2,-1,1,2,2,0,1,2,-1,2,2,0,-1,4,2,-1,1,2]),
 
