@@ -345,7 +345,6 @@ Viracocha= new secondOrigin("Viracocha","God of Creation and the Sky",Inca.name,
  Heget= new secondOrigin("Heget","Titan of Fertility",Ocean.name,Ocean,[Forceful,Clever,Sneaky],[Water,Fertility],[Protector]),
  Gaia= new secondOrigin("Gaia","Titan of Life",World.name,World,[Forceful,Careful,Flashy],[Fertility,Nature],[Mother]),
  GreenMan= new secondOrigin("The Green Man","Titan of Nature",World.name,World,[Sneaky,Careful,Flashy],[Nature],[Harmonizer,FreeSpirit]),
- CromCruach= new secondOrigin("Crom Cruach","Titan of Decay",World.name,World,[Forceful,Sneaky,Quick],[Earth,Death],[General,Enforcer]),
  Ourea= new secondOrigin("Ourea","Titan of Mountains",World.name,World,[Careful,Clever,Forceful],[Earth],[Thinker]),
  Kur= new secondOrigin("Kur","Titan of Expanse",World.name,World,[Forceful,Careful,Clever],[Earth,Travel],[FreeSpirit]),
 
