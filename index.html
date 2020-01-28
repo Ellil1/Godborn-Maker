@@ -26,7 +26,7 @@
   
 	</head>
 	
-	<body onload="openNW(event, 'Display2');drawTriangle();godPlacer()">
+	<body onload="openNW(event, 'Display2');drawTriangle();godPlacer();setFirstRole(mainRole)">
 <ul class="tab">
   <li><a id="Display2Tab" href="#" class="tablinks" onclick="openNW(event, 'Display2')">God/Legendary Abilities Finder</a></li>
   <li><a id="Display1Tab" href="#" class="tablinks" onclick="openNW(event, 'Display1')">Aspects, Skills and Stunts Builder</a></li>
@@ -193,7 +193,6 @@
     <option value="Jade Sea">Jade Sea</option>
     <option value="Shambhala">Shambhala</option>
     <option value="Summer Court">Summer Court</option>
-    <option value="Utopia">Utopia</option>	
     <option value="Winter Court">Winter Court</option>
 	
     <option value="SecretSocieties" >----Secret Societies----</option>
@@ -212,9 +211,8 @@
 <a class="two">Legendary Ability and Skill Recommendations</a>
 	<label for="mainRole">Select Main Role</label>
 	<select id="mainRole" onchange="rolesChange(this); setFirstRole(mainRole)" >
-	<option selected value="empty">Select Role</option>
-	<option value="Meat Shield"> Meat Shield</option>
-	<option value="Damage Dealer">Damage Dealer</option>
+	<option value="Tank"> Tank</option>
+	<option selected value="Damage Dealer">Damage Dealer</option>
 	<option value="Party Face">Party Face</option>
 	<option value="Skill Monkey">Skill Monkey</option>
 	<option value="Support-Controller">Support/Controller</option>
@@ -279,6 +277,64 @@
 		<button onclick="saveTextAsFile()">Save Character Sheet</button>
 </div>
 
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<p>Choose the number of players</p>
+
+<select id="playerNumber">
+      <option selected value=1>1</option>
+      <option  value=2>2</option>
+      <option  value=3>3</option>
+      <option  value=4>4</option>
+      <option  value=5>5</option>
+      <option  value=6>6</option>
+  </select>
+<br>  
+<p>Choose the level of your players</p>
+
+<select  id="playerLevel">
+      <option selected value=1>1 - Young Scions (0-30xp)</option>
+      <option  value=2>2 - Awakened Scions (30-60xp)</option>
+      <option  value=3>3 - Demigods (60-90xp)</option>
+      <option  value=4>4 - Advanced Demigods (90-120xp)</option>
+      <option  value=5>5 - Minor Gods (120-150xp)</option>
+      <option  value=6>6 -Gods (150-200xp)</option>
+      <option  value=7>7 -Pantheon 200+xp)</option>
+  </select> 
+<br>
+<p>Choose the type of fight</p>
+<select id="fightType">
+      <option selected value=1>A Boss and his Underlings</option>
+      <option  value=2>Groups of Enemies</option>
+      <option  value=3>One Big Enemy</option>
+      <option  value=4>Two Big Enemies</option>
+
+  </select>
+<br> 
+<p>Choose the difficulty of the fight</p>
+<select  id="fightDifficulty">
+      <option selected value=2>Normal</option>
+      <option  value=1>Challenging</option>
+      <option  value=0>Brutal</option>
+  </select>
+
+
+
+<br> 
+<br>
+<br>
+<button type="button" onclick="alertFightLevel()">Give estimated Fight Difficulty !</button>
+<br>
+<br>
+<button type="button" onclick="findOrigin()">Find NPCs of a given Origin !</button>
+<br>
+<br>
+<br>
+<br>
+<button type="button" onclick="legendaryAttribute()">Generate a Legendary Aspect !</button>
+</div>
 
 	<button id="mainButton" onclick="calculateScore2()">Point</button>
 <canvas id="myCanvas" width="300" height="300" 
